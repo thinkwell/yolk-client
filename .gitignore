@@ -1,0 +1,6 @@
+*.gem
+.bundle
+.idea
+.autotest
+Gemfile.lock
+pkg/*

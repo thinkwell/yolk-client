@@ -1,0 +1,5 @@
+#### Ubuntu ####
+#require "test_notifier/runner/autotest"
+
+#### MAC OSX ####
+#require 'autotest/growl'
