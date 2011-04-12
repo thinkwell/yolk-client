@@ -1,5 +1,4 @@
 require 'john-hancock'
-require 'hashie'
 require 'active_support/core_ext/module/delegation'
 
 module JohnHancock::RequestProxy
