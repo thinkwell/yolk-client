@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email       = ["pauls@thinkwell.com"]
   s.homepage    = ""
   s.summary     = %q{REST Client for Yolk}
-  s.description = %q{TODO: Write a gem description}
+  s.description = %q{REST Client for Yolk. Uses john hancock for auth.}
 
   s.rubyforge_project = "yolk-client"
 
