@@ -9,10 +9,6 @@ module Yolk
       :consumer_secret,
       :user_agent,
       :format,
-      #:oauth_token,
-      #:oauth_token_secret,
-      #:proxy,
-      #:search_endpoint,
       :endpoint].freeze
 
     DEFAULT_ADAPTER = Faraday.default_adapter
@@ -55,10 +51,6 @@ module Yolk
       self.consumer_secret    = DEFAULT_CONSUMER_SECRET
       self.endpoint           = DEFAULT_ENDPOINT
       self.format             = DEFAULT_FORMAT
-      #self.oauth_token        = DEFAULT_OAUTH_TOKEN
-      #self.oauth_token_secret = DEFAULT_OAUTH_TOKEN_SECRET
-      #self.proxy              = DEFAULT_PROXY
-      #self.search_endpoint    = DEFAULT_SEARCH_ENDPOINT
       self.user_agent         = DEFAULT_USER_AGENT
       self
     end

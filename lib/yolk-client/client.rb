@@ -4,6 +4,11 @@ require 'yolk-client/authentication'
 
 module Yolk
   class Client
+
+    require 'yolk-client/client/enrollments'
+
+    include Yolk::Client::Enrollments
+
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
 
     # Creates a new Client

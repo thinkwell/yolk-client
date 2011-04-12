@@ -11,6 +11,17 @@ require 'yolk-client'
 # in spec/support/ and its subdirectories.
 Dir[File.join(__FILE__, 'support', '**', '*.rb')].each {|f| require f}
 
+VCR.config do |c|
+  c.cassette_library_dir     = 'spec/cassettes'
+  c.stub_with                :webmock
+  c.default_cassette_options = {:record => :new_episodes, :match_requests_on => [:method, :uri, :headers]}
+
+  c.before_record do |i|
+    i.request.headers['x-api-timestamp'] = /^[0-9]{10}$/
+    i.request.headers['x-api-signature'] = /^[0-9a-f]{32}$/
+  end
+end
+
 RSpec.configure do |config|
   # == Mock Framework
   #
