@@ -8,7 +8,7 @@ module JohnHancock::RequestProxy
     delegate :scheme, :host, :port, :path, :to => :url
 
     def query_parameters; url.query_values; end
-    def post_parameters; {}; end
+    def post_parameters; request[:body]; end
     def headers; request[:request_headers]; end
     def set_header key, val
       request[:request_headers][key] = val.to_s
