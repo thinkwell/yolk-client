@@ -17,6 +17,7 @@ module Yolk
 
       Faraday.new(options) do |builder|
         builder.use Faraday::Request::JohnHancockSignature, authentication if authenticated?
+        builder.use Faraday::Request::UrlEncoded
         builder.use Faraday::Response::RaiseHttp4xx
         builder.use Faraday::Response::Rashify unless raw
         unless raw

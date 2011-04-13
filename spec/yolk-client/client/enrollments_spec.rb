@@ -21,10 +21,15 @@ describe Yolk::Client do
         enrollments.all?{|e| e.owner.should == "admin@thinkwell.com"}
       end
     end
-    context "with limit" do
-      it "should only return the limit of enrollments" do
-        enrollments = @client.enrollments :search => {:limit_results => 20}
-        enrollments.count.should == 20
+    context "with limit of 20" do
+      before do
+        @enrollments = @client.enrollments :search => {:limit_results => 20}
+      end
+      it "should only return up to the limit" do
+        @enrollments.count.should == 20
+      end
+      it "should return rash objects" do
+        @enrollments.all?{|e| e.should be_instance_of Hashie::Rash}
       end
     end
     context "with state" do
