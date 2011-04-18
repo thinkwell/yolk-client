@@ -1,4 +1,4 @@
-
+require 'time'
 module Yolk
   class Client
     # Defines all api calls related to enrollments
@@ -12,9 +12,18 @@ module Yolk
         prepare_enrollments response
       end
 
+      def enrollment uuid
+        response = get("enrollments/#{uuid}")
+        prepare_enrollment(response)
+      end
+
       def enrollment_create enrollment
         response = post('enrollments', {:enrollment => enrollment})
         prepare_enrollment(response)
+      end
+
+      def enrollment_destroy uuid
+        response = delete("enrollments/#{uuid}")
       end
 
       private

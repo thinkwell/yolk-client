@@ -11,9 +11,11 @@ module Faraday
       when 403
         raise Yolk::Forbidden.new(error_message(env), env[:response_headers])
       when 404
-        raise Yolk::NotFound.new(error_message(env), env[:response_headers])
+        raise Yolk::NotFound.new(error_message(env), env[:response_headers], env[:body])
       when 406
         raise Yolk::NotAcceptable.new(error_message(env), env[:response_headers])
+      when 422
+        raise Yolk::UnprocessableEntity.new(error_message(env), env[:response_headers], env[:body])
       end
     end
 

@@ -1,11 +1,12 @@
 module Yolk
   # Custom error class for rescuing from all Yolk errors
   class Error < StandardError
-    attr_reader :http_headers
+    attr_reader :http_headers, :body
 
-    def initialize(message, http_headers)
+    def initialize(message, http_headers, body = nil)
       http_headers ||= {}
       @http_headers = Hash[http_headers]
+      @body = body
       super message
     end
   end
@@ -24,6 +25,9 @@ module Yolk
 
   # Raised when Yolk returns the HTTP status code 406
   class NotAcceptable < Error; end
+
+  # Raised when Yolk returns the HTTP status code 422 because of validation errors
+  class UnprocessableEntity < Error; end
 
   # Raised when Yolk returns the HTTP status code 500
   class InternalServerError < Error; end
