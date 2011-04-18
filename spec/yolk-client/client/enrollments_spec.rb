@@ -15,7 +15,9 @@ describe Yolk::Client do
       lambda{@client.enrollment('nonexistant')}.should raise_error Yolk::NotFound
     end
     it "should throw unprocessable entity when there are validation errors" do
-      lambda{@client.enrollment_create({:owner => "blah@test.com"})}.should raise_error(Yolk::UnprocessableEntity)
+      lambda{@client.enrollment_create({:owner => "blah@test.com"})}.should raise_error(Yolk::UnprocessableEntity){|error|
+        error.body['product'].should == ["can't be blank"]
+      }
     end
   end
   describe "enrollments" do
