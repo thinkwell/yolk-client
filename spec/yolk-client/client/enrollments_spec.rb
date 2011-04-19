@@ -5,6 +5,9 @@ describe Yolk::Client do
     @client = Yolk::Client.new(:consumer_key => '4d9f75499a768f299e000002', :consumer_secret => 'test',
                                :endpoint => 'http://localhost:3000/')
   end
+  def get_test_enrollment
+    @client.enrollments(:search => {:limit_results => 1}).first
+  end
   describe "errors" do
     use_vcr_cassette
     it "should a unauthorized error when credentials are incorrect" do
@@ -13,6 +16,7 @@ describe Yolk::Client do
     end
     it "should throw not found error for nonexistant uuid" do
       lambda{@client.enrollment('nonexistant')}.should raise_error Yolk::NotFound
+      lambda{@client.enrollment_destroy('nonexistant')}.should raise_error Yolk::NotFound
     end
     it "should throw unprocessable entity when there are validation errors" do
       lambda{@client.enrollment_create({:owner => "blah@test.com"})}.should raise_error(Yolk::UnprocessableEntity){|error|
@@ -64,11 +68,59 @@ describe Yolk::Client do
   describe "enrollment" do
     use_vcr_cassette
     it "should be found by its UUID" do
-      uuid = (test_enrollment = @client.enrollments(:search => {:state => :active, :limit_results => 1}).first).uuid
+      uuid = (test_enrollment = get_test_enrollment).uuid
       enrollment = @client.enrollment(uuid)
       enrollment.should be_a Hashie::Mash
       enrollment.uuid.should == uuid
       enrollment.should == test_enrollment
+    end
+  end
+  describe "enrollment_create" do
+    use_vcr_cassette
+    it "should return the enrollment created" do
+      product_id = "b108a430b488012ddb4540408c58c871"
+      enrollment = @client.enrollment_create({:owner => "blah@test.com", :product_id => product_id})
+      enrollment.rid.should == product_id
+      enrollment._id.should == enrollment.uuid
+    end
+    it "should create product by rid automatically" do
+      rid = "nonexistant"
+      enrollment = @client.enrollment_create({:owner => "blah@test.com", :rid => rid})
+      enrollment.product_id.should == rid
+      # Product Title defaults to RID when blank
+      enrollment.title.should == rid
+    end
+  end
+  describe "enrollment_update" do
+    use_vcr_cassette
+    it "should update enrollment" do
+      uuid = (test_enrollment = get_test_enrollment).uuid
+      length = (test_enrollment.access_length || rand(6)) + 1
+      response = @client.enrollment_update uuid, {:access_unit => "month", :access_length => length}
+      response.should == {}
+
+      updated_enrollment = @client.enrollment uuid
+      updated_enrollment.owner.should == test_enrollment.owner
+      updated_enrollment.rid.should == test_enrollment.rid
+      updated_enrollment.access_length.should == length
+    end
+    it "should throw validation errors on invalid update" do
+      uuid = get_test_enrollment.uuid
+      # Use a fixed to date to avoid VCR recording multiple fixtures
+      now = Time.new(2010, 10, 10)
+      now = (now + now.gmtoff).gmtime
+      lambda{
+        @client.enrollment_update uuid, {:start_date => now, :end_date => now - (60*60*24)}
+      }.should raise_error(Yolk::UnprocessableEntity){|e| e.body['end_date'].should == ["must be after #{now.to_s}"]}
+    end
+  end
+  describe "enrollment_destroy" do
+    use_vcr_cassette
+    it "should destroy enrollment" do
+      uuid = get_test_enrollment.uuid
+
+      @client.enrollment_destroy(uuid)
+      lambda{@client.enrollment(uuid)}.should raise_error(Yolk::NotFound)
     end
   end
 end

@@ -1,0 +1,157 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://localhost:3000/enrollments.json?search%5Blimit_results%5D=1
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - Yolk Ruby Gem
+      x-api-key: 
+      - 4d9f75499a768f299e000002
+      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
+      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 19 Apr 2011 21:49:57 GMT
+      status: 
+      - 200 OK
+      content-type: 
+      - application/json; charset=utf-8
+      etag: 
+      - "\"f891f5be468e38f4ec1b86a10218c550\""
+      cache-control: 
+      - max-age=0, private, must-revalidate
+      x-ua-compatible: 
+      - IE=Edge
+      set-cookie: 
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlMGM5YzA3ZDViMjVhZmFkOTFlZWQwZTM1MTk3OTk0NDk%3D--afc11a872a7040345e7bba630535d7b27a75c435; path=/; HttpOnly
+      x-runtime: 
+      - "0.241304"
+    body: "[{\"_id\":\"6208f467f2db70afe8e0db65f95cb376\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"14books@bellsouth.net\",\"end_date\":\"2009-11-09T23:59:59Z\",\"enrollment_id\":\"168656\",\"owner\":\"14books@bellsouth.net\",\"product_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"start_date\":\"2008-04-29T14:43:27Z\",\"store_id\":\"www.thinkwell.com\",\"tx_id\":\"\",\"updated_at\":\"2011-04-19T21:31:28Z\",\"url\":\"http://homeschool.thinkwell.com\",\"uuid\":\"6208f467f2db70afe8e0db65f95cb376\",\"version\":3,\"title\":\"Prealgebra\"}]"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :put
+    uri: http://localhost:3000/enrollments/6208f467f2db70afe8e0db65f95cb376.json
+    body: enrollment[access_unit]=month&enrollment[access_length]=2
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - Yolk Ruby Gem
+      x-api-key: 
+      - 4d9f75499a768f299e000002
+      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
+      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
+      content-type: 
+      - application/x-www-form-urlencoded
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 19 Apr 2011 21:49:57 GMT
+      status: 
+      - 200 OK
+      location: 
+      - http://localhost:3000/enrollments/6208f467f2db70afe8e0db65f95cb376
+      content-type: 
+      - application/json; charset=utf-8
+      etag: 
+      - "\"99914b932bd37a50b983c5e7c90ae93b\""
+      cache-control: 
+      - max-age=0, private, must-revalidate
+      x-ua-compatible: 
+      - IE=Edge
+      set-cookie: 
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlZWU2ZDk4MTMzMTY3ZTQ1OThmMjMwNTcwMDg5Y2IwNDA%3D--eef9830b59a41173acc08b5fca7ce89fb78bf979; path=/; HttpOnly
+      x-runtime: 
+      - "0.273760"
+    body: "{}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://localhost:3000/enrollments/6208f467f2db70afe8e0db65f95cb376.json
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - Yolk Ruby Gem
+      x-api-key: 
+      - 4d9f75499a768f299e000002
+      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
+      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 19 Apr 2011 21:49:57 GMT
+      status: 
+      - 200 OK
+      content-type: 
+      - application/json; charset=utf-8
+      etag: 
+      - "\"a1504307064b76d686e370cbb0610a05\""
+      cache-control: 
+      - max-age=0, private, must-revalidate
+      x-ua-compatible: 
+      - IE=Edge
+      set-cookie: 
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlNjFkOTg4NjkyZTZiODk2ZDNlYjg0Nzk2NjUxMTUxZTE%3D--e36422696b25f746f2cb34e09bfc30fdee200235; path=/; HttpOnly
+      x-runtime: 
+      - "0.240037"
+    body: "{\"_id\":\"6208f467f2db70afe8e0db65f95cb376\",\"access_length\":2,\"access_unit\":\"month\",\"assigned_to\":\"14books@bellsouth.net\",\"end_date\":\"2009-11-09T23:59:59Z\",\"enrollment_id\":\"168656\",\"owner\":\"14books@bellsouth.net\",\"product_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"start_date\":\"2008-04-29T14:43:27Z\",\"store_id\":\"www.thinkwell.com\",\"tx_id\":\"\",\"updated_at\":\"2011-04-19T21:49:57Z\",\"url\":\"http://homeschool.thinkwell.com\",\"uuid\":\"6208f467f2db70afe8e0db65f95cb376\",\"version\":4,\"title\":\"Prealgebra\"}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :put
+    uri: http://localhost:3000/enrollments/6208f467f2db70afe8e0db65f95cb376.json
+    body: enrollment[start_date]=2010-10-10%2000%3A00%3A00%20UTC&enrollment[end_date]=2010-10-09%2000%3A00%3A00%20UTC
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - Yolk Ruby Gem
+      x-api-key: 
+      - 4d9f75499a768f299e000002
+      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
+      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
+      content-type: 
+      - application/x-www-form-urlencoded
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 422
+      message: Unprocessable Entity
+    headers: 
+      date: 
+      - Tue, 19 Apr 2011 21:49:57 GMT
+      status: 
+      - 422 Unprocessable Entity
+      content-type: 
+      - application/json; charset=utf-8
+      cache-control: 
+      - no-cache
+      x-ua-compatible: 
+      - IE=Edge
+      set-cookie: 
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlYmUwNzc5MWU2OGYzMTQ2MjFhYTI3NzZmNzI0MGE5YjU%3D--5b13c014d511ab38522071217633242b8c5134f1; path=/; HttpOnly
+      x-runtime: 
+      - "0.187138"
+    body: "{\"end_date\":[\"must be after 2010-10-10 00:00:00 UTC\"]}"
+    http_version: "1.1"

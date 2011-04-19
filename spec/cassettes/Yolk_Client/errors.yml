@@ -108,3 +108,38 @@
       - "0.523208"
     body: "{\"product\":[\"can't be blank\"]}"
     http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :delete
+    uri: http://localhost:3000/enrollments/nonexistant.json
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - Yolk Ruby Gem
+      x-api-key: 
+      - 4d9f75499a768f299e000002
+      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
+      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 404
+      message: Not Found
+    headers: 
+      date: 
+      - Tue, 19 Apr 2011 19:52:23 GMT
+      status: 
+      - 404 Not Found
+      content-type: 
+      - application/json; charset=utf-8
+      cache-control: 
+      - no-cache
+      x-ua-compatible: 
+      - IE=Edge
+      set-cookie: 
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlZmUxMDIzZDgzODVkMmFiMTJmZTBjN2Q0YzUxOTUyYTM%3D--8d00dba205ca2af3187730a5764b6a88de08fb4e; path=/; HttpOnly
+      x-runtime: 
+      - "0.505029"
+    body: "{}"
+    http_version: "1.1"

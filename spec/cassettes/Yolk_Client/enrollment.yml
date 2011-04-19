@@ -116,3 +116,81 @@
       - "0.320412"
     body: "{\"_id\":\"00156f10104e012eaeb34040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"Seth@studyjam.com\",\"end_date\":\"2012-02-01T00:00:00Z\",\"owner\":\"Mike@studyjam.com\",\"product_id\":\"4d9cdd3abcb41c0658000001\",\"rid\":\"4d9cdd3abcb41c0658000001\",\"start_date\":\"2011-02-01T00:00:00Z\",\"store_id\":\"www.thinkwellhomeschool.com\",\"tx_id\":\"A704015887\",\"updated_at\":\"2011-04-07T22:41:40Z\",\"url\":\"http://homeschool.thinkwell.com/\",\"uuid\":\"00156f10104e012eaeb34040185a8c5f\",\"version\":3}"
     http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://localhost:3000/enrollments.json?search%5Blimit_results%5D=1
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - Yolk Ruby Gem
+      x-api-key: 
+      - 4d9f75499a768f299e000002
+      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
+      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 19 Apr 2011 21:28:19 GMT
+      status: 
+      - 200 OK
+      content-type: 
+      - application/json; charset=utf-8
+      etag: 
+      - "\"69a17e970df7e6e16000694922aca655\""
+      cache-control: 
+      - max-age=0, private, must-revalidate
+      x-ua-compatible: 
+      - IE=Edge
+      set-cookie: 
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlM2IyNjE2YWUzMTMxOGZlNzcyZTE2NDAyMmZiOGM5MTM%3D--5dd999969fd16fe254587edf1eae2ab057cfc9b5; path=/; HttpOnly
+      x-runtime: 
+      - "0.287287"
+    body: "[{\"_id\":\"610766bcc020459a043d837e7eda2175\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"100katrina@gmail.com\",\"end_date\":\"2011-03-29T00:00:00Z\",\"enrollment_id\":\"277346\",\"owner\":\"100katrina@gmail.com\",\"product_id\":\"50dkjfi395kdj\",\"rid\":\"50dkjfi395kdj\",\"start_date\":\"2010-03-29T00:00:00Z\",\"store_id\":\"www.thinkwell.com\",\"tx_id\":\"\",\"updated_at\":\"2011-04-07T22:41:40Z\",\"url\":\"http://homeschool.thinkwell.com\",\"uuid\":\"610766bcc020459a043d837e7eda2175\",\"version\":3,\"title\":\"50dkjfi395kdj\"}]"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://localhost:3000/enrollments/610766bcc020459a043d837e7eda2175.json
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - Yolk Ruby Gem
+      x-api-key: 
+      - 4d9f75499a768f299e000002
+      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
+      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 19 Apr 2011 21:28:20 GMT
+      status: 
+      - 200 OK
+      content-type: 
+      - application/json; charset=utf-8
+      etag: 
+      - "\"d0c24f94ba58bbfa2811e74ea5ad813f\""
+      cache-control: 
+      - max-age=0, private, must-revalidate
+      x-ua-compatible: 
+      - IE=Edge
+      set-cookie: 
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlMzc2MWRmODJhNTM4NTg4ZjJhMjMwNmRlYzM4ZjliNjA%3D--33ab579142d82ecfb43ca32bc3bad772ab808ced; path=/; HttpOnly
+      x-runtime: 
+      - "0.284400"
+    body: "{\"_id\":\"610766bcc020459a043d837e7eda2175\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"100katrina@gmail.com\",\"end_date\":\"2011-03-29T00:00:00Z\",\"enrollment_id\":\"277346\",\"owner\":\"100katrina@gmail.com\",\"product_id\":\"50dkjfi395kdj\",\"rid\":\"50dkjfi395kdj\",\"start_date\":\"2010-03-29T00:00:00Z\",\"store_id\":\"www.thinkwell.com\",\"tx_id\":\"\",\"updated_at\":\"2011-04-07T22:41:40Z\",\"url\":\"http://homeschool.thinkwell.com\",\"uuid\":\"610766bcc020459a043d837e7eda2175\",\"version\":3,\"title\":\"50dkjfi395kdj\"}"
+    http_version: "1.1"

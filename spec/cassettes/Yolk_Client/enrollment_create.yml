@@ -1,0 +1,79 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: http://localhost:3000/enrollments.json
+    body: enrollment[owner]=blah%40test.com&enrollment[product_id]=b108a430b488012ddb4540408c58c871
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - Yolk Ruby Gem
+      x-api-key: 
+      - 4d9f75499a768f299e000002
+      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
+      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
+      content-type: 
+      - application/x-www-form-urlencoded
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 201
+      message: Created
+    headers: 
+      date: 
+      - Tue, 19 Apr 2011 21:28:36 GMT
+      status: 
+      - 201 Created
+      location: 
+      - http://localhost:3000/enrollments/e8c1c2604cf9012e5b35001aa0be65af
+      content-type: 
+      - application/json; charset=utf-8
+      cache-control: 
+      - no-cache
+      x-ua-compatible: 
+      - IE=Edge
+      set-cookie: 
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlMzU2ODE1MDdkYzMxMjU2OGM2YWJiZTY3ZDkxNTViNDM%3D--650135a10bdd4fef78a4562fdb0bb294d15d9972; path=/; HttpOnly
+      x-runtime: 
+      - "0.308141"
+    body: "{\"_id\":\"e8c1c2604cf9012e5b35001aa0be65af\",\"created_at\":\"2011-04-19T21:28:36Z\",\"owner\":\"blah@test.com\",\"product_id\":\"b108a430b488012ddb4540408c58c871\",\"updated_at\":\"2011-04-19T21:28:36Z\",\"uuid\":\"e8c1c2604cf9012e5b35001aa0be65af\",\"version\":1,\"rid\":\"b108a430b488012ddb4540408c58c871\",\"url\":\"http://homeschool.thinkwell.com\",\"title\":\"Algebra I\"}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: http://localhost:3000/enrollments.json
+    body: enrollment[owner]=blah%40test.com&enrollment[rid]=nonexistant
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - Yolk Ruby Gem
+      x-api-key: 
+      - 4d9f75499a768f299e000002
+      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
+      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
+      content-type: 
+      - application/x-www-form-urlencoded
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 201
+      message: Created
+    headers: 
+      date: 
+      - Tue, 19 Apr 2011 21:28:36 GMT
+      status: 
+      - 201 Created
+      location: 
+      - http://localhost:3000/enrollments/e8f654f04cf9012e5b35001aa0be65af
+      content-type: 
+      - application/json; charset=utf-8
+      cache-control: 
+      - no-cache
+      x-ua-compatible: 
+      - IE=Edge
+      set-cookie: 
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlOWM2N2M2Mjc4OWY1ZDU0ODY0ZWE0YmFlMzA0MTU0NTk%3D--141d311dcbaed0850590a4729b7e7d2b7d1dc959; path=/; HttpOnly
+      x-runtime: 
+      - "0.306132"
+    body: "{\"_id\":\"e8f654f04cf9012e5b35001aa0be65af\",\"created_at\":\"2011-04-19T21:28:36Z\",\"owner\":\"blah@test.com\",\"product_id\":\"nonexistant\",\"updated_at\":\"2011-04-19T21:28:36Z\",\"uuid\":\"e8f654f04cf9012e5b35001aa0be65af\",\"version\":1,\"rid\":\"nonexistant\",\"url\":null,\"title\":\"nonexistant\"}"
+    http_version: "1.1"

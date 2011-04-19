@@ -22,8 +22,12 @@ module Yolk
         prepare_enrollment(response)
       end
 
+      def enrollment_update uuid, enrollment
+        put("enrollments/#{uuid}", {:enrollment => enrollment})
+      end
+
       def enrollment_destroy uuid
-        response = delete("enrollments/#{uuid}")
+        delete("enrollments/#{uuid}")
       end
 
       private
