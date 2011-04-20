@@ -36,8 +36,8 @@ module Yolk
         enrollments
       end
       def prepare_enrollment enrollment
-        enrollment.start_date = Time.parse(enrollment.start_date) if enrollment.start_date
-        enrollment.end_date = Time.parse(enrollment.end_date) if enrollment.end_date
+        enrollment.start_date &&= Time.parse(enrollment.start_date)
+        enrollment.end_date &&= Time.parse(enrollment.end_date)
         enrollment
       end
 

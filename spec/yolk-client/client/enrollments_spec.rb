@@ -37,7 +37,8 @@ describe Yolk::Client do
         @enrollments.all?{|e| e.should be_instance_of Hashie::Rash}
       end
       it "should return actual Time objects instead of strings" do
-        @enrollments.all?{|e| e.start_date.should be_a Time; e.end_date.should be_a Time}
+        @enrollments.reject{|e| e.start_date.nil? || e.end_date.nil?}.
+            all?{|e| e.start_date.should be_a Time; e.end_date.should be_a Time}
       end
     end
     context "with relevant_to_user passed" do
@@ -106,12 +107,17 @@ describe Yolk::Client do
     end
     it "should throw validation errors on invalid update" do
       uuid = get_test_enrollment.uuid
-      # Use a fixed to date to avoid VCR recording multiple fixtures
-      now = Time.new(2010, 10, 10)
+      # Use a fixed to date (2010-10-10) to avoid VCR recording multiple fixtures
+      now = Time.at(1286686800)
       now = (now + now.gmtoff).gmtime
+      # Format date by hand to avoid 1.8 vs 1.9 formatting issues
+      start_date = now.strftime '%Y-%m-%d %H:%M:%S %Z'
+      end_date = (now - (60*60*24)).strftime '%Y-%m-%d %H:%M:%S %Z'
+      start_date.gsub!(/GMT/, 'UTC')
+      end_date.gsub!(/GMT/, 'UTC')
       lambda{
-        @client.enrollment_update uuid, {:start_date => now, :end_date => now - (60*60*24)}
-      }.should raise_error(Yolk::UnprocessableEntity){|e| e.body['end_date'].should == ["must be after #{now.to_s}"]}
+        @client.enrollment_update uuid, {:start_date => start_date, :end_date => end_date}
+      }.should raise_error(Yolk::UnprocessableEntity){|e| e.body['end_date'].should == ["must be after #{start_date}"]}
     end
   end
   describe "enrollment_destroy" do

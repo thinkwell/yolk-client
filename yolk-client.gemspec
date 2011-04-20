@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency(%q<john-hancock>, ">= 0.0.2")
   s.add_runtime_dependency(%q<hashie>, '~> 1.0.0')
+  s.add_runtime_dependency(%q<yajl-ruby>, '~> 0.8.2')
   s.add_runtime_dependency(%q<multi_json>, '~> 0.0.5')
   s.add_runtime_dependency(%q<faraday>, '~> 0.6.0')
   s.add_runtime_dependency(%q<faraday_middleware>, '~> 0.6.3')

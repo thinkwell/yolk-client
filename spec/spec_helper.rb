@@ -14,7 +14,7 @@ Dir[File.join(__FILE__, 'support', '**', '*.rb')].each {|f| require f}
 VCR.config do |c|
   c.cassette_library_dir     = 'spec/cassettes'
   c.stub_with                :webmock
-  c.default_cassette_options = {:record => :new_episodes, :match_requests_on => [:method, :uri, :headers, :body]}
+  c.default_cassette_options = {:record => :none, :match_requests_on => [:method, :uri, :headers, :body]}
 
   c.before_record do |i|
     i.request.headers['x-api-timestamp'] = /^[0-9]{10}$/
