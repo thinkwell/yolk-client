@@ -12,7 +12,8 @@ module Yolk
       end
 
       def enrollments_by_user user, options = {}
-        enrollments(options.merge({"search[relevant_to_user]" => user}))
+        response = get("users/#{user}/enrollments", options)
+        prepare_enrollments response
       end
 
       def enrollment uuid
