@@ -4,12 +4,15 @@ module Yolk
     # Defines all api calls related to enrollments
     module Enrollments
 
-      def enrollments *args
-        options = args.last.is_a?(Hash) ? args.pop : {}
+      def enrollments options = {}
         search = options.delete :search
         search.each_pair{|k,v| options["search[#{k}]"] = v} if search
         response = get('enrollments', options)
         prepare_enrollments response
+      end
+
+      def enrollments_by_user user, options = {}
+        enrollments(options.merge({"search[relevant_to_user]" => user}))
       end
 
       def enrollment uuid

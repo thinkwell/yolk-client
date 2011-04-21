@@ -46,6 +46,8 @@ describe Yolk::Client do
         enrollments = @client.enrollments :search => {:relevant_to_user => "admin@thinkwell.com"}
         enrollments.should_not be_empty
         enrollments.all?{|e| [e.owner, e.assigned_to].should include "admin@thinkwell.com"}
+        same = @client.enrollments_by_user "admin@thinkwell.com"
+        same.should == enrollments
       end
     end
     context "with owner passed" do
