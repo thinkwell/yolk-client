@@ -41,7 +41,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://localhost:3000/enrollments.json?search%5Bowner_equals%5D=admin@thinkwell.com
+    uri: http://localhost:3000/enrollments.json?search%5Bowner%5D=admin@thinkwell.com
     body: 
     headers: 
       accept: 
