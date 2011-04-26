@@ -5,13 +5,14 @@ module Yolk
     module Enrollments
 
       def enrollments options = {}
-        search = options.delete :search
-        search.each_pair{|k,v| options["search[#{k}]"] = v} if search
+        format_search_options options
         response = get('enrollments', options)
         prepare_enrollments response
       end
 
       def enrollments_by_user user, options = {}
+        format_search_options options
+        options.reverse_merge! "search[limit_results]" => 0
         response = get("users/#{user}/enrollments", options)
         prepare_enrollments response
       end
@@ -44,7 +45,10 @@ module Yolk
         enrollment.end_date &&= Time.parse(enrollment.end_date)
         enrollment
       end
-
+      def format_search_options options
+        search = options.delete :search
+        search.each_pair{|k,v| options["search[#{k}]"] = v} if search
+      end
     end
   end
 end
