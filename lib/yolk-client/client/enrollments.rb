@@ -12,7 +12,7 @@ module Yolk
 
       def enrollments_by_user user, options = {}
         format_search_options options
-        options.reverse_merge! "search[limit_results]" => 0
+        options.merge! "search[limit_results]" => 0 unless options["search[limit_results]"]
         response = get("users/#{user}/enrollments", options)
         prepare_enrollments response
       end

@@ -80,7 +80,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://localhost:3000/users/admin@thinkwell.com/enrollments.json
+    uri: http://localhost:3000/users/admin@thinkwell.com/enrollments.json?search%5Blimit_results%5D=0
     body: 
     headers: 
       accept: 
