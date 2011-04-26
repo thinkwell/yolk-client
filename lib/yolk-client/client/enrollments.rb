@@ -41,8 +41,9 @@ module Yolk
         enrollments
       end
       def prepare_enrollment enrollment
-        enrollment.start_date &&= Time.parse(enrollment.start_date)
-        enrollment.end_date &&= Time.parse(enrollment.end_date)
+        # Parse dates
+        enrollment.select{|k, v| v && k =~ /_(date|at)$/}.
+            each{|k, v| enrollment.send(:"#{k}=", Time.parse(v))}
         enrollment
       end
       def format_search_options options
