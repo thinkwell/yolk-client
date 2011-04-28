@@ -11,6 +11,7 @@ module Yolk
     def connection(raw=false)
       options = {
         :headers => {'Accept' => "application/#{format}", 'User-Agent' => user_agent},
+        :proxy => proxy,
         :ssl => {:verify => false},
         :url => endpoint,
       }

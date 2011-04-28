@@ -9,6 +9,7 @@ module Yolk
       :consumer_secret,
       :user_agent,
       :format,
+      :proxy,
       :endpoint].freeze
 
     DEFAULT_ADAPTER = Faraday.default_adapter
@@ -26,6 +27,9 @@ module Yolk
     DEFAULT_USER_AGENT = "Yolk Ruby Gem".freeze
 
     DEFAULT_FORMAT = :json
+
+    # By default, don't use a proxy server
+    DEFAULT_PROXY = nil
 
     attr_accessor *VALID_OPTIONS_KEYS
 
@@ -51,6 +55,7 @@ module Yolk
       self.consumer_secret    = DEFAULT_CONSUMER_SECRET
       self.endpoint           = DEFAULT_ENDPOINT
       self.format             = DEFAULT_FORMAT
+      self.proxy              = DEFAULT_PROXY
       self.user_agent         = DEFAULT_USER_AGENT
       self
     end
