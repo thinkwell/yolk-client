@@ -1,5 +1,6 @@
 require 'faraday_middleware'
 require 'faraday/request/john-hancock_signature'
+require 'faraday/request/multi_json'
 require 'faraday/response/raise_http_4xx'
 require 'faraday/response/raise_http_5xx'
 
@@ -18,7 +19,7 @@ module Yolk
 
       Faraday.new(options) do |builder|
         builder.use Faraday::Request::JohnHancockSignature, authentication if authenticated?
-        builder.use Faraday::Request::UrlEncoded
+        builder.use Faraday::Request::MultiJson
         builder.use Faraday::Response::RaiseHttp4xx
         builder.use Faraday::Response::Rashify unless raw
         unless raw
