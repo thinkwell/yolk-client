@@ -75,7 +75,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: http://localhost:3000/enrollments.json
-    body: enrollment[owner]=blah%40test.com
+    body: "{\"enrollment\":{\"owner\":\"blah@test.com\"}}"
     headers: 
       accept: 
       - application/json
@@ -86,7 +86,7 @@
       x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
       x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
       content-type: 
-      - application/x-www-form-urlencoded
+      - application/json
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 422

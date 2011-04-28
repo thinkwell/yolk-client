@@ -42,7 +42,7 @@
   request: !ruby/struct:VCR::Request 
     method: :put
     uri: http://localhost:3000/enrollments/6208f467f2db70afe8e0db65f95cb376.json
-    body: enrollment[access_unit]=month&enrollment[access_length]=2
+    body: "{\"enrollment\":{\"access_unit\":\"month\",\"access_length\":2}}"
     headers: 
       accept: 
       - application/json
@@ -53,7 +53,7 @@
       x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
       x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
       content-type: 
-      - application/x-www-form-urlencoded
+      - application/json
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
@@ -122,7 +122,7 @@
   request: !ruby/struct:VCR::Request 
     method: :put
     uri: http://localhost:3000/enrollments/6208f467f2db70afe8e0db65f95cb376.json
-    body: enrollment[start_date]=2010-10-10%2000%3A00%3A00%20UTC&enrollment[end_date]=2010-10-09%2000%3A00%3A00%20UTC
+    body: "{\"enrollment\":{\"start_date\":\"2010-10-10 00:00:00 UTC\",\"end_date\":\"2010-10-09 00:00:00 UTC\"}}"
     headers: 
       accept: 
       - application/json
@@ -133,7 +133,7 @@
       x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
       x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
       content-type: 
-      - application/x-www-form-urlencoded
+      - application/json
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 422
