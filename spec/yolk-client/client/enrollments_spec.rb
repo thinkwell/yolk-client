@@ -82,17 +82,12 @@ describe Yolk::Client do
   describe "enrollment_create" do
     use_vcr_cassette
     it "should return the enrollment created" do
-      product_id = "b108a430b488012ddb4540408c58c871"
-      enrollment = @client.enrollment_create({:owner => "blah@test.com", :product_id => product_id})
-      enrollment.rid.should == product_id
+      product_id = "f479d240bf7b012da3914040185a8c5f"
+      enrollment = @client.enrollment_create({:owner => "blah@test.com", :rid => product_id})
+      enrollment.product.rid.should == product_id
       enrollment._id.should == enrollment.uuid
-    end
-    it "should create product by rid automatically" do
-      rid = "nonexistant"
-      enrollment = @client.enrollment_create({:owner => "blah@test.com", :rid => rid})
-      enrollment.product_id.should == rid
-      # Product Title defaults to RID when blank
-      enrollment.title.should == rid
+      enrollment.product.title.should == "Calculus"
+      enrollment.section_id.should_not be nil
     end
   end
   describe "enrollment_update" do

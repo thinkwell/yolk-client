@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request 
     method: :post
     uri: http://localhost:3000/enrollments.json
-    body: "{\"enrollment\":{\"owner\":\"blah@test.com\",\"product_id\":\"b108a430b488012ddb4540408c58c871\"}}"
+    body: "{\"enrollment\":{\"owner\":\"blah@test.com\",\"rid\":\"f479d240bf7b012da3914040185a8c5f\"}}"
     headers: 
       accept: 
       - application/json
@@ -21,11 +21,11 @@
       message: Created
     headers: 
       date: 
-      - Tue, 19 Apr 2011 21:28:36 GMT
+      - Thu, 12 May 2011 18:21:10 GMT
       status: 
       - 201 Created
       location: 
-      - http://localhost:3000/enrollments/e8c1c2604cf9012e5b35001aa0be65af
+      - http://localhost:3000/enrollments/8938e3905ef2012e604d001aa0be65af
       content-type: 
       - application/json; charset=utf-8
       cache-control: 
@@ -33,47 +33,8 @@
       x-ua-compatible: 
       - IE=Edge
       set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlMzU2ODE1MDdkYzMxMjU2OGM2YWJiZTY3ZDkxNTViNDM%3D--650135a10bdd4fef78a4562fdb0bb294d15d9972; path=/; HttpOnly
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlOTY5NjZlODU3MDM5NzYwMjBlZWNlYzUwZDdlZTEzZjM%3D--56b3c4a6811a04dc428f58a6c45ae03873f7460a; path=/; HttpOnly
       x-runtime: 
-      - "0.308141"
-    body: "{\"_id\":\"e8c1c2604cf9012e5b35001aa0be65af\",\"created_at\":\"2011-04-19T21:28:36Z\",\"owner\":\"blah@test.com\",\"product_id\":\"b108a430b488012ddb4540408c58c871\",\"updated_at\":\"2011-04-19T21:28:36Z\",\"uuid\":\"e8c1c2604cf9012e5b35001aa0be65af\",\"version\":1,\"rid\":\"b108a430b488012ddb4540408c58c871\",\"url\":\"http://homeschool.thinkwell.com\",\"title\":\"Algebra I\"}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :post
-    uri: http://localhost:3000/enrollments.json
-    body: "{\"enrollment\":{\"owner\":\"blah@test.com\",\"rid\":\"nonexistant\"}}"
-    headers: 
-      accept: 
-      - application/json
-      user-agent: 
-      - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      content-type: 
-      - application/json
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 201
-      message: Created
-    headers: 
-      date: 
-      - Tue, 19 Apr 2011 21:28:36 GMT
-      status: 
-      - 201 Created
-      location: 
-      - http://localhost:3000/enrollments/e8f654f04cf9012e5b35001aa0be65af
-      content-type: 
-      - application/json; charset=utf-8
-      cache-control: 
-      - no-cache
-      x-ua-compatible: 
-      - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlOWM2N2M2Mjc4OWY1ZDU0ODY0ZWE0YmFlMzA0MTU0NTk%3D--141d311dcbaed0850590a4729b7e7d2b7d1dc959; path=/; HttpOnly
-      x-runtime: 
-      - "0.306132"
-    body: "{\"_id\":\"e8f654f04cf9012e5b35001aa0be65af\",\"created_at\":\"2011-04-19T21:28:36Z\",\"owner\":\"blah@test.com\",\"product_id\":\"nonexistant\",\"updated_at\":\"2011-04-19T21:28:36Z\",\"uuid\":\"e8f654f04cf9012e5b35001aa0be65af\",\"version\":1,\"rid\":\"nonexistant\",\"url\":null,\"title\":\"nonexistant\"}"
+      - "0.444323"
+    body: "{\"_id\":\"8938e3905ef2012e604d001aa0be65af\",\"created_at\":\"2011-05-12T13:21:10-05:00\",\"owner\":\"blah@test.com\",\"section_id\":\"4dc9ab6fbcb41c539a00090e\",\"updated_at\":\"2011-05-12T13:21:10-05:00\",\"uuid\":\"8938e3905ef2012e604d001aa0be65af\",\"version\":1,\"product\":{\"_id\":\"f479d240bf7b012da3914040185a8c5f\",\"rid\":\"f479d240bf7b012da3914040185a8c5f\",\"title\":\"Calculus\"}}"
     http_version: "1.1"
