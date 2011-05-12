@@ -5,9 +5,15 @@ require 'yolk-client/authentication'
 module Yolk
   class Client
 
-    require 'yolk-client/client/enrollments'
+    %w(
+    utils
+    enrollments
+    organizations
+    ).each{|lib| require 'yolk-client/client/' + lib}
 
+    include Yolk::Client::Utils
     include Yolk::Client::Enrollments
+    include Yolk::Client::Organizations
 
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
 
