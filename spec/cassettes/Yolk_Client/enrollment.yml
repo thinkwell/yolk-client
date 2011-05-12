@@ -2,123 +2,6 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://localhost:3000/enrollments/fe183db0d329012da55a4040185a8c5f.json
-    body: 
-    headers: 
-      accept: 
-      - application/json
-      user-agent: 
-      - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      date: 
-      - Thu, 14 Apr 2011 19:37:03 GMT
-      status: 
-      - 200 OK
-      content-type: 
-      - application/json; charset=utf-8
-      etag: 
-      - "\"085df5cf7a21ede42d25594981e40a8b\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
-      - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlMWI1YThhNjY0ZTAyNmVmODQzODhkMzg3ZDBhNjY5NzA%3D--349a12720edc3868380066e8cfed32a585b76cec; path=/; HttpOnly
-      x-runtime: 
-      - "0.299674"
-    body: "{\"_id\":\"fe183db0d329012da55a4040185a8c5f\",\"access_length\":\"14\",\"access_unit\":\"day\",\"assigned_to\":\"admin@thinkwell.com\",\"end_date\":\"2010-11-29T21:05:27Z\",\"owner\":\"admin@thinkwell.com\",\"product_id\":\"d971ab20ce81012da4c84040185a8c5f\",\"rid\":\"d971ab20ce81012da4c84040185a8c5f\",\"start_date\":\"2010-11-15T21:05:27Z\",\"store_id\":\"www.thinkwellhomeschool.com\",\"tx_id\":\"A811134887\",\"updated_at\":\"2011-04-07T19:24:52Z\",\"url\":\"http://homeschool.thinkwell.com/\",\"uuid\":\"fe183db0d329012da55a4040185a8c5f\",\"version\":2}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://localhost:3000/enrollments.json?search%5Blimit_results%5D=1&search%5Bstate%5D=active
-    body: 
-    headers: 
-      accept: 
-      - application/json
-      user-agent: 
-      - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      date: 
-      - Thu, 14 Apr 2011 20:05:35 GMT
-      status: 
-      - 200 OK
-      content-type: 
-      - application/json; charset=utf-8
-      etag: 
-      - "\"3aa4792e624613df7d78f01cfd7d157b\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
-      - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlMGU2ZmU5ZGM5OTM0MDYzNzE2NzZiOWRlOTU1NDE4MTk%3D--054db926f860e0e84ca89361a2c6d39453ca089b; path=/; HttpOnly
-      x-runtime: 
-      - "0.287712"
-    body: "[{\"_id\":\"00156f10104e012eaeb34040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"Seth@studyjam.com\",\"end_date\":\"2012-02-01T00:00:00Z\",\"owner\":\"Mike@studyjam.com\",\"product_id\":\"4d9cdd3abcb41c0658000001\",\"rid\":\"4d9cdd3abcb41c0658000001\",\"start_date\":\"2011-02-01T00:00:00Z\",\"store_id\":\"www.thinkwellhomeschool.com\",\"tx_id\":\"A704015887\",\"updated_at\":\"2011-04-07T22:41:40Z\",\"url\":\"http://homeschool.thinkwell.com/\",\"uuid\":\"00156f10104e012eaeb34040185a8c5f\",\"version\":3}]"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://localhost:3000/enrollments/00156f10104e012eaeb34040185a8c5f.json
-    body: 
-    headers: 
-      accept: 
-      - application/json
-      user-agent: 
-      - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      date: 
-      - Thu, 14 Apr 2011 20:05:35 GMT
-      status: 
-      - 200 OK
-      content-type: 
-      - application/json; charset=utf-8
-      etag: 
-      - "\"0ab41a9be0124970d3bc41dab5c840d8\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
-      - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlODUxZTVkMWY5NTZjOTBiZjEyMjg0MTMyNzhkMmRjMjE%3D--ca137f32ad9e078387cf165faa281876eb6c8aaa; path=/; HttpOnly
-      x-runtime: 
-      - "0.320412"
-    body: "{\"_id\":\"00156f10104e012eaeb34040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"Seth@studyjam.com\",\"end_date\":\"2012-02-01T00:00:00Z\",\"owner\":\"Mike@studyjam.com\",\"product_id\":\"4d9cdd3abcb41c0658000001\",\"rid\":\"4d9cdd3abcb41c0658000001\",\"start_date\":\"2011-02-01T00:00:00Z\",\"store_id\":\"www.thinkwellhomeschool.com\",\"tx_id\":\"A704015887\",\"updated_at\":\"2011-04-07T22:41:40Z\",\"url\":\"http://homeschool.thinkwell.com/\",\"uuid\":\"00156f10104e012eaeb34040185a8c5f\",\"version\":3}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
     uri: http://localhost:3000/enrollments.json?search%5Blimit_results%5D=1
     body: 
     headers: 
@@ -138,27 +21,27 @@
       message: OK
     headers: 
       date: 
-      - Tue, 19 Apr 2011 21:28:19 GMT
+      - Thu, 12 May 2011 18:13:20 GMT
       status: 
       - 200 OK
       content-type: 
       - application/json; charset=utf-8
       etag: 
-      - "\"69a17e970df7e6e16000694922aca655\""
+      - "\"640ab79c72065346b50cc8f7782fa42d\""
       cache-control: 
       - max-age=0, private, must-revalidate
       x-ua-compatible: 
       - IE=Edge
       set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlM2IyNjE2YWUzMTMxOGZlNzcyZTE2NDAyMmZiOGM5MTM%3D--5dd999969fd16fe254587edf1eae2ab057cfc9b5; path=/; HttpOnly
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlOGFjYjA1OTQ1ZTliMzRjYTM1ZGI2ZjA3NjQzOTcwMmE%3D--aaddeed34d591eedc3270d86c00087d91be08e18; path=/; HttpOnly
       x-runtime: 
-      - "0.287287"
-    body: "[{\"_id\":\"610766bcc020459a043d837e7eda2175\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"100katrina@gmail.com\",\"end_date\":\"2011-03-29T00:00:00Z\",\"enrollment_id\":\"277346\",\"owner\":\"100katrina@gmail.com\",\"product_id\":\"50dkjfi395kdj\",\"rid\":\"50dkjfi395kdj\",\"start_date\":\"2010-03-29T00:00:00Z\",\"store_id\":\"www.thinkwell.com\",\"tx_id\":\"\",\"updated_at\":\"2011-04-07T22:41:40Z\",\"url\":\"http://homeschool.thinkwell.com\",\"uuid\":\"610766bcc020459a043d837e7eda2175\",\"version\":3,\"title\":\"50dkjfi395kdj\"}]"
+      - "0.504299"
+    body: "[{\"_id\":\"2ffe10b01ed9012eb12d4040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"owner\":\"4robins@gmail.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A426880766\",\"url\":null,\"uuid\":\"2ffe10b01ed9012eb12d4040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}}]"
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://localhost:3000/enrollments/610766bcc020459a043d837e7eda2175.json
+    uri: http://localhost:3000/enrollments/2ffe10b01ed9012eb12d4040185a8c5f.json
     body: 
     headers: 
       accept: 
@@ -177,20 +60,20 @@
       message: OK
     headers: 
       date: 
-      - Tue, 19 Apr 2011 21:28:20 GMT
+      - Thu, 12 May 2011 18:13:21 GMT
       status: 
       - 200 OK
       content-type: 
       - application/json; charset=utf-8
       etag: 
-      - "\"d0c24f94ba58bbfa2811e74ea5ad813f\""
+      - "\"38b9143acf78c2a82c643a4b49b127be\""
       cache-control: 
       - max-age=0, private, must-revalidate
       x-ua-compatible: 
       - IE=Edge
       set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlMzc2MWRmODJhNTM4NTg4ZjJhMjMwNmRlYzM4ZjliNjA%3D--33ab579142d82ecfb43ca32bc3bad772ab808ced; path=/; HttpOnly
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlYmZlNGM5MDk4N2FhZjY1YzgwOWEyYjNiYWMyMWE0NGM%3D--9efd00b83c5882597e9a19f4754e74ed10a797ed; path=/; HttpOnly
       x-runtime: 
-      - "0.284400"
-    body: "{\"_id\":\"610766bcc020459a043d837e7eda2175\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"100katrina@gmail.com\",\"end_date\":\"2011-03-29T00:00:00Z\",\"enrollment_id\":\"277346\",\"owner\":\"100katrina@gmail.com\",\"product_id\":\"50dkjfi395kdj\",\"rid\":\"50dkjfi395kdj\",\"start_date\":\"2010-03-29T00:00:00Z\",\"store_id\":\"www.thinkwell.com\",\"tx_id\":\"\",\"updated_at\":\"2011-04-07T22:41:40Z\",\"url\":\"http://homeschool.thinkwell.com\",\"uuid\":\"610766bcc020459a043d837e7eda2175\",\"version\":3,\"title\":\"50dkjfi395kdj\"}"
+      - "0.438614"
+    body: "{\"_id\":\"2ffe10b01ed9012eb12d4040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"owner\":\"4robins@gmail.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A426880766\",\"url\":null,\"uuid\":\"2ffe10b01ed9012eb12d4040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}}"
     http_version: "1.1"
