@@ -100,7 +100,7 @@ describe Yolk::Client do
 
       updated_enrollment = @client.enrollment uuid
       updated_enrollment.owner.should == test_enrollment.owner
-      updated_enrollment.rid.should == test_enrollment.rid
+      updated_enrollment.product.rid.should == test_enrollment.product.rid
       updated_enrollment.access_length.should == length
     end
     it "should throw validation errors on invalid update" do
@@ -115,7 +115,9 @@ describe Yolk::Client do
       end_date.gsub!(/GMT/, 'UTC')
       lambda{
         @client.enrollment_update uuid, {:start_date => start_date, :end_date => end_date}
-      }.should raise_error(Yolk::UnprocessableEntity){|e| e.body['end_date'].should == ["must be after #{start_date}"]}
+      }.should raise_error(Yolk::UnprocessableEntity){|e|
+        Time.parse(e.body['end_date'].first.match(/^must be after (.*)$/)[1]).should == now
+      }
     end
   end
   describe "enrollment_destroy" do

@@ -21,27 +21,27 @@
       message: OK
     headers: 
       date: 
-      - Tue, 19 Apr 2011 21:49:57 GMT
+      - Thu, 12 May 2011 18:23:07 GMT
       status: 
       - 200 OK
       content-type: 
       - application/json; charset=utf-8
       etag: 
-      - "\"f891f5be468e38f4ec1b86a10218c550\""
+      - "\"640ab79c72065346b50cc8f7782fa42d\""
       cache-control: 
       - max-age=0, private, must-revalidate
       x-ua-compatible: 
       - IE=Edge
       set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlMGM5YzA3ZDViMjVhZmFkOTFlZWQwZTM1MTk3OTk0NDk%3D--afc11a872a7040345e7bba630535d7b27a75c435; path=/; HttpOnly
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlOTUwNDU1NGRmOTUwYzdiMjUyMTBiMDI3NTU2Yzg3OWU%3D--cdd3d736edeef70e8f13c21dd2a3c09ddaf40092; path=/; HttpOnly
       x-runtime: 
-      - "0.241304"
-    body: "[{\"_id\":\"6208f467f2db70afe8e0db65f95cb376\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"14books@bellsouth.net\",\"end_date\":\"2009-11-09T23:59:59Z\",\"enrollment_id\":\"168656\",\"owner\":\"14books@bellsouth.net\",\"product_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"start_date\":\"2008-04-29T14:43:27Z\",\"store_id\":\"www.thinkwell.com\",\"tx_id\":\"\",\"updated_at\":\"2011-04-19T21:31:28Z\",\"url\":\"http://homeschool.thinkwell.com\",\"uuid\":\"6208f467f2db70afe8e0db65f95cb376\",\"version\":3,\"title\":\"Prealgebra\"}]"
+      - "0.443896"
+    body: "[{\"_id\":\"2ffe10b01ed9012eb12d4040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"owner\":\"4robins@gmail.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A426880766\",\"url\":null,\"uuid\":\"2ffe10b01ed9012eb12d4040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}}]"
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :put
-    uri: http://localhost:3000/enrollments/6208f467f2db70afe8e0db65f95cb376.json
+    uri: http://localhost:3000/enrollments/2ffe10b01ed9012eb12d4040185a8c5f.json
     body: "{\"enrollment\":{\"access_unit\":\"month\",\"access_length\":2}}"
     headers: 
       accept: 
@@ -60,11 +60,11 @@
       message: OK
     headers: 
       date: 
-      - Tue, 19 Apr 2011 21:49:57 GMT
+      - Thu, 12 May 2011 18:23:07 GMT
       status: 
       - 200 OK
       location: 
-      - http://localhost:3000/enrollments/6208f467f2db70afe8e0db65f95cb376
+      - http://localhost:3000/enrollments/2ffe10b01ed9012eb12d4040185a8c5f
       content-type: 
       - application/json; charset=utf-8
       etag: 
@@ -74,15 +74,15 @@
       x-ua-compatible: 
       - IE=Edge
       set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlZWU2ZDk4MTMzMTY3ZTQ1OThmMjMwNTcwMDg5Y2IwNDA%3D--eef9830b59a41173acc08b5fca7ce89fb78bf979; path=/; HttpOnly
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlZDdiZTA5YmRlODI4MjQ2N2MxYjA4ZmM2YzYxYmVhMTU%3D--d2d7f62e62ec7907460d05700e3ac8147a55c4b1; path=/; HttpOnly
       x-runtime: 
-      - "0.273760"
+      - "0.451415"
     body: "{}"
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://localhost:3000/enrollments/6208f467f2db70afe8e0db65f95cb376.json
+    uri: http://localhost:3000/enrollments/2ffe10b01ed9012eb12d4040185a8c5f.json
     body: 
     headers: 
       accept: 
@@ -101,27 +101,27 @@
       message: OK
     headers: 
       date: 
-      - Tue, 19 Apr 2011 21:49:57 GMT
+      - Thu, 12 May 2011 18:23:08 GMT
       status: 
       - 200 OK
       content-type: 
       - application/json; charset=utf-8
       etag: 
-      - "\"a1504307064b76d686e370cbb0610a05\""
+      - "\"c3db254d2ab0e570c79ae0c67112ff74\""
       cache-control: 
       - max-age=0, private, must-revalidate
       x-ua-compatible: 
       - IE=Edge
       set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlNjFkOTg4NjkyZTZiODk2ZDNlYjg0Nzk2NjUxMTUxZTE%3D--e36422696b25f746f2cb34e09bfc30fdee200235; path=/; HttpOnly
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlZmM5ODZiZDc3NTU5OGEyMjdiN2UzYzk1ZjNlZWVmYzI%3D--503b1c5074971afb517343cd415e21ca15f6c6b7; path=/; HttpOnly
       x-runtime: 
-      - "0.240037"
-    body: "{\"_id\":\"6208f467f2db70afe8e0db65f95cb376\",\"access_length\":2,\"access_unit\":\"month\",\"assigned_to\":\"14books@bellsouth.net\",\"end_date\":\"2009-11-09T23:59:59Z\",\"enrollment_id\":\"168656\",\"owner\":\"14books@bellsouth.net\",\"product_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"start_date\":\"2008-04-29T14:43:27Z\",\"store_id\":\"www.thinkwell.com\",\"tx_id\":\"\",\"updated_at\":\"2011-04-19T21:49:57Z\",\"url\":\"http://homeschool.thinkwell.com\",\"uuid\":\"6208f467f2db70afe8e0db65f95cb376\",\"version\":4,\"title\":\"Prealgebra\"}"
+      - "0.450288"
+    body: "{\"_id\":\"2ffe10b01ed9012eb12d4040185a8c5f\",\"access_length\":2,\"access_unit\":\"month\",\"owner\":\"4robins@gmail.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A426880766\",\"updated_at\":\"2011-05-12T13:23:07-05:00\",\"url\":null,\"uuid\":\"2ffe10b01ed9012eb12d4040185a8c5f\",\"version\":2,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}}"
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :put
-    uri: http://localhost:3000/enrollments/6208f467f2db70afe8e0db65f95cb376.json
+    uri: http://localhost:3000/enrollments/2ffe10b01ed9012eb12d4040185a8c5f.json
     body: "{\"enrollment\":{\"start_date\":\"2010-10-10 00:00:00 UTC\",\"end_date\":\"2010-10-09 00:00:00 UTC\"}}"
     headers: 
       accept: 
@@ -140,7 +140,7 @@
       message: Unprocessable Entity
     headers: 
       date: 
-      - Tue, 19 Apr 2011 21:49:57 GMT
+      - Thu, 12 May 2011 18:23:08 GMT
       status: 
       - 422 Unprocessable Entity
       content-type: 
@@ -150,8 +150,8 @@
       x-ua-compatible: 
       - IE=Edge
       set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlYmUwNzc5MWU2OGYzMTQ2MjFhYTI3NzZmNzI0MGE5YjU%3D--5b13c014d511ab38522071217633242b8c5134f1; path=/; HttpOnly
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlZmQxZDMyM2NiYTc2YWU3NTkzNTJkMTRmNTAyNTM1MDM%3D--922bf73cc4d9e2b397773244c6282d21224531f9; path=/; HttpOnly
       x-runtime: 
-      - "0.187138"
-    body: "{\"end_date\":[\"must be after 2010-10-10 00:00:00 UTC\"]}"
+      - "0.527040"
+    body: "{\"end_date\":[\"must be after 2010-10-09 19:00:00 -0500\"]}"
     http_version: "1.1"
