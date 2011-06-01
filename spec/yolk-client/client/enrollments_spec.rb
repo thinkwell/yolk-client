@@ -30,8 +30,9 @@ describe Yolk::Client do
       it "should only return up to the limit" do
         @organizations.count.should == 20
       end
-      it "should return rash objects" do
-        @organizations.all?{|e| e.should be_instance_of Hashie::Rash}
+      it "should return Yolk::Model objects" do
+        @organizations.all?{|e| e.should be_instance_of Yolk::Model}
+        @organizations.all?{|e| e.should be_a Hashie::Rash}
       end
       it "should return actual Time objects instead of strings" do
         @organizations.reject{|e| e.start_date.nil? || e.end_date.nil?}.
@@ -73,6 +74,11 @@ describe Yolk::Client do
       enrollment.should be_a Hashie::Mash
       enrollment.uuid.should == uuid
       enrollment.should == test_enrollment
+    end
+    specify "uuid can be accessed through _id or id accessors" do
+      enrollment = get_test_enrollment
+      enrollment._id.should == enrollment.uuid
+      enrollment.id.should == enrollment.uuid
     end
   end
   describe "enrollment_create" do

@@ -13,8 +13,9 @@ describe Yolk::Client do
       it "should only return 50" do
         @organizations.count.should == 50
       end
-      it "should return rash objects" do
-        @organizations.all?{|o| o.should be_instance_of Hashie::Rash}
+      it "should return Yolk::Model objects" do
+        @organizations.all?{|o| o.should be_instance_of Yolk::Model}
+        @organizations.all?{|o| o.should be_a Hashie::Rash}
       end
       it "should return actual organizations" do
         @organizations.all?{|o| [:name, :state, :city, :url].each{|k| o.should respond_to(k) }}
@@ -29,6 +30,10 @@ describe Yolk::Client do
       organization.should be_a Hashie::Rash
       organization._id.should == id
       organization.should == test_organization
+    end
+    specify "_id can be accessed through id accessor" do
+      organization = get_test_organization
+      organization.id.should == organization._id
     end
   end
 end
