@@ -20,6 +20,8 @@ VCR.config do |c|
     i.request.headers['x-api-timestamp'] = /^[0-9]{10}$/
     i.request.headers['x-api-signature'] = /^[0-9a-f]{32}$/
   end
+  # Hack so we can keep last VCR response to read its headers
+  c.before_playback{|i| Rspec.configuration.last_kept_response = i.response}
 end
 
 RSpec.configure do |config|
@@ -33,4 +35,6 @@ RSpec.configure do |config|
   #config.mock_with :rspec
 
   config.extend VCR::RSpec::Macros
+
+  config.add_setting :last_kept_response
 end

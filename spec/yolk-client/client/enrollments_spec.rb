@@ -58,11 +58,16 @@ describe Yolk::Client do
     context "with state" do
       it "should return active enrollments" do
         enrollments = client.enrollments :search => {:state => :active, :limit_results => 20}
-        enrollments.all?{|e| !e.assigned_to.nil? && e.end_date > Time.now}
+        record_time = last_response_time
+        enrollments.all? do |e|
+          e.assigned_to.should_not be_nil
+          e.end_date.should > record_time
+        end
       end
       it "should return expired enrollments" do
         enrollments = client.enrollments :search => {:state => :expired, :limit_results => 20}
-        enrollments.all?{|e| e.end_date < Time.now}
+        record_time = last_response_time
+        enrollments.all?{|e| e.end_date.should < record_time}
       end
     end
   end
