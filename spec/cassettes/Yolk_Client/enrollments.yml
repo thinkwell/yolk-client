@@ -272,3 +272,81 @@
       - "0.472677"
     body: "[{\"_id\":\"faff4b405ef0012e604c001aa0be65af\",\"access_length\":1,\"access_unit\":\"month\",\"assigned_to\":\"admin@thinkwell.com\",\"created_at\":\"2011-05-12T13:10:02-05:00\",\"disabled_at\":null,\"end_date\":\"2012-05-03T00:00:00-05:00\",\"owner\":\"admin@thinkwell.com\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2011-05-03T00:00:00-05:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":null,\"updated_at\":\"2011-05-12T13:10:02-05:00\",\"uuid\":\"faff4b405ef0012e604c001aa0be65af\",\"version\":1,\"product\":{\"_id\":\"4de80690bcb41c22e3000020\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}}]"
     http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://localhost:3000/enrollments.json?search%5Bassigned_to%5D=admin@thinkwell.com
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - Yolk Ruby Gem
+      x-api-key: 
+      - 4d9f75499a768f299e000002
+      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
+      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Thu, 02 Jun 2011 22:27:00 GMT
+      status: 
+      - 200 OK
+      content-type: 
+      - application/json; charset=utf-8
+      etag: 
+      - "\"92b3151ceaef2575d0cdae23bf3ee6a1\""
+      cache-control: 
+      - max-age=0, private, must-revalidate
+      x-ua-compatible: 
+      - IE=Edge
+      set-cookie: 
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlOTcwZjdkYWFkOGQ5MjU3ZWRkNjQwYjNmODliMDRjNzY%3D--430cd750af3010431ac23582f8d6e25fef35f2bd; path=/; HttpOnly
+      x-runtime: 
+      - "0.360493"
+    body: "[{\"_id\":\"faff4b405ef0012e604c001aa0be65af\",\"access_length\":1,\"access_unit\":\"month\",\"assigned_to\":\"admin@thinkwell.com\",\"created_at\":\"2011-05-12T13:10:02-05:00\",\"disabled_at\":null,\"end_date\":\"2012-05-03T00:00:00-05:00\",\"owner\":\"admin@thinkwell.com\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2011-05-03T00:00:00-05:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":null,\"updated_at\":\"2011-05-12T13:10:02-05:00\",\"uuid\":\"faff4b405ef0012e604c001aa0be65af\",\"version\":1,\"product\":{\"_id\":\"4de80690bcb41c22e3000020\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}}]"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://localhost:3000/enrollments.json?search%5Bassigned_to%5D=admin@thinkwell.com&search%5Blimit_results%5D=0
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - Yolk Ruby Gem
+      x-api-key: 
+      - 4d9f75499a768f299e000002
+      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
+      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Thu, 02 Jun 2011 22:27:00 GMT
+      status: 
+      - 200 OK
+      content-type: 
+      - application/json; charset=utf-8
+      etag: 
+      - "\"92b3151ceaef2575d0cdae23bf3ee6a1\""
+      cache-control: 
+      - max-age=0, private, must-revalidate
+      x-ua-compatible: 
+      - IE=Edge
+      set-cookie: 
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlZTdiNmZlYTM3MWM0ZTdkYzIyYjk0MGFjNDFmMmUyYWE%3D--240b2d50d3dafe2cdf36fb985871af30042c7fa2; path=/; HttpOnly
+      x-runtime: 
+      - "0.494260"
+    body: "[{\"_id\":\"faff4b405ef0012e604c001aa0be65af\",\"access_length\":1,\"access_unit\":\"month\",\"assigned_to\":\"admin@thinkwell.com\",\"created_at\":\"2011-05-12T13:10:02-05:00\",\"disabled_at\":null,\"end_date\":\"2012-05-03T00:00:00-05:00\",\"owner\":\"admin@thinkwell.com\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2011-05-03T00:00:00-05:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":null,\"updated_at\":\"2011-05-12T13:10:02-05:00\",\"uuid\":\"faff4b405ef0012e604c001aa0be65af\",\"version\":1,\"product\":{\"_id\":\"4de80690bcb41c22e3000020\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}}]"
+    http_version: "1.1"

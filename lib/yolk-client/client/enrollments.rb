@@ -24,6 +24,13 @@ module Yolk
         enrollments(options)
       end
 
+      def enrollments_by_assignee assignee, options = {}
+        format_search_options options
+        options.merge! "search[limit_results]" => 0 unless options["search[limit_results]"]
+        options.merge! "search[assigned_to]" => assignee
+        enrollments(options)
+      end
+
       def enrollment uuid
         response = get("enrollments/#{uuid}")
         prepare_enrollment(response)

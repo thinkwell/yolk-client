@@ -60,6 +60,18 @@ describe Yolk::Client do
         enrollments.all?{|e| e.owner.should == "admin@thinkwell.com"}
       end
     end
+    context "with assigned_to passed" do
+      it "should return only enrollments for that assignee" do
+        enrollments = client.enrollments :search => {:assigned_to => "admin@thinkwell.com"}
+        enrollments.should_not be_empty
+        enrollments.all?{|e| e.assigned_to.should == "admin@thinkwell.com"}
+      end
+      specify "enrollments_by_assignee" do
+        enrollments = client.enrollments_by_assignee "admin@thinkwell.com"
+        enrollments.should_not be_empty
+        enrollments.all?{|e| e.assigned_to.should == "admin@thinkwell.com"}
+      end
+    end
     context "with state" do
       it "should return active enrollments" do
         enrollments = client.enrollments :search => {:state => :active, :limit_results => 20}
