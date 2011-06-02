@@ -17,6 +17,13 @@ module Yolk
         prepare_enrollments response
       end
 
+      def enrollments_by_owner owner, options = {}
+        format_search_options options
+        options.merge! "search[limit_results]" => 0 unless options["search[limit_results]"]
+        options.merge! "search[owner]" => owner
+        enrollments(options)
+      end
+
       def enrollment uuid
         response = get("enrollments/#{uuid}")
         prepare_enrollment(response)

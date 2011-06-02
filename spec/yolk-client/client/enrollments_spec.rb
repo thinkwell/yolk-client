@@ -54,6 +54,11 @@ describe Yolk::Client do
         enrollments.should_not be_empty
         enrollments.all?{|e| e.owner.should == "admin@thinkwell.com"}
       end
+      specify "enrollments_by_owner" do
+        enrollments = client.enrollments_by_owner "admin@thinkwell.com"
+        enrollments.should_not be_empty
+        enrollments.all?{|e| e.owner.should == "admin@thinkwell.com"}
+      end
     end
     context "with state" do
       it "should return active enrollments" do
@@ -61,7 +66,7 @@ describe Yolk::Client do
         record_time = last_response_time
         enrollments.all? do |e|
           e.assigned_to.should_not be_nil
-          e.end_date.should > record_time
+          e.end_date.should > record_time.to_date.to_time
         end
       end
       it "should return expired enrollments" do
