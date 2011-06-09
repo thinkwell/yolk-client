@@ -36,4 +36,12 @@ describe Yolk::Client do
       organization.id.should == organization._id
     end
   end
+  describe "organizations_sections" do
+    use_vcr_cassette "Yolk_Client/organizations"
+    it "should return the sections for the organizations" do
+      organizations = client.organizations
+      sections = client.organizations.map(&:courses).flatten.map(&:sections).flatten.compact
+      client.organizations_sections.should =~ sections
+    end
+  end
 end

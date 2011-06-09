@@ -8,6 +8,11 @@ module Yolk
         prepare_organizations response
       end
 
+      def organizations_sections options = {}
+        format_search_options options
+        response = get('organizations/all_sections', options)
+      end
+
       def organization id
         response = get("organizations/#{id}")
         prepare_organization response
