@@ -18,6 +18,18 @@ module Yolk
         prepare_organization response
       end
 
+      def course_update org_id, course
+        course_id = course && (course[:id] || course[:_id])
+        return unless org_id && course_id
+        put("organizations/#{org_id}/courses/#{course_id}", {:course => course})
+      end
+
+      def section_update org_id, course_id, section
+        section_id = section && (section[:id] || section[:_id])
+        return unless org_id && course_id && section_id
+        put("organizations/#{org_id}/courses/#{course_id}/sections/#{section_id}", {:section => section})
+      end
+
       private
       def prepare_organizations organizations
         organizations.each {|o| prepare_organization o }
