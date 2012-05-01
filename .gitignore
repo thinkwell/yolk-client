@@ -4,3 +4,4 @@
 .autotest
 Gemfile.lock
 pkg/*
+.rvmrc
