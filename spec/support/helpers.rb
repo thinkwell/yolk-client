@@ -1,7 +1,7 @@
 def client
-  @client = Yolk::Client.new(:consumer_key => '4d9f75499a768f299e000002', :consumer_secret => 'test',
-                               :endpoint => 'http://localhost:3000/')
-end
-def last_response_time
-  Time.parse(Rspec.configuration.last_kept_response.headers['date'].first)
+  @client = Yolk::Client.new(
+    :consumer_key => TEST_CONSUMER_KEY,
+    :consumer_secret => TEST_CONSUMER_SECRET,
+    :endpoint => 'http://localhost:3000/'
+  )
 end

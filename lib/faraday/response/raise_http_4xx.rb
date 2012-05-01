@@ -31,12 +31,7 @@ module Faraday
       elsif body['error']
         ": #{body['error']}"
       elsif body['errors']
-        first = body['errors'].to_a.first
-        if first.kind_of? Hash
-          ": #{first['message'].chomp}"
-        else
-          ": #{first.chomp}"
-        end
+        ": #{body['errors'].inspect}"
       end
     end
   end

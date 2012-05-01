@@ -1,145 +1,555 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
+---
+http_interactions:
+- request:
+    method: get
     uri: http://localhost:3000/enrollments.json?search%5Blimit_results%5D=20
-    body: 
-    headers: 
-      accept: 
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
       - application/json
-      user-agent: 
+      User-Agent:
       - Yolk Ruby Gem
-      x-api-key: 
+      X-Api-Key:
       - invalid
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
+      X-Api-Timestamp:
+      - '1335896122'
+      X-Api-Signature:
+      - !binary |-
+        Njk1MWQ0OWEzYjA4ZGU4MjAwNTY4MzU0ODliZGZkMWQ=
+      Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 401
       message: Unauthorized
-    headers: 
-      date: 
-      - Thu, 12 May 2011 17:27:41 GMT
-      status: 
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:22 GMT
+      Status:
       - 401 Unauthorized
-      content-type: 
+      Connection:
+      - close
+      Content-Type:
       - application/json; charset=utf-8
-      cache-control: 
-      - no-cache
-      x-ua-compatible: 
+      X-Ua-Compatible:
       - IE=Edge
-      x-runtime: 
-      - "0.398374"
-    body: "{\"error\":\"Invalid email or password.\"}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://localhost:3000/enrollments/nonexistant.json
-    body: 
-    headers: 
-      accept: 
-      - application/json
-      user-agent: 
-      - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 404
-      message: Not Found
-    headers: 
-      date: 
-      - Thu, 12 May 2011 17:27:41 GMT
-      status: 
-      - 404 Not Found
-      content-type: 
-      - application/json; charset=utf-8
-      cache-control: 
+      Cache-Control:
       - no-cache
-      x-ua-compatible: 
-      - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlNDg1MjdhYTZmZGRhNmU5NWY3Mzc5OThkNGQxMDZmMGE%3D--f452be44c2070c1687b6e4fbf6e009c30755ca9d; path=/; HttpOnly
-      x-runtime: 
-      - "0.486722"
-    body: "{\"status_code\":404,\"status_message\":\"Not Found\",\"message\":\"Not Found\",\"error\":\"Not Found\",\"type\":\"Mongoid::Errors::DocumentNotFound\",\"application_trace\":[],\"framework_trace\":[\"mongoid (2.0.1) lib/mongoid/criterion/inclusion.rb:192:in `block in execute_or_raise'\",\"/home/pinkmexican/.rvm/gems/ruby-1.9.2-p180@yolk/bundler/gems/andand-bc93dee24216/lib/andand.rb:60:in `me'\",\"mongoid (2.0.1) lib/mongoid/criterion/inclusion.rb:190:in `execute_or_raise'\",\"mongoid (2.0.1) lib/mongoid/criterion/inclusion.rb:106:in `find'\",\"mongoid (2.0.1) lib/mongoid/finders.rb:67:in `find'\",\"inherited_resources (1.2.2) lib/inherited_resources/base_helpers.rb:44:in `resource'\",\"inherited_resources (1.2.2) lib/inherited_resources/actions.rb:13:in `show'\",\"actionpack (3.0.7) lib/action_controller/metal/implicit_render.rb:5:in `send_action'\",\"actionpack (3.0.7) lib/abstract_controller/base.rb:150:in `process_action'\",\"actionpack (3.0.7) lib/action_controller/metal/rendering.rb:11:in `process_action'\",\"actionpack (3.0.7) lib/abstract_controller/callbacks.rb:18:in `block in process_action'\",\"activesupport (3.0.7) lib/active_support/callbacks.rb:441:in `_run__4477540602278541083__process_action__3658015890414327155__callbacks'\",\"activesupport (3.0.7) lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'\",\"activesupport (3.0.7) lib/active_support/callbacks.rb:94:in `run_callbacks'\",\"actionpack (3.0.7) lib/abstract_controller/callbacks.rb:17:in `process_action'\",\"actionpack (3.0.7) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'\",\"activesupport (3.0.7) lib/active_support/notifications.rb:52:in `block in instrument'\",\"activesupport (3.0.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'\",\"activesupport (3.0.7) lib/active_support/notifications.rb:52:in `instrument'\",\"actionpack (3.0.7) lib/action_controller/metal/instrumentation.rb:29:in `process_action'\",\"actionpack (3.0.7) lib/action_controller/metal/rescue.rb:17:in `process_action'\",\"actionpack (3.0.7) lib/abstract_controller/base.rb:119:in `process'\",\"actionpack (3.0.7) lib/abstract_controller/rendering.rb:41:in `process'\",\"actionpack (3.0.7) lib/action_controller/metal.rb:138:in `dispatch'\",\"actionpack (3.0.7) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'\",\"actionpack (3.0.7) lib/action_controller/metal.rb:178:in `block in action'\",\"actionpack (3.0.7) lib/action_dispatch/routing/route_set.rb:62:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'\",\"actionpack (3.0.7) lib/action_dispatch/routing/route_set.rb:27:in `call'\",\"rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `block in call'\",\"rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `block in recognize'\",\"rack-mount (0.6.14) lib/rack/mount/code_generation.rb:75:in `optimized_each'\",\"rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'\",\"rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/routing/route_set.rb:493:in `call'\",\"sass (3.1.1) lib/sass/plugin/rack.rb:54:in `call'\",\"warden (1.0.3) lib/warden/manager.rb:35:in `block in call'\",\"warden (1.0.3) lib/warden/manager.rb:34:in `catch'\",\"warden (1.0.3) lib/warden/manager.rb:34:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/head.rb:14:in `call'\",\"rack (1.2.2) lib/rack/methodoverride.rb:24:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/params_parser.rb:21:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/flash.rb:182:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/cookies.rb:302:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'\",\"activesupport (3.0.7) lib/active_support/callbacks.rb:416:in `_run_call_callbacks'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/callbacks.rb:44:in `call'\",\"rack (1.2.2) lib/rack/sendfile.rb:107:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'\",\"railties (3.0.7) lib/rails/rack/logger.rb:13:in `call'\",\"rack (1.2.2) lib/rack/runtime.rb:17:in `call'\",\"activesupport (3.0.7) lib/active_support/cache/strategy/local_cache.rb:72:in `call'\",\"rack (1.2.2) lib/rack/lock.rb:11:in `block in call'\",\"<internal:prelude>:10:in `synchronize'\",\"rack (1.2.2) lib/rack/lock.rb:11:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/static.rb:30:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/static.rb:30:in `call'\",\"railties (3.0.7) lib/rails/application.rb:168:in `call'\",\"railties (3.0.7) lib/rails/application.rb:77:in `method_missing'\",\"railties (3.0.7) lib/rails/rack/log_tailer.rb:14:in `call'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:545:in `process_client'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:623:in `block in worker_loop'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:621:in `each'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:621:in `worker_loop'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:509:in `block (2 levels) in spawn_missing_workers'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:507:in `fork'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:507:in `block in spawn_missing_workers'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:503:in `each'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:503:in `spawn_missing_workers'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:516:in `maintain_worker_count'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:166:in `start'\",\"unicorn (3.6.1) lib/unicorn.rb:30:in `run'\",\"hooves (0.3) lib/hooves/unicorn.rb:33:in `run'\",\"rack (1.2.2) lib/rack/server.rb:213:in `start'\",\"railties (3.0.7) lib/rails/commands/server.rb:65:in `start'\",\"railties (3.0.7) lib/rails/commands.rb:30:in `block in <top (required)>'\",\"railties (3.0.7) lib/rails/commands.rb:27:in `tap'\",\"railties (3.0.7) lib/rails/commands.rb:27:in `<top (required)>'\",\"script/rails:6:in `require'\",\"script/rails:6:in `<main>'\"],\"full_trace\":[\"mongoid (2.0.1) lib/mongoid/criterion/inclusion.rb:192:in `block in execute_or_raise'\",\"/home/pinkmexican/.rvm/gems/ruby-1.9.2-p180@yolk/bundler/gems/andand-bc93dee24216/lib/andand.rb:60:in `me'\",\"mongoid (2.0.1) lib/mongoid/criterion/inclusion.rb:190:in `execute_or_raise'\",\"mongoid (2.0.1) lib/mongoid/criterion/inclusion.rb:106:in `find'\",\"mongoid (2.0.1) lib/mongoid/finders.rb:67:in `find'\",\"inherited_resources (1.2.2) lib/inherited_resources/base_helpers.rb:44:in `resource'\",\"inherited_resources (1.2.2) lib/inherited_resources/actions.rb:13:in `show'\",\"actionpack (3.0.7) lib/action_controller/metal/implicit_render.rb:5:in `send_action'\",\"actionpack (3.0.7) lib/abstract_controller/base.rb:150:in `process_action'\",\"actionpack (3.0.7) lib/action_controller/metal/rendering.rb:11:in `process_action'\",\"actionpack (3.0.7) lib/abstract_controller/callbacks.rb:18:in `block in process_action'\",\"activesupport (3.0.7) lib/active_support/callbacks.rb:441:in `_run__4477540602278541083__process_action__3658015890414327155__callbacks'\",\"activesupport (3.0.7) lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'\",\"activesupport (3.0.7) lib/active_support/callbacks.rb:94:in `run_callbacks'\",\"actionpack (3.0.7) lib/abstract_controller/callbacks.rb:17:in `process_action'\",\"actionpack (3.0.7) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'\",\"activesupport (3.0.7) lib/active_support/notifications.rb:52:in `block in instrument'\",\"activesupport (3.0.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'\",\"activesupport (3.0.7) lib/active_support/notifications.rb:52:in `instrument'\",\"actionpack (3.0.7) lib/action_controller/metal/instrumentation.rb:29:in `process_action'\",\"actionpack (3.0.7) lib/action_controller/metal/rescue.rb:17:in `process_action'\",\"actionpack (3.0.7) lib/abstract_controller/base.rb:119:in `process'\",\"actionpack (3.0.7) lib/abstract_controller/rendering.rb:41:in `process'\",\"actionpack (3.0.7) lib/action_controller/metal.rb:138:in `dispatch'\",\"actionpack (3.0.7) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'\",\"actionpack (3.0.7) lib/action_controller/metal.rb:178:in `block in action'\",\"actionpack (3.0.7) lib/action_dispatch/routing/route_set.rb:62:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'\",\"actionpack (3.0.7) lib/action_dispatch/routing/route_set.rb:27:in `call'\",\"rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `block in call'\",\"rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `block in recognize'\",\"rack-mount (0.6.14) lib/rack/mount/code_generation.rb:75:in `optimized_each'\",\"rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'\",\"rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/routing/route_set.rb:493:in `call'\",\"sass (3.1.1) lib/sass/plugin/rack.rb:54:in `call'\",\"warden (1.0.3) lib/warden/manager.rb:35:in `block in call'\",\"warden (1.0.3) lib/warden/manager.rb:34:in `catch'\",\"warden (1.0.3) lib/warden/manager.rb:34:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/head.rb:14:in `call'\",\"rack (1.2.2) lib/rack/methodoverride.rb:24:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/params_parser.rb:21:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/flash.rb:182:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/cookies.rb:302:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'\",\"activesupport (3.0.7) lib/active_support/callbacks.rb:416:in `_run_call_callbacks'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/callbacks.rb:44:in `call'\",\"rack (1.2.2) lib/rack/sendfile.rb:107:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'\",\"railties (3.0.7) lib/rails/rack/logger.rb:13:in `call'\",\"rack (1.2.2) lib/rack/runtime.rb:17:in `call'\",\"activesupport (3.0.7) lib/active_support/cache/strategy/local_cache.rb:72:in `call'\",\"rack (1.2.2) lib/rack/lock.rb:11:in `block in call'\",\"<internal:prelude>:10:in `synchronize'\",\"rack (1.2.2) lib/rack/lock.rb:11:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/static.rb:30:in `call'\",\"actionpack (3.0.7) lib/action_dispatch/middleware/static.rb:30:in `call'\",\"railties (3.0.7) lib/rails/application.rb:168:in `call'\",\"railties (3.0.7) lib/rails/application.rb:77:in `method_missing'\",\"railties (3.0.7) lib/rails/rack/log_tailer.rb:14:in `call'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:545:in `process_client'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:623:in `block in worker_loop'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:621:in `each'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:621:in `worker_loop'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:509:in `block (2 levels) in spawn_missing_workers'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:507:in `fork'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:507:in `block in spawn_missing_workers'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:503:in `each'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:503:in `spawn_missing_workers'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:516:in `maintain_worker_count'\",\"unicorn (3.6.1) lib/unicorn/http_server.rb:166:in `start'\",\"unicorn (3.6.1) lib/unicorn.rb:30:in `run'\",\"hooves (0.3) lib/hooves/unicorn.rb:33:in `run'\",\"rack (1.2.2) lib/rack/server.rb:213:in `start'\",\"railties (3.0.7) lib/rails/commands/server.rb:65:in `start'\",\"railties (3.0.7) lib/rails/commands.rb:30:in `block in <top (required)>'\",\"railties (3.0.7) lib/rails/commands.rb:27:in `tap'\",\"railties (3.0.7) lib/rails/commands.rb:27:in `<top (required)>'\",\"script/rails:6:in `require'\",\"script/rails:6:in `<main>'\"]}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request 
-    method: :post
-    uri: http://localhost:3000/enrollments.json
-    body: "{\"enrollment\":{\"owner\":\"blah@test.com\"}}"
-    headers: 
-      accept: 
-      - application/json
-      user-agent: 
-      - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      content-type: 
-      - application/json
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 422
-      message: Unprocessable Entity
-    headers: 
-      date: 
-      - Thu, 12 May 2011 17:27:42 GMT
-      status: 
-      - 422 Unprocessable Entity
-      content-type: 
-      - application/json; charset=utf-8
-      cache-control: 
-      - no-cache
-      x-ua-compatible: 
-      - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlNmYyNDU2OWRiM2Y1ZjIzY2ZkZjA2NWFlNjM5Yjg5MzI%3D--008b403ca405ea471579861cc88786203fb265f8; path=/; HttpOnly
-      x-runtime: 
-      - "0.429212"
-    body: "{\"section\":[\"can't be blank\"]}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :delete
+      X-Request-Id:
+      - fcae16067f6eff650cc8b8b1c5182eae
+      X-Runtime:
+      - '0.147803'
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":"Invalid email or password."}'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:22 GMT
+- request:
+    method: get
     uri: http://localhost:3000/enrollments/nonexistant.json
     body:
+      encoding: US-ASCII
+      string: ''
     headers:
-      accept:
+      Accept:
       - application/json
-      user-agent:
+      User-Agent:
       - Yolk Ruby Gem
-      x-api-key:
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896122'
+      X-Api-Signature:
+      - !binary |-
+        Y2I4NjFkNDRlNTM5OWVmMDg4OWI2ZTQ0ZWY3ZGY4Y2I=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
       code: 404
       message: Not Found
     headers:
-      date:
-      - Thu, 12 May 2011 17:27:42 GMT
-      status:
+      Date:
+      - Tue, 01 May 2012 18:15:22 GMT
+      Status:
       - 404 Not Found
-      content-type:
+      Connection:
+      - close
+      Content-Type:
       - application/json; charset=utf-8
-      cache-control:
-      - no-cache
-      x-ua-compatible:
+      X-Ua-Compatible:
       - IE=Edge
-      set-cookie:
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlYjFmYzliN2Y2ZWM2NTZhNGZmYWQ3ZWQxZGYwMzU1ZTg%3D--0e1e2ea72222ba276b7f8dc4e71c55b857dc606c; path=/; HttpOnly
-      x-runtime:
-      - "0.425169"
-    body: "{}"
-    http_version: "1.1"
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 6697a6bdbaeba58e6a5f6082bb666114
+      X-Runtime:
+      - '0.055744'
+    body:
+      encoding: US-ASCII
+      string: ! '{"status_code":404,"status_message":"Not Found","message":"Not Found","error":"Not
+        Found","type":"Mongoid::Errors::DocumentNotFound","application_trace":["app/controllers/enrollments_controller.rb:50:in
+        `load_enrollment''","activesupport (3.2.3) lib/active_support/callbacks.rb:429:in
+        `_run__557612985632167485__process_action__1960046915553067183__callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks''","actionpack
+        (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action''","activesupport
+        (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument''","activesupport
+        (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument''","activesupport
+        (3.2.3) lib/active_support/notifications.rb:123:in `instrument''","actionpack
+        (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action''","actionpack
+        (3.2.3) lib/abstract_controller/base.rb:121:in `process''","actionpack (3.2.3)
+        lib/abstract_controller/rendering.rb:45:in `process''","actionpack (3.2.3)
+        lib/action_controller/metal.rb:203:in `dispatch''","actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in
+        `dispatch''","actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block
+        in action''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in
+        `dispatch''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in
+        `call''","journey (1.0.3) lib/journey/router.rb:68:in `block in call''","journey
+        (1.0.3) lib/journey/router.rb:56:in `each''","journey (1.0.3) lib/journey/router.rb:56:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in
+        `call''","mongoid (2.4.9) lib/rack/mongoid/middleware/identity_map.rb:33:in
+        `block in call''","mongoid (2.4.9) lib/mongoid.rb:133:in `unit_of_work''","mongoid
+        (2.4.9) lib/rack/mongoid/middleware/identity_map.rb:33:in `call''","warden
+        (1.1.1) lib/warden/manager.rb:35:in `block in call''","warden (1.1.1) lib/warden/manager.rb:34:in
+        `catch''","warden (1.1.1) lib/warden/manager.rb:34:in `call''","rack-cors
+        (0.2.5) lib/rack/cors.rb:51:in `call''","actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in
+        `call''","rack (1.4.1) lib/rack/etag.rb:23:in `call''","rack (1.4.1) lib/rack/conditionalget.rb:25:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in
+        `call''","rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context''","rack
+        (1.4.1) lib/rack/session/abstract/id.rb:200:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/cookies.rb:338:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `_run__4121744771616623959__call__3781271744353477918__callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call''","railties
+        (3.2.3) lib/rails/rack/logger.rb:26:in `call_app''","railties (3.2.3) lib/rails/rack/logger.rb:16:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in
+        `call''","rack (1.4.1) lib/rack/methodoverride.rb:21:in `call''","rack (1.4.1)
+        lib/rack/runtime.rb:17:in `call''","activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in
+        `call''","rack (1.4.1) lib/rack/lock.rb:15:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/static.rb:62:in `call''","railties (3.2.3)
+        lib/rails/engine.rb:479:in `call''","railties (3.2.3) lib/rails/application.rb:220:in
+        `call''","railties (3.2.3) lib/rails/railtie/configurable.rb:30:in `method_missing''","unicorn
+        (4.3.0) lib/unicorn/http_server.rb:530:in `process_client''","unicorn (4.3.0)
+        lib/unicorn/http_server.rb:605:in `worker_loop''","unicorn (4.3.0) lib/unicorn/http_server.rb:487:in
+        `spawn_missing_workers''","unicorn (4.3.0) lib/unicorn/http_server.rb:137:in
+        `start''","unicorn (4.3.0) bin/unicorn_rails:209:in `<top (required)>''","/Users/bturner/.rvm/gems/ruby-1.9.3-p194@yolk/bin/unicorn_rails:23:in
+        `load''","/Users/bturner/.rvm/gems/ruby-1.9.3-p194@yolk/bin/unicorn_rails:23:in
+        `<main>''"],"framework_trace":["app/controllers/enrollments_controller.rb:50:in
+        `load_enrollment''","activesupport (3.2.3) lib/active_support/callbacks.rb:429:in
+        `_run__557612985632167485__process_action__1960046915553067183__callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks''","actionpack
+        (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action''","activesupport
+        (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument''","activesupport
+        (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument''","activesupport
+        (3.2.3) lib/active_support/notifications.rb:123:in `instrument''","actionpack
+        (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action''","actionpack
+        (3.2.3) lib/abstract_controller/base.rb:121:in `process''","actionpack (3.2.3)
+        lib/abstract_controller/rendering.rb:45:in `process''","actionpack (3.2.3)
+        lib/action_controller/metal.rb:203:in `dispatch''","actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in
+        `dispatch''","actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block
+        in action''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in
+        `dispatch''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in
+        `call''","journey (1.0.3) lib/journey/router.rb:68:in `block in call''","journey
+        (1.0.3) lib/journey/router.rb:56:in `each''","journey (1.0.3) lib/journey/router.rb:56:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in
+        `call''","mongoid (2.4.9) lib/rack/mongoid/middleware/identity_map.rb:33:in
+        `block in call''","mongoid (2.4.9) lib/mongoid.rb:133:in `unit_of_work''","mongoid
+        (2.4.9) lib/rack/mongoid/middleware/identity_map.rb:33:in `call''","warden
+        (1.1.1) lib/warden/manager.rb:35:in `block in call''","warden (1.1.1) lib/warden/manager.rb:34:in
+        `catch''","warden (1.1.1) lib/warden/manager.rb:34:in `call''","rack-cors
+        (0.2.5) lib/rack/cors.rb:51:in `call''","actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in
+        `call''","rack (1.4.1) lib/rack/etag.rb:23:in `call''","rack (1.4.1) lib/rack/conditionalget.rb:25:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in
+        `call''","rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context''","rack
+        (1.4.1) lib/rack/session/abstract/id.rb:200:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/cookies.rb:338:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `_run__4121744771616623959__call__3781271744353477918__callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call''","railties
+        (3.2.3) lib/rails/rack/logger.rb:26:in `call_app''","railties (3.2.3) lib/rails/rack/logger.rb:16:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in
+        `call''","rack (1.4.1) lib/rack/methodoverride.rb:21:in `call''","rack (1.4.1)
+        lib/rack/runtime.rb:17:in `call''","activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in
+        `call''","rack (1.4.1) lib/rack/lock.rb:15:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/static.rb:62:in `call''","railties (3.2.3)
+        lib/rails/engine.rb:479:in `call''","railties (3.2.3) lib/rails/application.rb:220:in
+        `call''","railties (3.2.3) lib/rails/railtie/configurable.rb:30:in `method_missing''","unicorn
+        (4.3.0) lib/unicorn/http_server.rb:530:in `process_client''","unicorn (4.3.0)
+        lib/unicorn/http_server.rb:605:in `worker_loop''","unicorn (4.3.0) lib/unicorn/http_server.rb:487:in
+        `spawn_missing_workers''","unicorn (4.3.0) lib/unicorn/http_server.rb:137:in
+        `start''","unicorn (4.3.0) bin/unicorn_rails:209:in `<top (required)>''","/Users/bturner/.rvm/gems/ruby-1.9.3-p194@yolk/bin/unicorn_rails:23:in
+        `load''","/Users/bturner/.rvm/gems/ruby-1.9.3-p194@yolk/bin/unicorn_rails:23:in
+        `<main>''"],"full_trace":["app/controllers/enrollments_controller.rb:50:in
+        `load_enrollment''","activesupport (3.2.3) lib/active_support/callbacks.rb:429:in
+        `_run__557612985632167485__process_action__1960046915553067183__callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks''","actionpack
+        (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action''","activesupport
+        (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument''","activesupport
+        (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument''","activesupport
+        (3.2.3) lib/active_support/notifications.rb:123:in `instrument''","actionpack
+        (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action''","actionpack
+        (3.2.3) lib/abstract_controller/base.rb:121:in `process''","actionpack (3.2.3)
+        lib/abstract_controller/rendering.rb:45:in `process''","actionpack (3.2.3)
+        lib/action_controller/metal.rb:203:in `dispatch''","actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in
+        `dispatch''","actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block
+        in action''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in
+        `dispatch''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in
+        `call''","journey (1.0.3) lib/journey/router.rb:68:in `block in call''","journey
+        (1.0.3) lib/journey/router.rb:56:in `each''","journey (1.0.3) lib/journey/router.rb:56:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in
+        `call''","mongoid (2.4.9) lib/rack/mongoid/middleware/identity_map.rb:33:in
+        `block in call''","mongoid (2.4.9) lib/mongoid.rb:133:in `unit_of_work''","mongoid
+        (2.4.9) lib/rack/mongoid/middleware/identity_map.rb:33:in `call''","warden
+        (1.1.1) lib/warden/manager.rb:35:in `block in call''","warden (1.1.1) lib/warden/manager.rb:34:in
+        `catch''","warden (1.1.1) lib/warden/manager.rb:34:in `call''","rack-cors
+        (0.2.5) lib/rack/cors.rb:51:in `call''","actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in
+        `call''","rack (1.4.1) lib/rack/etag.rb:23:in `call''","rack (1.4.1) lib/rack/conditionalget.rb:25:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in
+        `call''","rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context''","rack
+        (1.4.1) lib/rack/session/abstract/id.rb:200:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/cookies.rb:338:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `_run__4121744771616623959__call__3781271744353477918__callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call''","railties
+        (3.2.3) lib/rails/rack/logger.rb:26:in `call_app''","railties (3.2.3) lib/rails/rack/logger.rb:16:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in
+        `call''","rack (1.4.1) lib/rack/methodoverride.rb:21:in `call''","rack (1.4.1)
+        lib/rack/runtime.rb:17:in `call''","activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in
+        `call''","rack (1.4.1) lib/rack/lock.rb:15:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/static.rb:62:in `call''","railties (3.2.3)
+        lib/rails/engine.rb:479:in `call''","railties (3.2.3) lib/rails/application.rb:220:in
+        `call''","railties (3.2.3) lib/rails/railtie/configurable.rb:30:in `method_missing''","unicorn
+        (4.3.0) lib/unicorn/http_server.rb:530:in `process_client''","unicorn (4.3.0)
+        lib/unicorn/http_server.rb:605:in `worker_loop''","unicorn (4.3.0) lib/unicorn/http_server.rb:487:in
+        `spawn_missing_workers''","unicorn (4.3.0) lib/unicorn/http_server.rb:137:in
+        `start''","unicorn (4.3.0) bin/unicorn_rails:209:in `<top (required)>''","/Users/bturner/.rvm/gems/ruby-1.9.3-p194@yolk/bin/unicorn_rails:23:in
+        `load''","/Users/bturner/.rvm/gems/ruby-1.9.3-p194@yolk/bin/unicorn_rails:23:in
+        `<main>''"]}'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:22 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/enrollments/nonexistant.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896122'
+      X-Api-Signature:
+      - !binary |-
+        Y2I4NjFkNDRlNTM5OWVmMDg4OWI2ZTQ0ZWY3ZGY4Y2I=
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:22 GMT
+      Status:
+      - 404 Not Found
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJThiNjQyNWYxNWFkYTI3NzYzNTdkZWY0NDA0YjU4Mjk1BjsAVA%3D%3D--5c730171b4fbe1f14879c7a5e936c58931bedf27;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 81441d20a1ac544edc5f6bedeb50db9f
+      X-Runtime:
+      - '0.016885'
+    body:
+      encoding: US-ASCII
+      string: ! '{"status_code":404,"status_message":"Not Found","message":"Not Found","error":"Not
+        Found","type":"Mongoid::Errors::DocumentNotFound","application_trace":["app/controllers/enrollments_controller.rb:50:in
+        `load_enrollment''","activesupport (3.2.3) lib/active_support/callbacks.rb:429:in
+        `_run__557612985632167485__process_action__3807924515740883974__callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks''","actionpack
+        (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action''","activesupport
+        (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument''","activesupport
+        (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument''","activesupport
+        (3.2.3) lib/active_support/notifications.rb:123:in `instrument''","actionpack
+        (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action''","actionpack
+        (3.2.3) lib/abstract_controller/base.rb:121:in `process''","actionpack (3.2.3)
+        lib/abstract_controller/rendering.rb:45:in `process''","actionpack (3.2.3)
+        lib/action_controller/metal.rb:203:in `dispatch''","actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in
+        `dispatch''","actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block
+        in action''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in
+        `dispatch''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in
+        `call''","journey (1.0.3) lib/journey/router.rb:68:in `block in call''","journey
+        (1.0.3) lib/journey/router.rb:56:in `each''","journey (1.0.3) lib/journey/router.rb:56:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in
+        `call''","mongoid (2.4.9) lib/rack/mongoid/middleware/identity_map.rb:33:in
+        `block in call''","mongoid (2.4.9) lib/mongoid.rb:133:in `unit_of_work''","mongoid
+        (2.4.9) lib/rack/mongoid/middleware/identity_map.rb:33:in `call''","warden
+        (1.1.1) lib/warden/manager.rb:35:in `block in call''","warden (1.1.1) lib/warden/manager.rb:34:in
+        `catch''","warden (1.1.1) lib/warden/manager.rb:34:in `call''","rack-cors
+        (0.2.5) lib/rack/cors.rb:51:in `call''","actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in
+        `call''","rack (1.4.1) lib/rack/etag.rb:23:in `call''","rack (1.4.1) lib/rack/conditionalget.rb:35:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in
+        `call''","rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context''","rack
+        (1.4.1) lib/rack/session/abstract/id.rb:200:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/cookies.rb:338:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `_run__4121744771616623959__call__3781271744353477918__callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call''","railties
+        (3.2.3) lib/rails/rack/logger.rb:26:in `call_app''","railties (3.2.3) lib/rails/rack/logger.rb:16:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in
+        `call''","rack (1.4.1) lib/rack/methodoverride.rb:21:in `call''","rack (1.4.1)
+        lib/rack/runtime.rb:17:in `call''","activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in
+        `call''","rack (1.4.1) lib/rack/lock.rb:15:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/static.rb:62:in `call''","railties (3.2.3)
+        lib/rails/engine.rb:479:in `call''","railties (3.2.3) lib/rails/application.rb:220:in
+        `call''","railties (3.2.3) lib/rails/railtie/configurable.rb:30:in `method_missing''","unicorn
+        (4.3.0) lib/unicorn/http_server.rb:530:in `process_client''","unicorn (4.3.0)
+        lib/unicorn/http_server.rb:605:in `worker_loop''","unicorn (4.3.0) lib/unicorn/http_server.rb:487:in
+        `spawn_missing_workers''","unicorn (4.3.0) lib/unicorn/http_server.rb:137:in
+        `start''","unicorn (4.3.0) bin/unicorn_rails:209:in `<top (required)>''","/Users/bturner/.rvm/gems/ruby-1.9.3-p194@yolk/bin/unicorn_rails:23:in
+        `load''","/Users/bturner/.rvm/gems/ruby-1.9.3-p194@yolk/bin/unicorn_rails:23:in
+        `<main>''"],"framework_trace":["app/controllers/enrollments_controller.rb:50:in
+        `load_enrollment''","activesupport (3.2.3) lib/active_support/callbacks.rb:429:in
+        `_run__557612985632167485__process_action__3807924515740883974__callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks''","actionpack
+        (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action''","activesupport
+        (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument''","activesupport
+        (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument''","activesupport
+        (3.2.3) lib/active_support/notifications.rb:123:in `instrument''","actionpack
+        (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action''","actionpack
+        (3.2.3) lib/abstract_controller/base.rb:121:in `process''","actionpack (3.2.3)
+        lib/abstract_controller/rendering.rb:45:in `process''","actionpack (3.2.3)
+        lib/action_controller/metal.rb:203:in `dispatch''","actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in
+        `dispatch''","actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block
+        in action''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in
+        `dispatch''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in
+        `call''","journey (1.0.3) lib/journey/router.rb:68:in `block in call''","journey
+        (1.0.3) lib/journey/router.rb:56:in `each''","journey (1.0.3) lib/journey/router.rb:56:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in
+        `call''","mongoid (2.4.9) lib/rack/mongoid/middleware/identity_map.rb:33:in
+        `block in call''","mongoid (2.4.9) lib/mongoid.rb:133:in `unit_of_work''","mongoid
+        (2.4.9) lib/rack/mongoid/middleware/identity_map.rb:33:in `call''","warden
+        (1.1.1) lib/warden/manager.rb:35:in `block in call''","warden (1.1.1) lib/warden/manager.rb:34:in
+        `catch''","warden (1.1.1) lib/warden/manager.rb:34:in `call''","rack-cors
+        (0.2.5) lib/rack/cors.rb:51:in `call''","actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in
+        `call''","rack (1.4.1) lib/rack/etag.rb:23:in `call''","rack (1.4.1) lib/rack/conditionalget.rb:35:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in
+        `call''","rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context''","rack
+        (1.4.1) lib/rack/session/abstract/id.rb:200:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/cookies.rb:338:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `_run__4121744771616623959__call__3781271744353477918__callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call''","railties
+        (3.2.3) lib/rails/rack/logger.rb:26:in `call_app''","railties (3.2.3) lib/rails/rack/logger.rb:16:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in
+        `call''","rack (1.4.1) lib/rack/methodoverride.rb:21:in `call''","rack (1.4.1)
+        lib/rack/runtime.rb:17:in `call''","activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in
+        `call''","rack (1.4.1) lib/rack/lock.rb:15:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/static.rb:62:in `call''","railties (3.2.3)
+        lib/rails/engine.rb:479:in `call''","railties (3.2.3) lib/rails/application.rb:220:in
+        `call''","railties (3.2.3) lib/rails/railtie/configurable.rb:30:in `method_missing''","unicorn
+        (4.3.0) lib/unicorn/http_server.rb:530:in `process_client''","unicorn (4.3.0)
+        lib/unicorn/http_server.rb:605:in `worker_loop''","unicorn (4.3.0) lib/unicorn/http_server.rb:487:in
+        `spawn_missing_workers''","unicorn (4.3.0) lib/unicorn/http_server.rb:137:in
+        `start''","unicorn (4.3.0) bin/unicorn_rails:209:in `<top (required)>''","/Users/bturner/.rvm/gems/ruby-1.9.3-p194@yolk/bin/unicorn_rails:23:in
+        `load''","/Users/bturner/.rvm/gems/ruby-1.9.3-p194@yolk/bin/unicorn_rails:23:in
+        `<main>''"],"full_trace":["app/controllers/enrollments_controller.rb:50:in
+        `load_enrollment''","activesupport (3.2.3) lib/active_support/callbacks.rb:429:in
+        `_run__557612985632167485__process_action__3807924515740883974__callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks''","actionpack
+        (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action''","activesupport
+        (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument''","activesupport
+        (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument''","activesupport
+        (3.2.3) lib/active_support/notifications.rb:123:in `instrument''","actionpack
+        (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action''","actionpack
+        (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action''","actionpack
+        (3.2.3) lib/abstract_controller/base.rb:121:in `process''","actionpack (3.2.3)
+        lib/abstract_controller/rendering.rb:45:in `process''","actionpack (3.2.3)
+        lib/action_controller/metal.rb:203:in `dispatch''","actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in
+        `dispatch''","actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block
+        in action''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in
+        `dispatch''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in
+        `call''","journey (1.0.3) lib/journey/router.rb:68:in `block in call''","journey
+        (1.0.3) lib/journey/router.rb:56:in `each''","journey (1.0.3) lib/journey/router.rb:56:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in
+        `call''","mongoid (2.4.9) lib/rack/mongoid/middleware/identity_map.rb:33:in
+        `block in call''","mongoid (2.4.9) lib/mongoid.rb:133:in `unit_of_work''","mongoid
+        (2.4.9) lib/rack/mongoid/middleware/identity_map.rb:33:in `call''","warden
+        (1.1.1) lib/warden/manager.rb:35:in `block in call''","warden (1.1.1) lib/warden/manager.rb:34:in
+        `catch''","warden (1.1.1) lib/warden/manager.rb:34:in `call''","rack-cors
+        (0.2.5) lib/rack/cors.rb:51:in `call''","actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in
+        `call''","rack (1.4.1) lib/rack/etag.rb:23:in `call''","rack (1.4.1) lib/rack/conditionalget.rb:35:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in
+        `call''","rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context''","rack
+        (1.4.1) lib/rack/session/abstract/id.rb:200:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/cookies.rb:338:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `_run__4121744771616623959__call__3781271744353477918__callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks''","activesupport
+        (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call''","actionpack
+        (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call''","railties
+        (3.2.3) lib/rails/rack/logger.rb:26:in `call_app''","railties (3.2.3) lib/rails/rack/logger.rb:16:in
+        `call''","actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in
+        `call''","rack (1.4.1) lib/rack/methodoverride.rb:21:in `call''","rack (1.4.1)
+        lib/rack/runtime.rb:17:in `call''","activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in
+        `call''","rack (1.4.1) lib/rack/lock.rb:15:in `call''","actionpack (3.2.3)
+        lib/action_dispatch/middleware/static.rb:62:in `call''","railties (3.2.3)
+        lib/rails/engine.rb:479:in `call''","railties (3.2.3) lib/rails/application.rb:220:in
+        `call''","railties (3.2.3) lib/rails/railtie/configurable.rb:30:in `method_missing''","unicorn
+        (4.3.0) lib/unicorn/http_server.rb:530:in `process_client''","unicorn (4.3.0)
+        lib/unicorn/http_server.rb:605:in `worker_loop''","unicorn (4.3.0) lib/unicorn/http_server.rb:487:in
+        `spawn_missing_workers''","unicorn (4.3.0) lib/unicorn/http_server.rb:137:in
+        `start''","unicorn (4.3.0) bin/unicorn_rails:209:in `<top (required)>''","/Users/bturner/.rvm/gems/ruby-1.9.3-p194@yolk/bin/unicorn_rails:23:in
+        `load''","/Users/bturner/.rvm/gems/ruby-1.9.3-p194@yolk/bin/unicorn_rails:23:in
+        `<main>''"]}'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:22 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/enrollments.json
+    body:
+      encoding: UTF-8
+      string: ! '{"enrollment":{"owner":"blah@test.com"}}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896122'
+      X-Api-Signature:
+      - !binary |-
+        OGE1M2Q2YWY1MTEyOWVhMTlmMmQ5N2Q1NGYzMjQ4ZWI=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:22 GMT
+      Status:
+      - 422 Unprocessable Entity
+      Connection:
+      - close
+      X-Csrf-Token:
+      - 3F32fKJvmAc4hoGOLmTJ6JE4SN5ERtPn1vw2XdJxvL4=
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _yolk_session=BAh7BzoQX2NzcmZfdG9rZW5JIjEzRjMyZktKdm1BYzRob0dPTG1USjZKRTRTTjVFUnRQbjF2dzJYZEp4dkw0PQY6BkVGSSIPc2Vzc2lvbl9pZAY7BkZJIiUzNzE0MzU1NWFmNTVmYTNiOTk2NDA1ZWRiN2U0ZjM0NQY7BlQ%3D--e8d54907dd33ffbf2d186c9f46559f67fca66d59;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 67be4e33f147d61119495453b73b0417
+      X-Runtime:
+      - '0.019929'
+    body:
+      encoding: US-ASCII
+      string: ! '{"errors":{"section":["can''t be blank"]}}'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:22 GMT
+recorded_with: VCR 2.1.1

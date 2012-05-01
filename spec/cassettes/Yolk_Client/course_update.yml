@@ -1,126 +1,164 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://localhost:3000/organizations.json?search%5Blimit_results%5D=1
-    body: 
-    headers: 
-      accept: 
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/organizations/4fa0235a25f8c653f0000003.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
       - application/json
-      user-agent: 
+      User-Agent:
       - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896123'
+      X-Api-Signature:
+      - !binary |-
+        MzA5N2Y0ZTQyZjAzZWFhNThmZDFmZGNlOWI4NzY3MjE=
+      Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      content-type: 
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:23 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Csrf-Token:
+      - /Gb3MMrWhroW3EXJUb/zR8WJTTrDb8KW+YGmyFCv1lo=
+      Content-Type:
       - application/json; charset=utf-8
-      etag: 
-      - "\"c35a096e675643ccc968e4a631e38c9f\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
+      X-Ua-Compatible:
       - IE=Edge
-      x-runtime: 
-      - "0.639618"
-      server: 
-      - WEBrick/1.3.1 (Ruby/1.9.2/2011-02-18)
-      date: 
-      - Tue, 26 Jul 2011 22:07:29 GMT
-      content-length: 
-      - "558"
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlZTJiNGM2MjRmOTA3YzlmYzc2MTZjZjIxNmI1NmE3Zjc%3D--d79ec42834d842c597fa766cd8217c734ef90d1d; path=/; HttpOnly
-    body: "[{\"_id\":\"4dee9d51f776483ae1000037\",\"city\":\"Akiachak\",\"courses\":[{\"_id\":\"4dee9d51f776483ae1000038\",\"name\":\"Regional - Midwest Banks\",\"product_id\":\"4dee9d0bf776483abb000029\",\"sections\":[{\"_id\":\"4dee9d51f776483ae1000039\",\"active\":true,\"end_date\":\"2011-07-01T04:59:59Z\",\"instructor\":\"Brett Slaathaug\",\"name\":\"Physics I\",\"registration_end_date\":\"2000-01-02T05:59:59Z\",\"registration_start_date\":\"2000-01-01T06:00:00Z\",\"start_at\":\"2011-03-30T00:00:00-05:00\",\"start_date\":\"2011-03-30T05:00:00Z\"}]}],\"name\":\"Akiachak High School\",\"state\":\"AK\",\"city\":null,\"url\":null}]"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :put
-    uri: http://localhost:3000/organizations/4dee9d51f776483ae1000037/courses/4dee9d51f776483ae1000038.json
-    body: "{\"course\":{\"_id\":\"4dee9d51f776483ae1000038\",\"name\":\"Course UPDATED\"}}"
-    headers: 
-      accept: 
-      - application/json
-      user-agent: 
-      - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      content-type: 
-      - application/json
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      location: 
-      - http://localhost:3000/organizations/4dee9d51f776483ae1000037/courses
-      content-type: 
-      - application/json; charset=utf-8
-      etag: 
-      - "\"99914b932bd37a50b983c5e7c90ae93b\""
-      cache-control: 
+      Etag:
+      - ! '"06935aa2cbc8d38267d913f0e3da10b1"'
+      Cache-Control:
       - max-age=0, private, must-revalidate
-      x-ua-compatible: 
-      - IE=Edge
-      x-runtime: 
-      - "0.630822"
-      server: 
-      - WEBrick/1.3.1 (Ruby/1.9.2/2011-02-18)
-      date: 
-      - Tue, 26 Jul 2011 22:07:29 GMT
-      content-length: 
-      - "2"
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlNzVhNmZmYTE1N2RkMzJjZThmNDAxZWZlZDAwMTE4MWM%3D--24dc53f5f2b1770f9aa13394e7e35d9d27396b0a; path=/; HttpOnly
-    body: "{}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://localhost:3000/organizations/4dee9d51f776483ae1000037.json
-    body: 
-    headers: 
-      accept: 
+      Set-Cookie:
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWNhZDBjZDc0MDg4NWQwNWVjODM4NDNjNjE0Zjc4ZDg4BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMS9HYjNNTXJXaHJvVzNFWEpVYi96UjhXSlRUckRiOEtXK1lHbXlGQ3YxbG89BjsARg%3D%3D--68daddb9322eb552f84d48982f9db05c160e2d2c;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 67c6868ae43f041ea2c086693e058f29
+      X-Runtime:
+      - '0.010392'
+    body:
+      encoding: US-ASCII
+      string: ! '{"_id":"4fa0235a25f8c653f0000003","city":"Austin","courses":[{"_id":"4fa0236025f8c653f0000004","hippo_course_id":null,"name":"Test
+        Course","product_id":"4fa0230a25f8c653f0000001","rid":null,"sections":[{"_id":"4fa0237625f8c653f0000005","active":true,"end_at":"2038-01-19T03:14:07-06:00","instructor":"Professor
+        Test","name":"Test Section","registration_end_at":"2038-01-19T03:14:07-06:00","registration_start_at":"2012-05-01T12:55:02-05:00","rid":"calctest","start_at":"2012-05-01T12:55:02-05:00"}]}],"lms_id":null,"name":"Test
+        Organization","state":"TX","city":null,"url":null}'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+- request:
+    method: put
+    uri: http://localhost:3000/organizations/4fa0235a25f8c653f0000003/courses/4fa0236025f8c653f0000004.json
+    body:
+      encoding: UTF-8
+      string: ! '{"course":{"_id":"4fa0236025f8c653f0000004","name":"Course UPDATED"}}'
+    headers:
+      Accept:
       - application/json
-      user-agent: 
+      User-Agent:
       - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896123'
+      X-Api-Signature:
+      - !binary |-
+        OGNhZDY5NzI5NWQ0NzFlNWZlMzU4ZTA4MzY2YjkwMTQ=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:23 GMT
+      Status:
+      - 204 No Content
+      Connection:
+      - close
+      X-Csrf-Token:
+      - IAqUyHtqosJFErYkmYcHd+ukBebibvcHd1W3P805zu8=
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _yolk_session=BAh7BzoQX2NzcmZfdG9rZW5JIjFJQXFVeUh0cW9zSkZFcllrbVljSGQrdWtCZWJpYnZjSGQxVzNQODA1enU4PQY6BkVGSSIPc2Vzc2lvbl9pZAY7BkZJIiUwMGQ3NDMyMjU2YzU1ZTQ5NmRlZDc2NzdjM2MwNDkzOQY7BlQ%3D--e457334b14d8d5ed451576f87ba77a59b029b734;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 9fe20d9a4b95846a2fe990711db5dc82
+      X-Runtime:
+      - '0.033182'
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/organizations/4fa0235a25f8c653f0000003.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896123'
+      X-Api-Signature:
+      - !binary |-
+        MzA5N2Y0ZTQyZjAzZWFhNThmZDFmZGNlOWI4NzY3MjE=
+      Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      content-type: 
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:23 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Csrf-Token:
+      - MGM3PC21avZYsOpODmvWr0il9sji4FVe11I6cm84BdE=
+      Content-Type:
       - application/json; charset=utf-8
-      etag: 
-      - "\"30c51c321792a7d674b25d531b73381b\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
+      X-Ua-Compatible:
       - IE=Edge
-      x-runtime: 
-      - "0.626318"
-      server: 
-      - WEBrick/1.3.1 (Ruby/1.9.2/2011-02-18)
-      date: 
-      - Tue, 26 Jul 2011 22:07:30 GMT
-      content-length: 
-      - "546"
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlYjE3MWU5ZmY4OTRmOWVjYTIxNzQ1MDJkYzcyNWI3YTY%3D--7a9d534ce3f3aa10f37c65e124ca300a14e1ab47; path=/; HttpOnly
-    body: "{\"_id\":\"4dee9d51f776483ae1000037\",\"city\":\"Akiachak\",\"courses\":[{\"_id\":\"4dee9d51f776483ae1000038\",\"name\":\"Course UPDATED\",\"product_id\":\"4dee9d0bf776483abb000029\",\"sections\":[{\"_id\":\"4dee9d51f776483ae1000039\",\"active\":true,\"end_date\":\"2011-07-01T04:59:59Z\",\"instructor\":\"Brett Slaathaug\",\"name\":\"Physics I\",\"registration_end_date\":\"2000-01-02T05:59:59Z\",\"registration_start_date\":\"2000-01-01T06:00:00Z\",\"start_at\":\"2011-03-30T00:00:00-05:00\",\"start_date\":\"2011-03-30T05:00:00Z\"}]}],\"name\":\"Akiachak High School\",\"state\":\"AK\",\"city\":null,\"url\":null}"
-    http_version: "1.1"
+      Etag:
+      - ! '"6ec504e7d07f62fbde9439c8a9326cef"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWJhNTQ4NzY3ZTBiYjQ1MGNmN2U3MDc5NjY1NDAxYzQ3BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMU1HTTNQQzIxYXZaWXNPcE9EbXZXcjBpbDlzamk0RlZlMTFJNmNtODRCZEU9BjsARg%3D%3D--e381e962bc5b42f76e2c99690726bde67d147d68;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 45dca8d2a7f956327aab3fee01dedb07
+      X-Runtime:
+      - '0.010020'
+    body:
+      encoding: US-ASCII
+      string: ! '{"_id":"4fa0235a25f8c653f0000003","city":"Austin","courses":[{"_id":"4fa0236025f8c653f0000004","hippo_course_id":null,"name":"Course
+        UPDATED","product_id":"4fa0230a25f8c653f0000001","rid":null,"sections":[{"_id":"4fa0237625f8c653f0000005","active":true,"end_at":"2038-01-19T03:14:07-06:00","instructor":"Professor
+        Test","name":"Test Section","registration_end_at":"2038-01-19T03:14:07-06:00","registration_start_at":"2012-05-01T12:55:02-05:00","rid":"calctest","start_at":"2012-05-01T12:55:02-05:00"}]}],"lms_id":null,"name":"Test
+        Organization","state":"TX","city":null,"url":null}'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+recorded_with: VCR 2.1.1

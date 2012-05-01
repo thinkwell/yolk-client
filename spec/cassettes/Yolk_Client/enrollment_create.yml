@@ -1,40 +1,58 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :post
+---
+http_interactions:
+- request:
+    method: post
     uri: http://localhost:3000/enrollments.json
-    body: "{\"enrollment\":{\"owner\":\"blah@test.com\",\"rid\":\"f479d240bf7b012da3914040185a8c5f\"}}"
-    headers: 
-      accept: 
+    body:
+      encoding: UTF-8
+      string: ! '{"enrollment":{"owner":"blah@test.com","rid":"calctest","section_id":"4fa0237625f8c653f0000005"}}'
+    headers:
+      Accept:
       - application/json
-      user-agent: 
+      User-Agent:
       - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      content-type: 
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896123'
+      X-Api-Signature:
+      - !binary |-
+        NWEwM2JkOWI3MzE2Y2Q5OGI5Y2FlMzJlZTdiZDQ5M2I=
+      Content-Type:
       - application/json
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 201
       message: Created
-    headers: 
-      date: 
-      - Thu, 12 May 2011 18:21:10 GMT
-      status: 
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:23 GMT
+      Status:
       - 201 Created
-      location: 
-      - http://localhost:3000/enrollments/8938e3905ef2012e604d001aa0be65af
-      content-type: 
+      Connection:
+      - close
+      Location:
+      - http://localhost:3000/enrollments/4fa0283b25f8c65779000002
+      X-Csrf-Token:
+      - DVaSlwPqpzU6h5iOHIqQgHF9st/UFjqWKRt4iBkdnVk=
+      Content-Type:
       - application/json; charset=utf-8
-      cache-control: 
-      - no-cache
-      x-ua-compatible: 
+      X-Ua-Compatible:
       - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlOTY5NjZlODU3MDM5NzYwMjBlZWNlYzUwZDdlZTEzZjM%3D--56b3c4a6811a04dc428f58a6c45ae03873f7460a; path=/; HttpOnly
-      x-runtime: 
-      - "0.444323"
-    body: "{\"_id\":\"8938e3905ef2012e604d001aa0be65af\",\"created_at\":\"2011-05-12T13:21:10-05:00\",\"owner\":\"blah@test.com\",\"section_id\":\"4dc9ab6fbcb41c539a00090e\",\"updated_at\":\"2011-05-12T13:21:10-05:00\",\"uuid\":\"8938e3905ef2012e604d001aa0be65af\",\"version\":1,\"product\":{\"_id\":\"f479d240bf7b012da3914040185a8c5f\",\"rid\":\"f479d240bf7b012da3914040185a8c5f\",\"title\":\"Calculus\"}}"
-    http_version: "1.1"
+      Etag:
+      - ! '"27a0c62218f657332b5215c07d961370"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yolk_session=BAh7BzoQX2NzcmZfdG9rZW5JIjFEVmFTbHdQcXB6VTZoNWlPSElxUWdIRjlzdC9VRmpxV0tSdDRpQmtkblZrPQY6BkVGSSIPc2Vzc2lvbl9pZAY7BkZJIiUyYWE4OWQ3NmI0MTIzNDM3ODg1MmVhODBmZjY0MDg2OAY7BlQ%3D--b351a898d2d9f44bd9cafdf395ed746be53a7b95;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 6162c9ef3e49034d5c9fec56516c9163
+      X-Runtime:
+      - '0.081570'
+    body:
+      encoding: US-ASCII
+      string: ! '{"_id":"4fa0283b25f8c65779000002","access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T13:15:23-05:00","disabled_at":null,"end_at":null,"enrollment_id":null,"owner":"blah@test.com","section_id":"4fa0237625f8c653f0000005","start_at":null,"store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:15:23-05:00","url":null,"uuid":null,"version":1}'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+recorded_with: VCR 2.1.1

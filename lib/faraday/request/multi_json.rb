@@ -6,7 +6,7 @@ module Faraday
 
     def call(env)
       match_content_type(env) do |data|
-        env[:body] = ::MultiJson.encode data
+        env[:body] = ::MultiJson.dump data
       end
       @app.call env
     end

@@ -1,157 +1,210 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://localhost:3000/enrollments.json?search%5Blimit_results%5D=1
-    body: 
-    headers: 
-      accept: 
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/enrollments/4fa0234c25f8c653f0000002.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
       - application/json
-      user-agent: 
+      User-Agent:
       - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896123'
+      X-Api-Signature:
+      - !binary |-
+        NzhiMGJmNTBiMzQ4N2ZlNTY0NjJkODg5MGU5YWQyZTg=
+      Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      date: 
-      - Thu, 12 May 2011 18:23:07 GMT
-      status: 
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:23 GMT
+      Status:
       - 200 OK
-      content-type: 
+      Connection:
+      - close
+      X-Csrf-Token:
+      - Md1a/x71Z+Cfa95u5VC2RKb7He3GQ9L2U6hCy7KpzLQ=
+      Content-Type:
       - application/json; charset=utf-8
-      etag: 
-      - "\"640ab79c72065346b50cc8f7782fa42d\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
+      X-Ua-Compatible:
       - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlOTUwNDU1NGRmOTUwYzdiMjUyMTBiMDI3NTU2Yzg3OWU%3D--cdd3d736edeef70e8f13c21dd2a3c09ddaf40092; path=/; HttpOnly
-      x-runtime: 
-      - "0.443896"
-    body: "[{\"_id\":\"2ffe10b01ed9012eb12d4040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"owner\":\"4robins@gmail.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A426880766\",\"url\":null,\"uuid\":\"2ffe10b01ed9012eb12d4040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}}]"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :put
-    uri: http://localhost:3000/enrollments/2ffe10b01ed9012eb12d4040185a8c5f.json
-    body: "{\"enrollment\":{\"access_unit\":\"month\",\"access_length\":2}}"
-    headers: 
-      accept: 
-      - application/json
-      user-agent: 
-      - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      content-type: 
-      - application/json
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      date: 
-      - Thu, 12 May 2011 18:23:07 GMT
-      status: 
-      - 200 OK
-      location: 
-      - http://localhost:3000/enrollments/2ffe10b01ed9012eb12d4040185a8c5f
-      content-type: 
-      - application/json; charset=utf-8
-      etag: 
-      - "\"99914b932bd37a50b983c5e7c90ae93b\""
-      cache-control: 
+      Etag:
+      - ! '"045b714e61c1d573ffe5ba5ee6bf0f22"'
+      Cache-Control:
       - max-age=0, private, must-revalidate
-      x-ua-compatible: 
-      - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlZDdiZTA5YmRlODI4MjQ2N2MxYjA4ZmM2YzYxYmVhMTU%3D--d2d7f62e62ec7907460d05700e3ac8147a55c4b1; path=/; HttpOnly
-      x-runtime: 
-      - "0.451415"
-    body: "{}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://localhost:3000/enrollments/2ffe10b01ed9012eb12d4040185a8c5f.json
-    body: 
-    headers: 
-      accept: 
+      Set-Cookie:
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTcyNjU5NTAxNDY0M2E0ODMxMWIxZTY3OWU1MWMyODYzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMU1kMWEveDcxWitDZmE5NXU1VkMyUktiN0hlM0dROUwyVTZoQ3k3S3B6TFE9BjsARg%3D%3D--2653d5c0367389e58ff3adfff79f25dd2c53f9f8;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 5f7b6400ffeb132c93afc5ff22564712
+      X-Runtime:
+      - '0.010909'
+    body:
+      encoding: US-ASCII
+      string: ! '{"_id":"4fa0234c25f8c653f0000002","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:55:50-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":2}]}'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+- request:
+    method: put
+    uri: http://localhost:3000/enrollments/c6225010-75e5-012f-cdbb-60c5478e5578.json
+    body:
+      encoding: UTF-8
+      string: ! '{"enrollment":{"access_unit":"month","access_length":5}}'
+    headers:
+      Accept:
       - application/json
-      user-agent: 
+      User-Agent:
       - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896123'
+      X-Api-Signature:
+      - !binary |-
+        MTVlN2Q4YTc1YzNhYWEwMGQ2MDliNmM1NTE4MmY5NzE=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:23 GMT
+      Status:
+      - 204 No Content
+      Connection:
+      - close
+      X-Csrf-Token:
+      - daiRgoTiPyQSiNO3xoR6s4rtaLQuibr27vbYWHEl/FM=
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _yolk_session=BAh7BzoQX2NzcmZfdG9rZW5JIjFkYWlSZ29UaVB5UVNpTk8zeG9SNnM0cnRhTFF1aWJyMjd2YllXSEVsL0ZNPQY6BkVGSSIPc2Vzc2lvbl9pZAY7BkZJIiUwM2YxMjVhNGRlMTc5YzczODExOWE1YjdlM2I5ODlmZAY7BlQ%3D--8fec0334b3d6524bce70cc596b9df2df033f6a9d;
+        path=/; HttpOnly
+      X-Request-Id:
+      - e9cfb7d84d912b824c5a2b23c55e7c4a
+      X-Runtime:
+      - '0.015606'
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/enrollments/c6225010-75e5-012f-cdbb-60c5478e5578.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896123'
+      X-Api-Signature:
+      - !binary |-
+        MTVlN2Q4YTc1YzNhYWEwMGQ2MDliNmM1NTE4MmY5NzE=
+      Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      date: 
-      - Thu, 12 May 2011 18:23:08 GMT
-      status: 
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:23 GMT
+      Status:
       - 200 OK
-      content-type: 
+      Connection:
+      - close
+      X-Csrf-Token:
+      - 5wLAM200MjUF+51ZYY9ywdJgjlopGFHQ7xcwAOHlq0Y=
+      Content-Type:
       - application/json; charset=utf-8
-      etag: 
-      - "\"c3db254d2ab0e570c79ae0c67112ff74\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
+      X-Ua-Compatible:
       - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlZmM5ODZiZDc3NTU5OGEyMjdiN2UzYzk1ZjNlZWVmYzI%3D--503b1c5074971afb517343cd415e21ca15f6c6b7; path=/; HttpOnly
-      x-runtime: 
-      - "0.450288"
-    body: "{\"_id\":\"2ffe10b01ed9012eb12d4040185a8c5f\",\"access_length\":2,\"access_unit\":\"month\",\"owner\":\"4robins@gmail.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A426880766\",\"updated_at\":\"2011-05-12T13:23:07-05:00\",\"url\":null,\"uuid\":\"2ffe10b01ed9012eb12d4040185a8c5f\",\"version\":2,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :put
-    uri: http://localhost:3000/enrollments/2ffe10b01ed9012eb12d4040185a8c5f.json
-    body: "{\"enrollment\":{\"start_date\":\"2010-10-10 00:00:00 UTC\",\"end_date\":\"2010-10-09 00:00:00 UTC\"}}"
-    headers: 
-      accept: 
+      Etag:
+      - ! '"b9b29eb536c01f3100bb530c58168bbc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWNjZmViODZiZTQ5MTQ2YTJkNWJkYmFmZjMyMTA2ODExBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMTV3TEFNMjAwTWpVRis1MVpZWTl5d2RKZ2psb3BHRkhRN3hjd0FPSGxxMFk9BjsARg%3D%3D--7d953bdf268971ae3c1d1f4f41c378160564754b;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 73200548b0728ef14c71039ad2f13afa
+      X-Runtime:
+      - '0.013704'
+    body:
+      encoding: US-ASCII
+      string: ! '{"_id":"4fa0234c25f8c653f0000002","access_length":5,"access_unit":"month","assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:15:23-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":4,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:55:50-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":2},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":3}]}'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+- request:
+    method: put
+    uri: http://localhost:3000/enrollments/c6225010-75e5-012f-cdbb-60c5478e5578.json
+    body:
+      encoding: UTF-8
+      string: ! '{"enrollment":{"start_at":"2010-10-10 00:00:00 UTC","end_at":"2010-10-09
+        00:00:00 UTC"}}'
+    headers:
+      Accept:
       - application/json
-      user-agent: 
+      User-Agent:
       - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      content-type: 
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896123'
+      X-Api-Signature:
+      - !binary |-
+        MTVlN2Q4YTc1YzNhYWEwMGQ2MDliNmM1NTE4MmY5NzE=
+      Content-Type:
       - application/json
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 422
       message: Unprocessable Entity
-    headers: 
-      date: 
-      - Thu, 12 May 2011 18:23:08 GMT
-      status: 
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:23 GMT
+      Status:
       - 422 Unprocessable Entity
-      content-type: 
+      Connection:
+      - close
+      X-Csrf-Token:
+      - nNS5A8RML0IIttcY+IRNO+pfI5WKj1UIqZiZIgGTyB8=
+      Content-Type:
       - application/json; charset=utf-8
-      cache-control: 
-      - no-cache
-      x-ua-compatible: 
+      X-Ua-Compatible:
       - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlZmQxZDMyM2NiYTc2YWU3NTkzNTJkMTRmNTAyNTM1MDM%3D--922bf73cc4d9e2b397773244c6282d21224531f9; path=/; HttpOnly
-      x-runtime: 
-      - "0.527040"
-    body: "{\"end_date\":[\"must be after 2010-10-09 19:00:00 -0500\"]}"
-    http_version: "1.1"
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _yolk_session=BAh7BzoQX2NzcmZfdG9rZW5JIjFuTlM1QThSTUwwSUl0dGNZK0lSTk8rcGZJNVdLajFVSXFaaVpJZ0dUeUI4PQY6BkVGSSIPc2Vzc2lvbl9pZAY7BkZJIiVhNDM4YWNmOWRmM2I0YjFlODkxOWFjODQ1OGRkOTRjMgY7BlQ%3D--d25c75bb3e2bceaa30f29675cc232b4ab2a16f00;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 3cce57b4245893f125a38da45e1b612e
+      X-Runtime:
+      - '0.017083'
+    body:
+      encoding: US-ASCII
+      string: ! '{"errors":{"end_at":["must be after Sat, 09 Oct 2010 19:00:00 -0500"]}}'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+recorded_with: VCR 2.1.1

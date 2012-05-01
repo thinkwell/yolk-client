@@ -7,21 +7,35 @@ require 'forgery'
 
 require 'yolk-client'
 
+TEST_CONSUMER_KEY = '4fa023c325f8c653f0000007'
+TEST_CONSUMER_SECRET = 'MySeCRET'
+TEST_OWNER = 'test@thinkwell.com'
+TEST_ASSIGNED_TO = 'test@thinkwell.com'
+TEST_ENROLLMENT = '4fa0234c25f8c653f0000002'
+TEST_ORGANIZATION = '4fa0235a25f8c653f0000003'
+TEST_SECTION = '4fa0237625f8c653f0000005'
+TEST_RID = 'calctest'
+
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[File.join(File.dirname(__FILE__), 'support', '**', '*.rb')].each {|f| require f}
 
-VCR.config do |c|
+VCR.configure do |c|
   c.cassette_library_dir     = 'spec/cassettes'
-  c.stub_with                :webmock
-  c.default_cassette_options = {:record => :none, :match_requests_on => [:method, :uri, :headers, :body]}
+  c.hook_into                :webmock
+  c.register_request_matcher :john_hancock_headers do |r1, r2|
+    jh_headers = lambda do |key, val|
+      (key == 'X-Api-Timestamp' && val[0].to_s =~ /^[0-9]{10}$/) ||
+        (key == 'X-Api-Signature' && val[0].to_s =~ /^[0-9a-f]{32}$/)
+    end
 
-  c.before_record do |i|
-    i.request.headers['x-api-timestamp'] = /^[0-9]{10}$/
-    i.request.headers['x-api-signature'] = /^[0-9a-f]{32}$/
+    (r1.headers.reject &jh_headers) == (r2.headers.reject &jh_headers)
   end
-  # Hack so we can keep last VCR response to read its headers
-  c.before_playback{|i| Rspec.configuration.last_kept_response = i.response}
+  c.default_cassette_options = {
+    #:record => :new_episodes,
+    :record => :none,
+    :match_requests_on => [:method, :uri, :john_hancock_headers, :body]
+  }
 end
 
 RSpec.configure do |config|

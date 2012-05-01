@@ -9,14 +9,19 @@ source "http://gem.thinkwell.com/"
 gemspec
 
 group :test do
-  gem 'autotest', '~> 4.4.5'
-  gem 'test_notifier', '~> 0.3.6'
+  gem 'rspec'
+  gem 'rr'
+  gem 'autotest'
+  gem 'test_notifier'
+  gem 'forgery'
+  gem 'webmock'
+  gem 'vcr'
   if DARWIN
-    gem 'rb-fsevent', '~> 0.4.0'
+    gem 'rb-fsevent'
     gem 'growl'
   end
   if LINUX
-    gem 'rb-inotify', '~> 0.8.4'
+    gem 'rb-inotify'
     gem 'libnotify'
   end
 end

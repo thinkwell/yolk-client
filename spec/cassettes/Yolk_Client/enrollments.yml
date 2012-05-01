@@ -1,352 +1,480 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://localhost:3000/enrollments.json?search%5Blimit_results%5D=20
-    body: 
-    headers: 
-      accept: 
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/enrollments.json?search%5Blimit_results%5D=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
       - application/json
-      user-agent: 
+      User-Agent:
       - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896122'
+      X-Api-Signature:
+      - !binary |-
+        OGE1M2Q2YWY1MTEyOWVhMTlmMmQ5N2Q1NGYzMjQ4ZWI=
+      Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      date: 
-      - Thu, 12 May 2011 18:11:19 GMT
-      status: 
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:22 GMT
+      Status:
       - 200 OK
-      content-type: 
+      Connection:
+      - close
+      X-Csrf-Token:
+      - UjMKOuJrZJy+chlf2cZs0NmaYE3e+Lfo0LwbuICmUps=
+      Content-Type:
       - application/json; charset=utf-8
-      etag: 
-      - "\"65c30329091e755be740e8861bf9880b\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
+      X-Ua-Compatible:
       - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlNTBmYWQ1MjdhYTIwNGRhYjM2NDMwNmQ1MjA3NzhmYTk%3D--57b72bdc9d9dda0dfd869acfa24c172ca2508315; path=/; HttpOnly
-      x-runtime: 
-      - "1.240726"
-    body: "[{\"_id\":\"2ffe10b01ed9012eb12d4040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"owner\":\"4robins@gmail.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A426880766\",\"url\":null,\"uuid\":\"2ffe10b01ed9012eb12d4040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}},{\"_id\":\"faff4b405ef0012e604c001aa0be65af\",\"access_length\":1,\"access_unit\":\"month\",\"assigned_to\":\"admin@thinkwell.com\",\"created_at\":\"2011-05-12T13:10:02-05:00\",\"disabled_at\":null,\"end_date\":\"2012-05-03T00:00:00-05:00\",\"owner\":\"admin@thinkwell.com\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2011-05-03T00:00:00-05:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":null,\"updated_at\":\"2011-05-12T13:10:02-05:00\",\"uuid\":\"faff4b405ef0012e604c001aa0be65af\",\"version\":1,\"product\":{\"_id\":\"3194a4a0b383012ddb4140408c58c871\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}},{\"_id\":\"61076696b0e97a81474b658a67c31bd0\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"100katrina@gmail.com\",\"end_date\":\"2011-01-11T02:38:52-06:00\",\"enrollment_id\":\"266293\",\"owner\":\"100katrina@gmail.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"start_date\":\"2010-01-11T02:38:44-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"61076696b0e97a81474b658a67c31bd0\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}},{\"_id\":\"610766dfdbe56e81afd24698b74b52b8\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"100katrina@gmail.com\",\"end_date\":\"2010-01-06T17:59:59-06:00\",\"enrollment_id\":\"168811\",\"owner\":\"100katrina@gmail.com\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2009-01-06T03:15:32-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"610766dfdbe56e81afd24698b74b52b8\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"6208f3fabe25f8db38106b3e4456a35c\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"14books@bellsouth.net\",\"end_date\":\"2010-11-02T11:09:18-05:00\",\"enrollment_id\":\"259842\",\"owner\":\"14books@bellsouth.net\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"start_date\":\"2009-11-02T11:09:12-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"6208f3fabe25f8db38106b3e4456a35c\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}},{\"_id\":\"6208f467f2db70afe8e0db65f95cb376\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"14books@bellsouth.net\",\"end_date\":\"2009-11-09T17:59:59-06:00\",\"enrollment_id\":\"168656\",\"owner\":\"14books@bellsouth.net\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2008-04-29T09:43:27-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"6208f467f2db70afe8e0db65f95cb376\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"5d56565fecc10a5f2482253b9c5c4917\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"14skater@gmail.com\",\"end_date\":\"2011-10-29T17:59:59-05:00\",\"enrollment_id\":\"295582\",\"owner\":\"14skater@gmail.com\",\"rid\":\"92fb56b0bf8a012da3a54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000536\",\"start_date\":\"2010-08-29T08:17:20-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"5d56565fecc10a5f2482253b9c5c4917\",\"version\":1,\"product\":{\"_id\":\"92fb56b0bf8a012da3a54040185a8c5f\",\"rid\":\"92fb56b0bf8a012da3a54040185a8c5f\",\"title\":\"Economics\"}},{\"_id\":\"5d057bace0c2a6d8167c5b0494d0f5b5\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"21stcenturyberean@gmail.com\",\"end_date\":\"2011-10-05T17:59:59-05:00\",\"enrollment_id\":\"302079\",\"owner\":\"21stcenturyberean@gmail.com\",\"rid\":\"d1a71130bf72012da37c4040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a00053c\",\"start_date\":\"2010-09-30T06:00:12-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"5d057bace0c2a6d8167c5b0494d0f5b5\",\"version\":1,\"product\":{\"_id\":\"d1a71130bf72012da37c4040185a8c5f\",\"rid\":\"d1a71130bf72012da37c4040185a8c5f\",\"title\":\"Grade 7 Math\"}},{\"_id\":\"5d35cefcfd5ce9fcc31b8c8c9c76db61\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2Chera@inbox.com\",\"end_date\":\"2011-09-03T17:59:59-05:00\",\"enrollment_id\":\"297457\",\"owner\":\"2Chera@inbox.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"start_date\":\"2010-09-03T04:49:57-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"5d35cefcfd5ce9fcc31b8c8c9c76db61\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}},{\"_id\":\"5cfd65d3f394a65c893043e5f7e7c1f1\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2leahy@sbcglobal.net\",\"end_date\":\"2011-10-25T17:59:59-05:00\",\"enrollment_id\":\"304759\",\"owner\":\"2leahy@sbcglobal.net\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2010-10-25T08:41:57-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"105025\",\"url\":null,\"uuid\":\"5cfd65d3f394a65c893043e5f7e7c1f1\",\"version\":1,\"product\":{\"_id\":\"3194a4a0b383012ddb4140408c58c871\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}},{\"_id\":\"614f6e7bd4dd55e641581ee853d48671\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2martins@comcast.net\",\"end_date\":\"2010-09-08T05:44:43-05:00\",\"enrollment_id\":\"252166\",\"owner\":\"2martins@comcast.net\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2009-09-08T05:44:38-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"614f6e7bd4dd55e641581ee853d48671\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"5d5be0d7e617c817e8787a68c2b5a817\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2mechengr@sbcglobal.net\",\"end_date\":\"2011-08-25T17:59:59-05:00\",\"enrollment_id\":\"294581\",\"owner\":\"2mechengr@sbcglobal.net\",\"rid\":\"d52b83c0bf7a012da3894040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000528\",\"start_date\":\"2010-08-25T11:37:10-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"5d5be0d7e617c817e8787a68c2b5a817\",\"version\":1,\"product\":{\"_id\":\"d52b83c0bf7a012da3894040185a8c5f\",\"rid\":\"d52b83c0bf7a012da3894040185a8c5f\",\"title\":\"Biology\"}},{\"_id\":\"5d662df0ab06d3f0f4c11ee84114e08c\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2mutschfun@ntelos.net\",\"end_date\":\"2011-08-17T17:59:59-05:00\",\"enrollment_id\":\"291981\",\"owner\":\"2mutschfun@ntelos.net\",\"rid\":\"df563cd0b870012ddb4b40408c58c871\",\"section_id\":\"4dc9ab6ebcb41c539a00053e\",\"start_date\":\"2010-08-17T01:25:25-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"5d662df0ab06d3f0f4c11ee84114e08c\",\"version\":1,\"product\":{\"_id\":\"df563cd0b870012ddb4b40408c58c871\",\"rid\":\"df563cd0b870012ddb4b40408c58c871\",\"title\":\"Grade 8 Math\"}},{\"_id\":\"5dc23fcbbd39b056597035fea9f9c907\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2qt2bgabi@gmail.com\",\"disabled_date\":\"2011-01-06T17:56:07Z\",\"end_date\":\"2011-02-05T03:30:43-06:00\",\"enrollment_id\":\"273075\",\"owner\":\"2qt2bgabi@gmail.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"start_date\":\"2010-02-05T03:30:43-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"85301\",\"url\":null,\"uuid\":\"5dc23fcbbd39b056597035fea9f9c907\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}},{\"_id\":\"5dc240450690c96de015e666c01aaa8b\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2qt2bgabi@gmail.com\",\"disabled_date\":\"2011-01-06T17:56:07Z\",\"end_date\":\"2010-10-06T06:35:11-05:00\",\"enrollment_id\":\"256966\",\"owner\":\"2qt2bgabi@gmail.com\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2009-10-06T06:34:59-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"75721\",\"url\":null,\"uuid\":\"5dc240450690c96de015e666c01aaa8b\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"61069c5e067c16cebbb0b2d94e35a547\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2soccerstars@gmail.com\",\"end_date\":\"2011-01-05T04:04:45-06:00\",\"enrollment_id\":\"264728\",\"owner\":\"2soccerstars@gmail.com\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2010-01-05T04:04:46-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"81270\",\"url\":null,\"uuid\":\"61069c5e067c16cebbb0b2d94e35a547\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"61069c8de76bd59bc6dad106855af868\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2soccerstars@gmail.com\",\"end_date\":\"2012-01-07T17:59:59-06:00\",\"enrollment_id\":\"311292\",\"owner\":\"2soccerstars@gmail.com\",\"rid\":\"b108a430b488012ddb4540408c58c871\",\"section_id\":\"4dc9ab6ebcb41c539a00051d\",\"start_date\":\"2011-01-07T02:14:42-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"61069c8de76bd59bc6dad106855af868\",\"version\":1,\"product\":{\"_id\":\"b108a430b488012ddb4540408c58c871\",\"rid\":\"b108a430b488012ddb4540408c58c871\",\"title\":\"Algebra I\"}},{\"_id\":\"6e6b7fe000a8012eab734040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"3Maximum@gmail.com\",\"disabled_date\":\"2011-02-08T17:37:44Z\",\"end_date\":\"2012-01-23T17:14:33-06:00\",\"owner\":\"3Maximum@gmail.com\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2011-01-23T17:14:33-06:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A633528306\",\"url\":null,\"uuid\":\"6e6b7fe000a8012eab734040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"3194a4a0b383012ddb4140408c58c871\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}},{\"_id\":\"6e6bf6c000a8012eab744040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"3Maximum@gmail.com\",\"disabled_date\":\"2011-02-08T17:37:55Z\",\"end_date\":\"2012-01-23T17:14:45-06:00\",\"owner\":\"3Maximum@gmail.com\",\"rid\":\"d1a71130bf72012da37c4040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a00053c\",\"start_date\":\"2011-01-23T17:14:45-06:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A633528306\",\"url\":null,\"uuid\":\"6e6bf6c000a8012eab744040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"d1a71130bf72012da37c4040185a8c5f\",\"rid\":\"d1a71130bf72012da37c4040185a8c5f\",\"title\":\"Grade 7 Math\"}},{\"_id\":\"6e6c693000a8012eab754040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"3Maximum@gmail.com\",\"disabled_date\":\"2011-02-08T17:37:46Z\",\"end_date\":\"2012-01-23T17:14:38-06:00\",\"owner\":\"3Maximum@gmail.com\",\"rid\":\"df563cd0b870012ddb4b40408c58c871\",\"section_id\":\"4dc9ab6ebcb41c539a00053e\",\"start_date\":\"2011-01-23T17:14:38-06:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A633528306\",\"url\":null,\"uuid\":\"6e6c693000a8012eab754040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"df563cd0b870012ddb4b40408c58c871\",\"rid\":\"df563cd0b870012ddb4b40408c58c871\",\"title\":\"Grade 8 Math\"}}]"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://localhost:3000/enrollments.json?search%5Brelevant_to_user%5D=admin@thinkwell.com
-    body: 
-    headers: 
-      accept: 
+      Etag:
+      - ! '"d4ce539b5a7bc28a1542485269207d75"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWEwYWQwYjQ4ZDgzNjIxYmZlMzlmMWFiY2FkYmZiMzE2BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVVqTUtPdUpyWkp5K2NobGYyY1pzME5tYVlFM2UrTGZvMEx3YnVJQ21VcHM9BjsARg%3D%3D--edc6e976428bf88682e0cdc91035f8ad9a7f92b2;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 79b13a0ecde4550d79c944cbb66017f5
+      X-Runtime:
+      - '0.054355'
+    body:
+      encoding: US-ASCII
+      string: ! '[{"_id":"4fa0234c25f8c653f0000002","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:55:50-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":2}]},{"_id":"4fa0241e25f8c653f0000008","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c632cf10-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:57:58-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c632cf10-75e5-012f-cdbb-60c5478e5578","version":2}]}]'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:22 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/enrollments.json?search%5Brelevant_to_user%5D=test@thinkwell.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
       - application/json
-      user-agent: 
+      User-Agent:
       - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896122'
+      X-Api-Signature:
+      - !binary |-
+        OGE1M2Q2YWY1MTEyOWVhMTlmMmQ5N2Q1NGYzMjQ4ZWI=
+      Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      date: 
-      - Thu, 12 May 2011 18:11:20 GMT
-      status: 
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:22 GMT
+      Status:
       - 200 OK
-      content-type: 
+      Connection:
+      - close
+      X-Csrf-Token:
+      - 8hNab5cemvKX0Gcx0T7/bui8Pes2kYz9CXB6inLLk38=
+      Content-Type:
       - application/json; charset=utf-8
-      etag: 
-      - "\"8ec832755826403d28f4904c303655cc\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
+      X-Ua-Compatible:
       - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlNzk5NjU4ZDZmMzdhZjVhOGQzYjYyOGNhNjYyNmIyNGM%3D--8aac9c2bb68acaf1282f5006546536efa9845a83; path=/; HttpOnly
-      x-runtime: 
-      - "0.718261"
-    body: "[{\"_id\":\"faff4b405ef0012e604c001aa0be65af\",\"access_length\":1,\"access_unit\":\"month\",\"assigned_to\":\"admin@thinkwell.com\",\"created_at\":\"2011-05-12T13:10:02-05:00\",\"disabled_at\":null,\"end_date\":\"2012-05-03T00:00:00-05:00\",\"owner\":\"admin@thinkwell.com\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2011-05-03T00:00:00-05:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":null,\"updated_at\":\"2011-05-12T13:10:02-05:00\",\"uuid\":\"faff4b405ef0012e604c001aa0be65af\",\"version\":1,\"product\":{\"_id\":\"3194a4a0b383012ddb4140408c58c871\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}}]"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://localhost:3000/users/admin@thinkwell.com/enrollments.json?search%5Blimit_results%5D=0
-    body: 
-    headers: 
-      accept: 
+      Etag:
+      - ! '"bcd3b48d1e78b97940c3c985c6cea8bc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTNkMzQzYTQ2MDI2MGUzMzA5MjdhMjQwZmRjYzYwYWE3BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMThoTmFiNWNlbXZLWDBHY3gwVDcvYnVpOFBlczJrWXo5Q1hCNmluTExrMzg9BjsARg%3D%3D--7af90ad2a695da33f22a254df850a969ba265f76;
+        path=/; HttpOnly
+      X-Request-Id:
+      - b14db956d4622fdcf7f78c09ca4c3bfc
+      X-Runtime:
+      - '0.019589'
+    body:
+      encoding: US-ASCII
+      string: ! '[{"_id":"4fa0234c25f8c653f0000002","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:55:50-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":2}]},{"_id":"4fa0241e25f8c653f0000008","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c632cf10-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:57:58-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c632cf10-75e5-012f-cdbb-60c5478e5578","version":2}]},{"_id":"4fa0242a25f8c653f0000009","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c63357c0-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:58:06-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c63357c0-75e5-012f-cdbb-60c5478e5578","version":2}]}]'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:22 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/users/test@thinkwell.com/enrollments.json?search%5Blimit_results%5D=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
       - application/json
-      user-agent: 
+      User-Agent:
       - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896122'
+      X-Api-Signature:
+      - !binary |-
+        YjNkNDFjNGExOWZhNDZkZDc5NWU2OWVhNzdlNmI2YWY=
+      Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      date: 
-      - Thu, 12 May 2011 18:11:20 GMT
-      status: 
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:22 GMT
+      Status:
       - 200 OK
-      content-type: 
+      Connection:
+      - close
+      X-Csrf-Token:
+      - AxdZfdv/dj0lbaokZCSVSWHmkpQGyOZNYadh+MsIaog=
+      Content-Type:
       - application/json; charset=utf-8
-      etag: 
-      - "\"8ec832755826403d28f4904c303655cc\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
+      X-Ua-Compatible:
       - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlMTA0MGEyNDg1NDE2ZGYxNDUwMTI5NmUzZDEyZDVkNjk%3D--978471a6eaaa80f9c124c12bea351874c97a115f; path=/; HttpOnly
-      x-runtime: 
-      - "0.508350"
-    body: "[{\"_id\":\"faff4b405ef0012e604c001aa0be65af\",\"access_length\":1,\"access_unit\":\"month\",\"assigned_to\":\"admin@thinkwell.com\",\"created_at\":\"2011-05-12T13:10:02-05:00\",\"disabled_at\":null,\"end_date\":\"2012-05-03T00:00:00-05:00\",\"owner\":\"admin@thinkwell.com\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2011-05-03T00:00:00-05:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":null,\"updated_at\":\"2011-05-12T13:10:02-05:00\",\"uuid\":\"faff4b405ef0012e604c001aa0be65af\",\"version\":1,\"product\":{\"_id\":\"3194a4a0b383012ddb4140408c58c871\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}}]"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://localhost:3000/enrollments.json?search%5Bowner%5D=admin@thinkwell.com
-    body: 
-    headers: 
-      accept: 
+      Etag:
+      - ! '"bcd3b48d1e78b97940c3c985c6cea8bc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTdlYjNjNTMyZDIzOWVhMTYyN2ZjODNjZDcwZDcxYzk4BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMUF4ZFpmZHYvZGowbGJhb2taQ1NWU1dIbWtwUUd5T1pOWWFkaCtNc0lhb2c9BjsARg%3D%3D--788d5b14b44ad5ba70dcdc128354bc2ed6e08aa4;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 77fed2db163fb7d3e7e292ba0ea3dbfb
+      X-Runtime:
+      - '0.019058'
+    body:
+      encoding: US-ASCII
+      string: ! '[{"_id":"4fa0234c25f8c653f0000002","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:55:50-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":2}]},{"_id":"4fa0241e25f8c653f0000008","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c632cf10-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:57:58-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c632cf10-75e5-012f-cdbb-60c5478e5578","version":2}]},{"_id":"4fa0242a25f8c653f0000009","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c63357c0-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:58:06-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c63357c0-75e5-012f-cdbb-60c5478e5578","version":2}]}]'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:22 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/enrollments.json?search%5Bowner%5D=test@thinkwell.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
       - application/json
-      user-agent: 
+      User-Agent:
       - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896122'
+      X-Api-Signature:
+      - !binary |-
+        OGE1M2Q2YWY1MTEyOWVhMTlmMmQ5N2Q1NGYzMjQ4ZWI=
+      Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      date: 
-      - Thu, 12 May 2011 18:11:21 GMT
-      status: 
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:22 GMT
+      Status:
       - 200 OK
-      content-type: 
+      Connection:
+      - close
+      X-Csrf-Token:
+      - +QTDGLB+6IzeQdOUvpaWqoyysYwURomeMg6MCxRCJ3k=
+      Content-Type:
       - application/json; charset=utf-8
-      etag: 
-      - "\"8ec832755826403d28f4904c303655cc\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
+      X-Ua-Compatible:
       - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlZGYxN2Q2ZGM4NmFlMTM2MWY2YThiMGJmZjNlZjZjZGE%3D--80398f80f2f977d1fc4a4d97494904e9176ea646; path=/; HttpOnly
-      x-runtime: 
-      - "0.433015"
-    body: "[{\"_id\":\"faff4b405ef0012e604c001aa0be65af\",\"access_length\":1,\"access_unit\":\"month\",\"assigned_to\":\"admin@thinkwell.com\",\"created_at\":\"2011-05-12T13:10:02-05:00\",\"disabled_at\":null,\"end_date\":\"2012-05-03T00:00:00-05:00\",\"owner\":\"admin@thinkwell.com\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2011-05-03T00:00:00-05:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":null,\"updated_at\":\"2011-05-12T13:10:02-05:00\",\"uuid\":\"faff4b405ef0012e604c001aa0be65af\",\"version\":1,\"product\":{\"_id\":\"3194a4a0b383012ddb4140408c58c871\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}}]"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
+      Etag:
+      - ! '"8b648c123f8be353662c508efbbd70f1"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWFmMjkyYjUzOWUzZDYxMTliY2NmZDk4MWI2N2E3ZTc5BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMStRVERHTEIrNkl6ZVFkT1V2cGFXcW95eXNZd1VSb21lTWc2TUN4UkNKM2s9BjsARg%3D%3D--1380e6d591a65995ba691f807082d97c2f1e2c4b;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 0631127ef2fd64eaa5962e265a5de8de
+      X-Runtime:
+      - '0.016282'
+    body:
+      encoding: US-ASCII
+      string: ! '[{"_id":"4fa0234c25f8c653f0000002","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:55:50-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":2}]}]'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:22 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/enrollments.json?search%5Blimit_results%5D=0&search%5Bowner%5D=test@thinkwell.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896122'
+      X-Api-Signature:
+      - !binary |-
+        OGE1M2Q2YWY1MTEyOWVhMTlmMmQ5N2Q1NGYzMjQ4ZWI=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:22 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Csrf-Token:
+      - AuDjurNo1vtKw6P9Y/Ei2lSFSgoMXRjfOlM6u2TMiCc=
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"8b648c123f8be353662c508efbbd70f1"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWExODIwOWIxYjY5MWJkYWE2NDE1N2E5OGVlNDhlMThhBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMUF1RGp1ck5vMXZ0S3c2UDlZL0VpMmxTRlNnb01YUmpmT2xNNnUyVE1pQ2M9BjsARg%3D%3D--e4f97d54a9b2bcedde4f1057bf58b6088c2dae2a;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 6dca2d0d2632ea665c7644e74d2ff5bb
+      X-Runtime:
+      - '0.011778'
+    body:
+      encoding: US-ASCII
+      string: ! '[{"_id":"4fa0234c25f8c653f0000002","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:55:50-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":2}]}]'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:22 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/enrollments.json?search%5Bassigned_to%5D=test@thinkwell.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896122'
+      X-Api-Signature:
+      - !binary |-
+        OGE1M2Q2YWY1MTEyOWVhMTlmMmQ5N2Q1NGYzMjQ4ZWI=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:22 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Csrf-Token:
+      - w6yWSDMn0ensBQLAafOJaeq23yuiSX6XsOzcNYOMJzw=
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"bcd3b48d1e78b97940c3c985c6cea8bc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUyMGQ2OWNhNWU3Yjc1NWY4YzkyNTM0NTA5ZDZhNzY1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMXc2eVdTRE1uMGVuc0JRTEFhZk9KYWVxMjN5dWlTWDZYc096Y05ZT01Kenc9BjsARg%3D%3D--94deccc0206b26ad9f1c9da5881a95aa3902cb4c;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 92ef8570a7a3fd8aa435807872e4148f
+      X-Runtime:
+      - '0.019084'
+    body:
+      encoding: US-ASCII
+      string: ! '[{"_id":"4fa0234c25f8c653f0000002","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:55:50-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":2}]},{"_id":"4fa0241e25f8c653f0000008","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c632cf10-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:57:58-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c632cf10-75e5-012f-cdbb-60c5478e5578","version":2}]},{"_id":"4fa0242a25f8c653f0000009","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c63357c0-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:58:06-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c63357c0-75e5-012f-cdbb-60c5478e5578","version":2}]}]'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:22 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/enrollments.json?search%5Bassigned_to%5D=test@thinkwell.com&search%5Blimit_results%5D=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896123'
+      X-Api-Signature:
+      - !binary |-
+        NWEwM2JkOWI3MzE2Y2Q5OGI5Y2FlMzJlZTdiZDQ5M2I=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:23 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Csrf-Token:
+      - qmhbyNnCUpgQ1jYQCD8xfWIeqIGf6lO86Sd8aVka8Fw=
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"bcd3b48d1e78b97940c3c985c6cea8bc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWQyMjAxNTUxYzc4ZTM0OTdlZmE3MWI1YjcwYTY2OTk4BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMXFtaGJ5Tm5DVXBnUTFqWVFDRDh4ZldJZXFJR2Y2bE84NlNkOGFWa2E4Rnc9BjsARg%3D%3D--1eead54227b8435d63624fda786857ce4a6bb232;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 24ab16e07c71160ca64801de9e7aca48
+      X-Runtime:
+      - '0.023276'
+    body:
+      encoding: US-ASCII
+      string: ! '[{"_id":"4fa0234c25f8c653f0000002","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:55:50-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":2}]},{"_id":"4fa0241e25f8c653f0000008","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c632cf10-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:57:58-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c632cf10-75e5-012f-cdbb-60c5478e5578","version":2}]},{"_id":"4fa0242a25f8c653f0000009","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c63357c0-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:58:06-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c63357c0-75e5-012f-cdbb-60c5478e5578","version":2}]}]'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+- request:
+    method: get
     uri: http://localhost:3000/enrollments.json?search%5Blimit_results%5D=20&search%5Bstate%5D=active
-    body: 
-    headers: 
-      accept: 
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
       - application/json
-      user-agent: 
+      User-Agent:
       - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896123'
+      X-Api-Signature:
+      - !binary |-
+        NWEwM2JkOWI3MzE2Y2Q5OGI5Y2FlMzJlZTdiZDQ5M2I=
+      Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      date: 
-      - Thu, 12 May 2011 18:11:22 GMT
-      status: 
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:23 GMT
+      Status:
       - 200 OK
-      content-type: 
+      Connection:
+      - close
+      X-Csrf-Token:
+      - WBmg0Bq0bCiauyI/dK5//e3lN+RcshuFn6SNGDARnqA=
+      Content-Type:
       - application/json; charset=utf-8
-      etag: 
-      - "\"07880ae179feb909fef36ba3952a9dcc\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
+      X-Ua-Compatible:
       - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlOTA0OWMxZmYwN2ZlMGJjYzllY2ZjYzBhNmE0NjJiMGY%3D--5b6759f4d5cd51a407288474bbcadfd2f37c7bf8; path=/; HttpOnly
-      x-runtime: 
-      - "0.988587"
-    body: "[{\"_id\":\"faff4b405ef0012e604c001aa0be65af\",\"access_length\":1,\"access_unit\":\"month\",\"assigned_to\":\"admin@thinkwell.com\",\"created_at\":\"2011-05-12T13:10:02-05:00\",\"disabled_at\":null,\"end_date\":\"2012-05-03T00:00:00-05:00\",\"owner\":\"admin@thinkwell.com\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2011-05-03T00:00:00-05:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":null,\"updated_at\":\"2011-05-12T13:10:02-05:00\",\"uuid\":\"faff4b405ef0012e604c001aa0be65af\",\"version\":1,\"product\":{\"_id\":\"3194a4a0b383012ddb4140408c58c871\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}},{\"_id\":\"5d56565fecc10a5f2482253b9c5c4917\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"14skater@gmail.com\",\"end_date\":\"2011-10-29T17:59:59-05:00\",\"enrollment_id\":\"295582\",\"owner\":\"14skater@gmail.com\",\"rid\":\"92fb56b0bf8a012da3a54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000536\",\"start_date\":\"2010-08-29T08:17:20-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"5d56565fecc10a5f2482253b9c5c4917\",\"version\":1,\"product\":{\"_id\":\"92fb56b0bf8a012da3a54040185a8c5f\",\"rid\":\"92fb56b0bf8a012da3a54040185a8c5f\",\"title\":\"Economics\"}},{\"_id\":\"5d057bace0c2a6d8167c5b0494d0f5b5\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"21stcenturyberean@gmail.com\",\"end_date\":\"2011-10-05T17:59:59-05:00\",\"enrollment_id\":\"302079\",\"owner\":\"21stcenturyberean@gmail.com\",\"rid\":\"d1a71130bf72012da37c4040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a00053c\",\"start_date\":\"2010-09-30T06:00:12-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"5d057bace0c2a6d8167c5b0494d0f5b5\",\"version\":1,\"product\":{\"_id\":\"d1a71130bf72012da37c4040185a8c5f\",\"rid\":\"d1a71130bf72012da37c4040185a8c5f\",\"title\":\"Grade 7 Math\"}},{\"_id\":\"5d35cefcfd5ce9fcc31b8c8c9c76db61\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2Chera@inbox.com\",\"end_date\":\"2011-09-03T17:59:59-05:00\",\"enrollment_id\":\"297457\",\"owner\":\"2Chera@inbox.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"start_date\":\"2010-09-03T04:49:57-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"5d35cefcfd5ce9fcc31b8c8c9c76db61\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}},{\"_id\":\"5cfd65d3f394a65c893043e5f7e7c1f1\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2leahy@sbcglobal.net\",\"end_date\":\"2011-10-25T17:59:59-05:00\",\"enrollment_id\":\"304759\",\"owner\":\"2leahy@sbcglobal.net\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2010-10-25T08:41:57-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"105025\",\"url\":null,\"uuid\":\"5cfd65d3f394a65c893043e5f7e7c1f1\",\"version\":1,\"product\":{\"_id\":\"3194a4a0b383012ddb4140408c58c871\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}},{\"_id\":\"5d5be0d7e617c817e8787a68c2b5a817\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2mechengr@sbcglobal.net\",\"end_date\":\"2011-08-25T17:59:59-05:00\",\"enrollment_id\":\"294581\",\"owner\":\"2mechengr@sbcglobal.net\",\"rid\":\"d52b83c0bf7a012da3894040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000528\",\"start_date\":\"2010-08-25T11:37:10-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"5d5be0d7e617c817e8787a68c2b5a817\",\"version\":1,\"product\":{\"_id\":\"d52b83c0bf7a012da3894040185a8c5f\",\"rid\":\"d52b83c0bf7a012da3894040185a8c5f\",\"title\":\"Biology\"}},{\"_id\":\"5d662df0ab06d3f0f4c11ee84114e08c\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2mutschfun@ntelos.net\",\"end_date\":\"2011-08-17T17:59:59-05:00\",\"enrollment_id\":\"291981\",\"owner\":\"2mutschfun@ntelos.net\",\"rid\":\"df563cd0b870012ddb4b40408c58c871\",\"section_id\":\"4dc9ab6ebcb41c539a00053e\",\"start_date\":\"2010-08-17T01:25:25-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"5d662df0ab06d3f0f4c11ee84114e08c\",\"version\":1,\"product\":{\"_id\":\"df563cd0b870012ddb4b40408c58c871\",\"rid\":\"df563cd0b870012ddb4b40408c58c871\",\"title\":\"Grade 8 Math\"}},{\"_id\":\"61069c8de76bd59bc6dad106855af868\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2soccerstars@gmail.com\",\"end_date\":\"2012-01-07T17:59:59-06:00\",\"enrollment_id\":\"311292\",\"owner\":\"2soccerstars@gmail.com\",\"rid\":\"b108a430b488012ddb4540408c58c871\",\"section_id\":\"4dc9ab6ebcb41c539a00051d\",\"start_date\":\"2011-01-07T02:14:42-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"61069c8de76bd59bc6dad106855af868\",\"version\":1,\"product\":{\"_id\":\"b108a430b488012ddb4540408c58c871\",\"rid\":\"b108a430b488012ddb4540408c58c871\",\"title\":\"Algebra I\"}},{\"_id\":\"6e6b7fe000a8012eab734040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"3Maximum@gmail.com\",\"disabled_date\":\"2011-02-08T17:37:44Z\",\"end_date\":\"2012-01-23T17:14:33-06:00\",\"owner\":\"3Maximum@gmail.com\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2011-01-23T17:14:33-06:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A633528306\",\"url\":null,\"uuid\":\"6e6b7fe000a8012eab734040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"3194a4a0b383012ddb4140408c58c871\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}},{\"_id\":\"6e6bf6c000a8012eab744040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"3Maximum@gmail.com\",\"disabled_date\":\"2011-02-08T17:37:55Z\",\"end_date\":\"2012-01-23T17:14:45-06:00\",\"owner\":\"3Maximum@gmail.com\",\"rid\":\"d1a71130bf72012da37c4040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a00053c\",\"start_date\":\"2011-01-23T17:14:45-06:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A633528306\",\"url\":null,\"uuid\":\"6e6bf6c000a8012eab744040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"d1a71130bf72012da37c4040185a8c5f\",\"rid\":\"d1a71130bf72012da37c4040185a8c5f\",\"title\":\"Grade 7 Math\"}},{\"_id\":\"6e6c693000a8012eab754040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"3Maximum@gmail.com\",\"disabled_date\":\"2011-02-08T17:37:46Z\",\"end_date\":\"2012-01-23T17:14:38-06:00\",\"owner\":\"3Maximum@gmail.com\",\"rid\":\"df563cd0b870012ddb4b40408c58c871\",\"section_id\":\"4dc9ab6ebcb41c539a00053e\",\"start_date\":\"2011-01-23T17:14:38-06:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A633528306\",\"url\":null,\"uuid\":\"6e6c693000a8012eab754040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"df563cd0b870012ddb4b40408c58c871\",\"rid\":\"df563cd0b870012ddb4b40408c58c871\",\"title\":\"Grade 8 Math\"}},{\"_id\":\"6e6d503000a8012eab774040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"3Maximum@gmail.com\",\"disabled_date\":\"2011-02-08T17:37:42Z\",\"end_date\":\"2012-01-12T22:05:29-06:00\",\"owner\":\"3Maximum@gmail.com\",\"rid\":\"d52b83c0bf7a012da3894040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000528\",\"start_date\":\"2011-01-12T22:05:29-06:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A633528306\",\"url\":null,\"uuid\":\"6e6d503000a8012eab774040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"d52b83c0bf7a012da3894040185a8c5f\",\"rid\":\"d52b83c0bf7a012da3894040185a8c5f\",\"title\":\"Biology\"}},{\"_id\":\"6e6e409000a8012eab794040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"3Maximum@gmail.com\",\"disabled_date\":\"2011-02-08T17:37:51Z\",\"end_date\":\"2012-01-13T07:27:36-06:00\",\"owner\":\"3Maximum@gmail.com\",\"rid\":\"ac50ac00bf85012da39d4040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000532\",\"start_date\":\"2011-01-13T07:27:36-06:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A633528306\",\"url\":null,\"uuid\":\"6e6e409000a8012eab794040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"ac50ac00bf85012da39d4040185a8c5f\",\"rid\":\"ac50ac00bf85012da39d4040185a8c5f\",\"title\":\"Chemistry\"}},{\"_id\":\"6108cd90a5409e5552ccd6cc5d5678e6\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"4robins@gmail.com\",\"end_date\":\"2011-07-21T17:59:59-05:00\",\"enrollment_id\":\"270742\",\"owner\":\"4robins@gmail.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"start_date\":\"2010-01-22T11:46:31-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"84036\",\"url\":null,\"uuid\":\"6108cd90a5409e5552ccd6cc5d5678e6\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}},{\"_id\":\"6087b2903ddf012eb7824040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"4secretsquirrel@cox.net\",\"end_date\":\"2012-03-31T11:13:11-05:00\",\"owner\":\"4secretsquirrel@cox.net\",\"rid\":\"b108a430b488012ddb4540408c58c871\",\"section_id\":\"4dc9ab6ebcb41c539a00051d\",\"start_date\":\"2011-03-31T11:13:11-05:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A148417455\",\"url\":null,\"uuid\":\"6087b2903ddf012eb7824040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"b108a430b488012ddb4540408c58c871\",\"rid\":\"b108a430b488012ddb4540408c58c871\",\"title\":\"Algebra I\"}},{\"_id\":\"5d1c5dd8e1ac3752ba5c6c9888c6bff7\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"4u2cjc@gmail.com\",\"end_date\":\"2011-09-18T17:59:59-05:00\",\"enrollment_id\":\"300277\",\"owner\":\"4u2cjc@gmail.com\",\"rid\":\"d1a71130bf72012da37c4040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a00053c\",\"start_date\":\"2010-09-18T03:19:39-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"102016\",\"url\":null,\"uuid\":\"5d1c5dd8e1ac3752ba5c6c9888c6bff7\",\"version\":1,\"product\":{\"_id\":\"d1a71130bf72012da37c4040185a8c5f\",\"rid\":\"d1a71130bf72012da37c4040185a8c5f\",\"title\":\"Grade 7 Math\"}},{\"_id\":\"5d1c5dfcde52fdde6e93da8848eeb0a5\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"4u2cjc@gmail.com\",\"end_date\":\"2011-12-13T17:59:59-06:00\",\"enrollment_id\":\"308471\",\"owner\":\"4u2cjc@gmail.com\",\"rid\":\"df563cd0b870012ddb4b40408c58c871\",\"section_id\":\"4dc9ab6ebcb41c539a00053e\",\"start_date\":\"2010-12-12T23:40:58-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"107350\",\"url\":null,\"uuid\":\"5d1c5dfcde52fdde6e93da8848eeb0a5\",\"version\":1,\"product\":{\"_id\":\"df563cd0b870012ddb4b40408c58c871\",\"rid\":\"df563cd0b870012ddb4b40408c58c871\",\"title\":\"Grade 8 Math\"}},{\"_id\":\"23ef7250181c012eb0224040185a8c5f\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"4u2cjc@gmail.com\",\"end_date\":\"2012-02-11T08:50:33-06:00\",\"owner\":\"4u2cjc@gmail.com\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2011-02-11T08:50:33-06:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":\"A547411244\",\"url\":null,\"uuid\":\"23ef7250181c012eb0224040185a8c5f\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"5d7bd094bc0b223bb68ac7fd63925954\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"5navygators@gmail.com\",\"end_date\":\"2011-06-02T10:37:14-05:00\",\"enrollment_id\":\"284532\",\"owner\":\"5navygators@gmail.com\",\"rid\":\"92fb56b0bf8a012da3a54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000536\",\"start_date\":\"2010-06-02T10:37:04-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"5d7bd094bc0b223bb68ac7fd63925954\",\"version\":1,\"product\":{\"_id\":\"92fb56b0bf8a012da3a54040185a8c5f\",\"rid\":\"92fb56b0bf8a012da3a54040185a8c5f\",\"title\":\"Economics\"}},{\"_id\":\"56fc08941372f82a0296d596dd6d2499\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"7bambinos@gmail.com\",\"end_date\":\"2011-07-01T17:59:59-05:00\",\"enrollment_id\":\"288102\",\"owner\":\"7bambinos@gmail.com\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2010-07-01T06:19:32-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"56fc08941372f82a0296d596dd6d2499\",\"version\":1,\"product\":{\"_id\":\"3194a4a0b383012ddb4140408c58c871\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}}]"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
+      Etag:
+      - ! '"bcd3b48d1e78b97940c3c985c6cea8bc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTZkN2VjMTY2MTFlZThkZTJhMWUxYjc5MTQyZWQ5NmMzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVdCbWcwQnEwYkNpYXV5SS9kSzUvL2UzbE4rUmNzaHVGbjZTTkdEQVJucUE9BjsARg%3D%3D--42a379b5d50882e6e1faa211d8d2c58de7f72387;
+        path=/; HttpOnly
+      X-Request-Id:
+      - f74e1203239e8fc7dd680251f27599e2
+      X-Runtime:
+      - '0.018974'
+    body:
+      encoding: US-ASCII
+      string: ! '[{"_id":"4fa0234c25f8c653f0000002","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:55:50-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":2}]},{"_id":"4fa0241e25f8c653f0000008","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c632cf10-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:57:58-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:57:58-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test3@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:57:50-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c632cf10-75e5-012f-cdbb-60c5478e5578","version":2}]},{"_id":"4fa0242a25f8c653f0000009","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c63357c0-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:58:06-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:58:06-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test2@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:58:02-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c63357c0-75e5-012f-cdbb-60c5478e5578","version":2}]}]'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+- request:
+    method: get
     uri: http://localhost:3000/enrollments.json?search%5Blimit_results%5D=20&search%5Bstate%5D=expired
-    body: 
-    headers: 
-      accept: 
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
       - application/json
-      user-agent: 
+      User-Agent:
       - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1335896123'
+      X-Api-Signature:
+      - !binary |-
+        NWEwM2JkOWI3MzE2Y2Q5OGI5Y2FlMzJlZTdiZDQ5M2I=
+      Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      date: 
-      - Thu, 12 May 2011 18:11:23 GMT
-      status: 
+    headers:
+      Date:
+      - Tue, 01 May 2012 18:15:23 GMT
+      Status:
       - 200 OK
-      content-type: 
+      Connection:
+      - close
+      X-Csrf-Token:
+      - zukMEH2FK1WGq94B5TN8RuOK2W88VfmUAeWR6yK3Opg=
+      Content-Type:
       - application/json; charset=utf-8
-      etag: 
-      - "\"074ea9880b06ab4653a0bd6011a8784f\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
+      X-Ua-Compatible:
       - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlNzAyYjE1ZDQxYjYxODk0MjA4ZWI2ZGIxYzllYjRhZjA%3D--236fcc0b9fccfb9be857d3858bafaa9ab98a6c6c; path=/; HttpOnly
-      x-runtime: 
-      - "1.018371"
-    body: "[{\"_id\":\"61076696b0e97a81474b658a67c31bd0\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"100katrina@gmail.com\",\"end_date\":\"2011-01-11T02:38:52-06:00\",\"enrollment_id\":\"266293\",\"owner\":\"100katrina@gmail.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"start_date\":\"2010-01-11T02:38:44-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"61076696b0e97a81474b658a67c31bd0\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}},{\"_id\":\"610766dfdbe56e81afd24698b74b52b8\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"100katrina@gmail.com\",\"end_date\":\"2010-01-06T17:59:59-06:00\",\"enrollment_id\":\"168811\",\"owner\":\"100katrina@gmail.com\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2009-01-06T03:15:32-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"610766dfdbe56e81afd24698b74b52b8\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"6208f3fabe25f8db38106b3e4456a35c\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"14books@bellsouth.net\",\"end_date\":\"2010-11-02T11:09:18-05:00\",\"enrollment_id\":\"259842\",\"owner\":\"14books@bellsouth.net\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"start_date\":\"2009-11-02T11:09:12-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"6208f3fabe25f8db38106b3e4456a35c\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}},{\"_id\":\"6208f467f2db70afe8e0db65f95cb376\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"14books@bellsouth.net\",\"end_date\":\"2009-11-09T17:59:59-06:00\",\"enrollment_id\":\"168656\",\"owner\":\"14books@bellsouth.net\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2008-04-29T09:43:27-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"6208f467f2db70afe8e0db65f95cb376\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"614f6e7bd4dd55e641581ee853d48671\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2martins@comcast.net\",\"end_date\":\"2010-09-08T05:44:43-05:00\",\"enrollment_id\":\"252166\",\"owner\":\"2martins@comcast.net\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2009-09-08T05:44:38-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"614f6e7bd4dd55e641581ee853d48671\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"5dc23fcbbd39b056597035fea9f9c907\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2qt2bgabi@gmail.com\",\"disabled_date\":\"2011-01-06T17:56:07Z\",\"end_date\":\"2011-02-05T03:30:43-06:00\",\"enrollment_id\":\"273075\",\"owner\":\"2qt2bgabi@gmail.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"start_date\":\"2010-02-05T03:30:43-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"85301\",\"url\":null,\"uuid\":\"5dc23fcbbd39b056597035fea9f9c907\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}},{\"_id\":\"5dc240450690c96de015e666c01aaa8b\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2qt2bgabi@gmail.com\",\"disabled_date\":\"2011-01-06T17:56:07Z\",\"end_date\":\"2010-10-06T06:35:11-05:00\",\"enrollment_id\":\"256966\",\"owner\":\"2qt2bgabi@gmail.com\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2009-10-06T06:34:59-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"75721\",\"url\":null,\"uuid\":\"5dc240450690c96de015e666c01aaa8b\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"61069c5e067c16cebbb0b2d94e35a547\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"2soccerstars@gmail.com\",\"end_date\":\"2011-01-05T04:04:45-06:00\",\"enrollment_id\":\"264728\",\"owner\":\"2soccerstars@gmail.com\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2010-01-05T04:04:46-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"81270\",\"url\":null,\"uuid\":\"61069c5e067c16cebbb0b2d94e35a547\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"5dcb4c73b838b40f7c8d4bb471d98773\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"3bookworms@gmail.com\",\"end_date\":\"2010-04-15T17:59:59-05:00\",\"enrollment_id\":\"129669\",\"owner\":\"3bookworms@gmail.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"start_date\":\"2009-04-15T06:20:16-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"5dcb4c73b838b40f7c8d4bb471d98773\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}},{\"_id\":\"625e2051fffd447057c4d33a3f8b802e\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"3john4@bellsouth.net\",\"end_date\":\"2010-07-10T17:59:59-05:00\",\"enrollment_id\":\"131845\",\"owner\":\"3john4@bellsouth.net\",\"rid\":\"a916d410bf8e012da3b94040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000548\",\"start_date\":\"2009-07-10T16:07:09-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"625e2051fffd447057c4d33a3f8b802e\",\"version\":1,\"product\":{\"_id\":\"a916d410bf8e012da3b94040185a8c5f\",\"rid\":\"a916d410bf8e012da3b94040185a8c5f\",\"title\":\"Precalculus\"}},{\"_id\":\"6237c080eab1cc684a3ac95c27e4b4de\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"4-nuts@msn.com\",\"end_date\":\"2010-08-10T08:33:49-05:00\",\"enrollment_id\":\"244156\",\"owner\":\"4-nuts@msn.com\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2009-08-10T08:33:51-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"6237c080eab1cc684a3ac95c27e4b4de\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"6124b87f9dad9246096f51378f7839b3\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"4dacooneys@cox.net\",\"end_date\":\"2010-11-18T03:01:41-06:00\",\"enrollment_id\":\"261350\",\"owner\":\"4dacooneys@cox.net\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2009-11-18T03:01:37-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"78857\",\"url\":null,\"uuid\":\"6124b87f9dad9246096f51378f7839b3\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"5d8e4f0aeed0ad4bba3237cf919061dd\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"4ellison@verizon.net\",\"end_date\":\"2011-03-02T07:07:24-06:00\",\"enrollment_id\":\"275180\",\"owner\":\"4ellison@verizon.net\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2010-03-02T07:07:25-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"86773\",\"url\":null,\"uuid\":\"5d8e4f0aeed0ad4bba3237cf919061dd\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"6108cdb5ee30f17200bbd6e048ad69d5\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"4robins@gmail.com\",\"end_date\":\"2010-02-07T17:59:59-06:00\",\"enrollment_id\":\"168765\",\"owner\":\"4robins@gmail.com\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000546\",\"start_date\":\"2008-09-16T16:23:47-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"50649\",\"url\":null,\"uuid\":\"6108cdb5ee30f17200bbd6e048ad69d5\",\"version\":1,\"product\":{\"_id\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"rid\":\"1d455cc0bf8e012da3b54040185a8c5f\",\"title\":\"Prealgebra\"}},{\"_id\":\"6108cdddbd1feb60d1b970dc514dd3f7\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"4robins@gmail.com\",\"end_date\":\"2011-02-18T14:23:24-06:00\",\"enrollment_id\":\"274400\",\"owner\":\"4robins@gmail.com\",\"rid\":\"570109b0bf73012da37d4040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000521\",\"start_date\":\"2010-02-18T14:23:35-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"6108cdddbd1feb60d1b970dc514dd3f7\",\"version\":1,\"product\":{\"_id\":\"570109b0bf73012da37d4040185a8c5f\",\"rid\":\"570109b0bf73012da37d4040185a8c5f\",\"title\":\"American Government\"}},{\"_id\":\"5dc9abfdfdd552a6c9c97c300ddbb043\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"57mm57@gmail.com\",\"end_date\":\"2011-03-28T06:38:45-05:00\",\"enrollment_id\":\"277313\",\"owner\":\"57mm57@gmail.com\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2010-03-28T06:38:44-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"88355\",\"url\":null,\"uuid\":\"5dc9abfdfdd552a6c9c97c300ddbb043\",\"version\":1,\"product\":{\"_id\":\"3194a4a0b383012ddb4140408c58c871\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}},{\"_id\":\"626119bbb3947f9883e0c60904ce9abd\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"603brookside@gmail.com\",\"end_date\":\"2010-08-15T05:36:16-05:00\",\"enrollment_id\":\"244764\",\"owner\":\"603brookside@gmail.com\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000526\",\"start_date\":\"2009-08-15T05:36:19-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"626119bbb3947f9883e0c60904ce9abd\",\"version\":1,\"product\":{\"_id\":\"201ede90bf78012da3854040185a8c5f\",\"rid\":\"201ede90bf78012da3854040185a8c5f\",\"title\":\"Beginning Algebra\"}},{\"_id\":\"626082e2d89e604867a108f458df221d\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"6webbs@gmail.com\",\"end_date\":\"2010-06-05T17:59:59-05:00\",\"enrollment_id\":\"131833\",\"owner\":\"6webbs@gmail.com\",\"rid\":\"a916d410bf8e012da3b94040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000548\",\"start_date\":\"2009-06-05T08:06:17-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"626082e2d89e604867a108f458df221d\",\"version\":1,\"product\":{\"_id\":\"a916d410bf8e012da3b94040185a8c5f\",\"rid\":\"a916d410bf8e012da3b94040185a8c5f\",\"title\":\"Precalculus\"}},{\"_id\":\"61ad16fa0eb004d094e72a240676180e\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"7clarkes@verizon.net\",\"end_date\":\"2010-10-28T03:30:06-05:00\",\"enrollment_id\":\"259309\",\"owner\":\"7clarkes@verizon.net\",\"rid\":\"f479d240bf7b012da3914040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a00052c\",\"start_date\":\"2009-10-28T03:30:02-05:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"61ad16fa0eb004d094e72a240676180e\",\"version\":1,\"product\":{\"_id\":\"f479d240bf7b012da3914040185a8c5f\",\"rid\":\"f479d240bf7b012da3914040185a8c5f\",\"title\":\"Calculus\"}},{\"_id\":\"61ad1722e11fc6e926b4367a302c688a\",\"access_length\":1,\"access_unit\":\"year\",\"assigned_to\":\"7clarkes@verizon.net\",\"end_date\":\"2010-01-27T17:59:59-06:00\",\"enrollment_id\":\"131789\",\"owner\":\"7clarkes@verizon.net\",\"rid\":\"a916d410bf8e012da3b94040185a8c5f\",\"section_id\":\"4dc9ab6ebcb41c539a000548\",\"start_date\":\"2009-01-27T12:24:08-06:00\",\"store_id\":\"4dc9a888bcb41c526d000001\",\"tx_id\":\"\",\"url\":null,\"uuid\":\"61ad1722e11fc6e926b4367a302c688a\",\"version\":1,\"product\":{\"_id\":\"a916d410bf8e012da3b94040185a8c5f\",\"rid\":\"a916d410bf8e012da3b94040185a8c5f\",\"title\":\"Precalculus\"}}]"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://localhost:3000/enrollments.json?search%5Blimit_results%5D=0&search%5Bowner%5D=admin@thinkwell.com
-    body: 
-    headers: 
-      accept: 
-      - application/json
-      user-agent: 
-      - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      date: 
-      - Thu, 02 Jun 2011 21:56:18 GMT
-      status: 
-      - 200 OK
-      content-type: 
-      - application/json; charset=utf-8
-      etag: 
-      - "\"92b3151ceaef2575d0cdae23bf3ee6a1\""
-      cache-control: 
+      Etag:
+      - ! '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
       - max-age=0, private, must-revalidate
-      x-ua-compatible: 
-      - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlM2M0YjQ0YjZmM2FlMDczMWFlYTQzN2ViNGQ3NWNkZTI%3D--eac097b39be8d2a3a42c96b2cfa581f55df9d7da; path=/; HttpOnly
-      x-runtime: 
-      - "0.472677"
-    body: "[{\"_id\":\"faff4b405ef0012e604c001aa0be65af\",\"access_length\":1,\"access_unit\":\"month\",\"assigned_to\":\"admin@thinkwell.com\",\"created_at\":\"2011-05-12T13:10:02-05:00\",\"disabled_at\":null,\"end_date\":\"2012-05-03T00:00:00-05:00\",\"owner\":\"admin@thinkwell.com\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2011-05-03T00:00:00-05:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":null,\"updated_at\":\"2011-05-12T13:10:02-05:00\",\"uuid\":\"faff4b405ef0012e604c001aa0be65af\",\"version\":1,\"product\":{\"_id\":\"4de80690bcb41c22e3000020\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}}]"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://localhost:3000/enrollments.json?search%5Bassigned_to%5D=admin@thinkwell.com
-    body: 
-    headers: 
-      accept: 
-      - application/json
-      user-agent: 
-      - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      date: 
-      - Thu, 02 Jun 2011 22:27:00 GMT
-      status: 
-      - 200 OK
-      content-type: 
-      - application/json; charset=utf-8
-      etag: 
-      - "\"92b3151ceaef2575d0cdae23bf3ee6a1\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
-      - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlOTcwZjdkYWFkOGQ5MjU3ZWRkNjQwYjNmODliMDRjNzY%3D--430cd750af3010431ac23582f8d6e25fef35f2bd; path=/; HttpOnly
-      x-runtime: 
-      - "0.360493"
-    body: "[{\"_id\":\"faff4b405ef0012e604c001aa0be65af\",\"access_length\":1,\"access_unit\":\"month\",\"assigned_to\":\"admin@thinkwell.com\",\"created_at\":\"2011-05-12T13:10:02-05:00\",\"disabled_at\":null,\"end_date\":\"2012-05-03T00:00:00-05:00\",\"owner\":\"admin@thinkwell.com\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2011-05-03T00:00:00-05:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":null,\"updated_at\":\"2011-05-12T13:10:02-05:00\",\"uuid\":\"faff4b405ef0012e604c001aa0be65af\",\"version\":1,\"product\":{\"_id\":\"4de80690bcb41c22e3000020\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}}]"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://localhost:3000/enrollments.json?search%5Bassigned_to%5D=admin@thinkwell.com&search%5Blimit_results%5D=0
-    body: 
-    headers: 
-      accept: 
-      - application/json
-      user-agent: 
-      - Yolk Ruby Gem
-      x-api-key: 
-      - 4d9f75499a768f299e000002
-      x-api-timestamp: !ruby/regexp /^[0-9]{10}$/
-      x-api-signature: !ruby/regexp /^[0-9a-f]{32}$/
-      accept-encoding: 
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      date: 
-      - Thu, 02 Jun 2011 22:27:00 GMT
-      status: 
-      - 200 OK
-      content-type: 
-      - application/json; charset=utf-8
-      etag: 
-      - "\"92b3151ceaef2575d0cdae23bf3ee6a1\""
-      cache-control: 
-      - max-age=0, private, must-revalidate
-      x-ua-compatible: 
-      - IE=Edge
-      set-cookie: 
-      - _yolk_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRiIlZTdiNmZlYTM3MWM0ZTdkYzIyYjk0MGFjNDFmMmUyYWE%3D--240b2d50d3dafe2cdf36fb985871af30042c7fa2; path=/; HttpOnly
-      x-runtime: 
-      - "0.494260"
-    body: "[{\"_id\":\"faff4b405ef0012e604c001aa0be65af\",\"access_length\":1,\"access_unit\":\"month\",\"assigned_to\":\"admin@thinkwell.com\",\"created_at\":\"2011-05-12T13:10:02-05:00\",\"disabled_at\":null,\"end_date\":\"2012-05-03T00:00:00-05:00\",\"owner\":\"admin@thinkwell.com\",\"section_id\":\"4dc9ab6ebcb41c539a00053a\",\"start_date\":\"2011-05-03T00:00:00-05:00\",\"store_id\":\"4dc9a888bcb41c526d000002\",\"tx_id\":null,\"updated_at\":\"2011-05-12T13:10:02-05:00\",\"uuid\":\"faff4b405ef0012e604c001aa0be65af\",\"version\":1,\"product\":{\"_id\":\"4de80690bcb41c22e3000020\",\"rid\":\"3194a4a0b383012ddb4140408c58c871\",\"title\":\"Grade 6 Math\"}}]"
-    http_version: "1.1"
+      Set-Cookie:
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTAzNjRiMzE5OTEwMzZhOWNkODMxNDE5M2UwMmEyN2NhBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMXp1a01FSDJGSzFXR3E5NEI1VE44UnVPSzJXODhWZm1VQWVXUjZ5SzNPcGc9BjsARg%3D%3D--569c05e762857fde407385fa95c57266f1ba8a94;
+        path=/; HttpOnly
+      X-Request-Id:
+      - dd71fd52183cd0742547a4c66e2e7399
+      X-Runtime:
+      - '0.013678'
+    body:
+      encoding: US-ASCII
+      string: ! '[]'
+    http_version: 
+  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+recorded_with: VCR 2.1.1
