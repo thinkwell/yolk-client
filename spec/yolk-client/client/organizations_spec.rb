@@ -43,7 +43,11 @@ describe Yolk::Client do
     use_vcr_cassette "Yolk_Client/organizations"
     it "should return the sections for the organizations" do
       organizations = client.organizations
-      sections = client.organizations.map(&:courses).flatten.map(&:sections).flatten.compact
+      sections = client.organizations.map do |organization|
+        organization.courses.map do |course|
+          course.sections if course.sections
+        end if organization.courses
+      end.flatten.compact
       client.organizations_sections.should =~ sections
     end
   end
