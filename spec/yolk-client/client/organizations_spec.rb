@@ -28,15 +28,15 @@ describe Yolk::Client do
   describe "organization" do
     use_vcr_cassette
     it "should be found by its ID" do
-      id = (test_organization = get_test_organization)._id
+      id = (test_organization = get_test_organization).id
       organization = client.organization(id)
       organization.should be_a Hashie::Rash
-      organization._id.should == id
+      organization.id.should == id
       organization.should == test_organization
     end
-    specify "_id can be accessed through id accessor" do
+    specify "id can be accessed through id accessor" do
       organization = get_test_organization
-      organization.id.should == organization._id
+      organization.id.should == organization.id
     end
   end
   describe "organizations_sections" do
@@ -54,7 +54,7 @@ describe Yolk::Client do
       test_course = test_org.courses.sample
       test_course.name.should_not be_empty
       new_name = "Course UPDATED"
-      response = client.course_update test_org.id, {:_id => test_course.id, :name => new_name}
+      response = client.course_update test_org.id, {:id => test_course.id, :name => new_name}
       response.should == nil
       org = client.organization test_org.id
       org.should_not be_nil
