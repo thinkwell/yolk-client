@@ -110,7 +110,7 @@ describe Yolk::Client do
     use_vcr_cassette
     it "should update enrollment" do
       uuid = (test_enrollment = get_test_enrollment).uuid
-      length = (test_enrollment.access_length || rand(6)) + 1
+      length = (test_enrollment.access_length || 5) + 1
       response = client.enrollment_update uuid, {:access_unit => "month", :access_length => length}
       response.should == nil
 
