@@ -14,10 +14,10 @@ http_interactions:
       X-Api-Key:
       - 4fa023c325f8c653f0000007
       X-Api-Timestamp:
-      - '1335896123'
+      - '1336074035'
       X-Api-Signature:
       - !binary |-
-        NzhiMGJmNTBiMzQ4N2ZlNTY0NjJkODg5MGU5YWQyZTg=
+        NGE2MDJjYzhmM2Y5ZTE0YTc5ZDI2OTZhMjVhN2FhOTI=
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -26,33 +26,33 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 01 May 2012 18:15:23 GMT
+      - Thu, 03 May 2012 19:40:35 GMT
       Status:
       - 200 OK
       Connection:
       - close
       X-Csrf-Token:
-      - LTKjr4eK/y4qBOIATYxxcHSVeIsC/Bkh04LHKVpkwCQ=
+      - CgaVP8fIkqfWpsB2kRBHnXaIufdE3Y2v6lOEb0LkhFk=
       Content-Type:
       - application/json; charset=utf-8
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - ! '"045b714e61c1d573ffe5ba5ee6bf0f22"'
+      - ! '"dc476faa6f46a7651e9eee299c4d5726"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTBlNTMwNDBhNjAxZWJhZGE2OGRhZjA0ZTA5OThmM2Y0BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMUxUS2pyNGVLL3k0cUJPSUFUWXh4Y0hTVmVJc0MvQmtoMDRMSEtWcGt3Q1E9BjsARg%3D%3D--c1186b0475593a76bc02a0d9c89b091061f74bae;
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWEzMzU1NDA5YmVhMzc3NzY1ZmMwMGRhOTZjZGFhNWZjBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMUNnYVZQOGZJa3FmV3BzQjJrUkJIblhhSXVmZEUzWTJ2NmxPRWIwTGtoRms9BjsARg%3D%3D--ef0929bb91fcdb243a38758db49bbf48a96f0ada;
         path=/; HttpOnly
       X-Request-Id:
-      - 941b60c5058bbc04f078c106b14c995f
+      - cf44c2670b26da4332df003a7d12dc57
       X-Runtime:
-      - '0.015689'
+      - '0.011485'
     body:
       encoding: US-ASCII
-      string: ! '{"_id":"4fa0234c25f8c653f0000002","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:55:50-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":2}]}'
+      string: ! '{"id":"4fa0234c25f8c653f0000002","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":3}'
     http_version: 
-  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+  recorded_at: Thu, 03 May 2012 19:40:35 GMT
 - request:
     method: get
     uri: http://localhost:3000/enrollments/c6225010-75e5-012f-cdbb-60c5478e5578.json
@@ -67,10 +67,10 @@ http_interactions:
       X-Api-Key:
       - 4fa023c325f8c653f0000007
       X-Api-Timestamp:
-      - '1335896123'
+      - '1336074035'
       X-Api-Signature:
       - !binary |-
-        MTVlN2Q4YTc1YzNhYWEwMGQ2MDliNmM1NTE4MmY5NzE=
+        MTM4NGZjOTA2M2Y1Y2VmZjZjMzliODNlMmFlMzY3ZTE=
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -79,31 +79,31 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 01 May 2012 18:15:23 GMT
+      - Thu, 03 May 2012 19:40:35 GMT
       Status:
       - 200 OK
       Connection:
       - close
       X-Csrf-Token:
-      - SWNzvJmAfdeMqvhVMCnI9hsCwom3baTe5V0uPi3MIlI=
+      - RG2eST+Z9Qquo74yHRn2i6c2kptGrY4S88u6QknE9o0=
       Content-Type:
       - application/json; charset=utf-8
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - ! '"045b714e61c1d573ffe5ba5ee6bf0f22"'
+      - ! '"dc476faa6f46a7651e9eee299c4d5726"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTUzMmNiY2JjYzZkZGZiNTAzNTAwNDc1MmI3ZDRmMmU3BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVNXTnp2Sm1BZmRlTXF2aFZNQ25JOWhzQ3dvbTNiYVRlNVYwdVBpM01JbEk9BjsARg%3D%3D--9bf1fca08f4d44a563590e14d440970fe9cae482;
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTEyODhmM2U4M2Y5YzgxOGU3NTI0YzU2ZmI2OTk3ZTY1BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVJHMmVTVCtaOVFxdW83NHlIUm4yaTZjMmtwdEdyWTRTODh1NlFrbkU5bzA9BjsARg%3D%3D--060a6d00337e7b6d2a6596e6eb04b085464ebdf7;
         path=/; HttpOnly
       X-Request-Id:
-      - 7896f8c0bcb22493bb7dec645052dd29
+      - 531d453f28fae5836d6a0ab3447d2383
       X-Runtime:
-      - '0.011717'
+      - '0.010438'
     body:
       encoding: US-ASCII
-      string: ! '{"_id":"4fa0234c25f8c653f0000002","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":3,"versions":[{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T12:55:50-05:00","url":null,"uuid":null,"version":1},{"_id":null,"access_length":null,"access_unit":null,"assigned_to":null,"created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:02:43-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":2}]}'
+      string: ! '{"id":"4fa0234c25f8c653f0000002","access_length":null,"access_unit":null,"assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-01T13:07:53-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":3}'
     http_version: 
-  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+  recorded_at: Thu, 03 May 2012 19:40:35 GMT
 recorded_with: VCR 2.1.1

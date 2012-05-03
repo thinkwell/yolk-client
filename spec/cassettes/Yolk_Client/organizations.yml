@@ -14,10 +14,10 @@ http_interactions:
       X-Api-Key:
       - 4fa023c325f8c653f0000007
       X-Api-Timestamp:
-      - '1335896123'
+      - '1336074035'
       X-Api-Signature:
       - !binary |-
-        Y2IyYmRkMmZlODg3NDAzYmZlYjExYzc3Yzc2ZDJmMWE=
+        ODM3ZDQyYjRkYjAxZjY2MzdiMjhmZWUxYjNiZTFjNDE=
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -26,36 +26,37 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 01 May 2012 18:15:23 GMT
+      - Thu, 03 May 2012 19:40:35 GMT
       Status:
       - 200 OK
       Connection:
       - close
       X-Csrf-Token:
-      - 0nquTsm/aRjU4D8ezq4k57G6awpJOgGbyvhR0IcG2Kw=
+      - HQY5T7kYtCCfDKOxTX5Wzoxj+w6Ml0NfFRDd89GD8lA=
       Content-Type:
       - application/json; charset=utf-8
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - ! '"fa06a92c7e29fa0ea5cec14d165283e9"'
+      - ! '"72dd640fddc306bfc98881e241b2f98a"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTFkMjQ1YzlmYmM4YTI4YjEyY2U4NDhiODQxOTY5ZGY5BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMTBucXVUc20vYVJqVTREOGV6cTRrNTdHNmF3cEpPZ0dieXZoUjBJY0cyS3c9BjsARg%3D%3D--279c8f107b0adc32fc2d41893d44596990917975;
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTljNTViMGU4MTNiZDY1ZmViMGE1MmUzYmRiMzVmOTI2BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMUhRWTVUN2tZdENDZkRLT3hUWDVXem94ait3Nk1sME5mRlJEZDg5R0Q4bEE9BjsARg%3D%3D--537335fcd193a2cf4658c4f08f27bfe61065a79d;
         path=/; HttpOnly
       X-Request-Id:
-      - 2303a937fa7909ca95b8f1e85f39351a
+      - 161eafe6cba0fdc60d8ff0d4282f25ca
       X-Runtime:
-      - '0.017621'
+      - '0.013473'
     body:
       encoding: US-ASCII
-      string: ! '[{"_id":"4fa0235a25f8c653f0000003","city":"Austin","courses":[{"_id":"4fa0236025f8c653f0000004","hippo_course_id":null,"name":"Test
-        Course","product_id":"4fa0230a25f8c653f0000001","rid":null,"sections":[{"_id":"4fa0237625f8c653f0000005","active":true,"end_at":"2038-01-19T03:14:07-06:00","instructor":"Professor
+      string: ! '[{"id":"4fa0235a25f8c653f0000003","city":"Austin","courses":[{"id":"4fa0236025f8c653f0000004","hippo_course_id":null,"name":"Test
+        Course","product_id":"4fa0230a25f8c653f0000001","rid":null,"sections":[{"id":"4fa0237625f8c653f0000005","active":true,"end_at":"2038-01-19T03:14:07-06:00","instructor":"Professor
         Test","name":"Test Section","registration_end_at":"2038-01-19T03:14:07-06:00","registration_start_at":"2012-05-01T12:55:02-05:00","rid":"calctest","start_at":"2012-05-01T12:55:02-05:00"}]}],"lms_id":null,"name":"Test
-        Organization","state":"TX","city":null,"url":null}]'
+        Organization","state":"TX"},{"id":"4fa051ec043260631f000003","city":"Houston","lms_id":null,"name":"Test2
+        Organization","state":"TX"}]'
     http_version: 
-  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+  recorded_at: Thu, 03 May 2012 19:40:35 GMT
 - request:
     method: get
     uri: http://localhost:3000/organizations.json
@@ -70,10 +71,10 @@ http_interactions:
       X-Api-Key:
       - 4fa023c325f8c653f0000007
       X-Api-Timestamp:
-      - '1335896123'
+      - '1336074035'
       X-Api-Signature:
       - !binary |-
-        Y2IyYmRkMmZlODg3NDAzYmZlYjExYzc3Yzc2ZDJmMWE=
+        ODM3ZDQyYjRkYjAxZjY2MzdiMjhmZWUxYjNiZTFjNDE=
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -82,36 +83,37 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 01 May 2012 18:15:23 GMT
+      - Thu, 03 May 2012 19:40:35 GMT
       Status:
       - 200 OK
       Connection:
       - close
       X-Csrf-Token:
-      - SQMtT/58sNyQS3gcqb/EAGibBJPfk5Xyr6Gbyqg89m8=
+      - dd1H8oX4v3we06fRhltPINoXIMIPoeRsGAIFvY9ec50=
       Content-Type:
       - application/json; charset=utf-8
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - ! '"fa06a92c7e29fa0ea5cec14d165283e9"'
+      - ! '"72dd640fddc306bfc98881e241b2f98a"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWFmMGQ3NDRlM2RiMDA0YjdjOWU5ZjA0OThhNWYzNWM3BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVNRTXRULzU4c055UVMzZ2NxYi9FQUdpYkJKUGZrNVh5cjZHYnlxZzg5bTg9BjsARg%3D%3D--96f9ab3864a2276a87cd5f2c702dec562fcd2e6e;
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTFmYmY0MmIyNDg3MzBjODMwZWMxNjcwYzIzMGZhZWY0BjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWRkMUg4b1g0djN3ZTA2ZlJobHRQSU5vWElNSVBvZVJzR0FJRnZZOWVjNTA9BjsARg%3D%3D--afa1f6d1e41d9b2ec97d4abe7129fb1f47113f4c;
         path=/; HttpOnly
       X-Request-Id:
-      - 501b03f376825e1da0af85eaf07d67f5
+      - 7a4beba6b6eca37c3131c1838bb08f28
       X-Runtime:
-      - '0.010096'
+      - '0.011503'
     body:
       encoding: US-ASCII
-      string: ! '[{"_id":"4fa0235a25f8c653f0000003","city":"Austin","courses":[{"_id":"4fa0236025f8c653f0000004","hippo_course_id":null,"name":"Test
-        Course","product_id":"4fa0230a25f8c653f0000001","rid":null,"sections":[{"_id":"4fa0237625f8c653f0000005","active":true,"end_at":"2038-01-19T03:14:07-06:00","instructor":"Professor
+      string: ! '[{"id":"4fa0235a25f8c653f0000003","city":"Austin","courses":[{"id":"4fa0236025f8c653f0000004","hippo_course_id":null,"name":"Test
+        Course","product_id":"4fa0230a25f8c653f0000001","rid":null,"sections":[{"id":"4fa0237625f8c653f0000005","active":true,"end_at":"2038-01-19T03:14:07-06:00","instructor":"Professor
         Test","name":"Test Section","registration_end_at":"2038-01-19T03:14:07-06:00","registration_start_at":"2012-05-01T12:55:02-05:00","rid":"calctest","start_at":"2012-05-01T12:55:02-05:00"}]}],"lms_id":null,"name":"Test
-        Organization","state":"TX","city":null,"url":null}]'
+        Organization","state":"TX"},{"id":"4fa051ec043260631f000003","city":"Houston","lms_id":null,"name":"Test2
+        Organization","state":"TX"}]'
     http_version: 
-  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+  recorded_at: Thu, 03 May 2012 19:40:35 GMT
 - request:
     method: get
     uri: http://localhost:3000/organizations/all_sections.json
@@ -126,10 +128,10 @@ http_interactions:
       X-Api-Key:
       - 4fa023c325f8c653f0000007
       X-Api-Timestamp:
-      - '1335896123'
+      - '1336074035'
       X-Api-Signature:
       - !binary |-
-        ZWM3Y2QxMzdkOTkwMmVmZjAwYmVkYjM2OWIzMjcxZWM=
+        NjQ1MWEyMzExOGI1NGU5M2E0MDU1MWMyYWUwMzY3ZGQ=
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -138,32 +140,32 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 01 May 2012 18:15:23 GMT
+      - Thu, 03 May 2012 19:40:35 GMT
       Status:
       - 200 OK
       Connection:
       - close
       X-Csrf-Token:
-      - hlqiYnWhH54s4tDn13vWMsnfwwriDqhEHh6RneWkzZQ=
+      - FXAI54Lcc+qv00p/XXtX4i/kgkdPlut6j1RMkEdJ4s4=
       Content-Type:
       - application/json; charset=utf-8
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - ! '"8b4db245daabe16b5cb9e31242de582b"'
+      - ! '"665853a4392d032748e42713a2684e35"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTZiZDhlOGEzM2EwMTFiZDQ2NTkwYTZlZjczZmQ3OTVhBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWhscWlZbldoSDU0czR0RG4xM3ZXTXNuZnd3cmlEcWhFSGg2Um5lV2t6WlE9BjsARg%3D%3D--82c6de83ed329500f38f28e5217796be2d886f48;
+      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWNkMmIzM2E4NzY5Nzg0ZTk4NjY0ZTY3YTZjYWM0MWUyBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMUZYQUk1NExjYytxdjAwcC9YWHRYNGkva2drZFBsdXQ2ajFSTWtFZEo0czQ9BjsARg%3D%3D--f5d1101b421f061a6684ed116759a1f58500a9b7;
         path=/; HttpOnly
       X-Request-Id:
-      - 88bf518f036d78377c0e6cdcdcabd1bd
+      - 9436604e4be561d5eee3d9f8149ff1f5
       X-Runtime:
-      - '0.012153'
+      - '0.015686'
     body:
       encoding: US-ASCII
-      string: ! '[{"_id":"4fa0237625f8c653f0000005","active":true,"end_at":"2038-01-19T03:14:07-06:00","instructor":"Professor
+      string: ! '[{"id":"4fa0237625f8c653f0000005","active":true,"end_at":"2038-01-19T03:14:07-06:00","instructor":"Professor
         Test","name":"Test Section","registration_end_at":"2038-01-19T03:14:07-06:00","registration_start_at":"2012-05-01T12:55:02-05:00","rid":"calctest","start_at":"2012-05-01T12:55:02-05:00"}]'
     http_version: 
-  recorded_at: Tue, 01 May 2012 18:15:23 GMT
+  recorded_at: Thu, 03 May 2012 19:40:35 GMT
 recorded_with: VCR 2.1.1
