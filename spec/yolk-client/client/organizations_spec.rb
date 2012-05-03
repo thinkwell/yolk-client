@@ -21,7 +21,7 @@ describe Yolk::Client do
         @organizations.all?{|o| o.should be_a Hashie::Rash}
       end
       it "should return actual organizations" do
-        @organizations.all?{|o| [:name, :state, :city, :url].each{|k| o.should respond_to(k) }}
+        @organizations.all?{|o| [:name, :state, :city].each{|k| o.should respond_to(k) }}
       end
     end
   end
