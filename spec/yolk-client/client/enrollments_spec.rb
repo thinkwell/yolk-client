@@ -39,12 +39,12 @@ describe Yolk::Client do
             all?{|e| e.start_at.should be_a Time; e.end_at.should be_a Time}
       end
     end
-    context "with relevant_to_user passed" do
-      it "should return only enrollments for that user" do
-        enrollments = client.enrollments :search => {:relevant_to_user => TEST_OWNER}
+    context "with relevant_to_entity passed" do
+      it "should return only enrollments for that entity" do
+        enrollments = client.enrollments :search => {:relevant_to_entity => TEST_OWNER}
         enrollments.should_not be_empty
         enrollments.all?{|e| [e.owner, e.assigned_to].should include TEST_OWNER}
-        same = client.enrollments_by_user TEST_OWNER
+        same = client.enrollments_by_entity TEST_OWNER
         same.should == enrollments
       end
     end

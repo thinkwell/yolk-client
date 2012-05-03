@@ -10,10 +10,10 @@ module Yolk
         prepare_enrollments response
       end
 
-      def enrollments_by_user user, options = {}
+      def enrollments_by_entity entity, options = {}
         format_search_options options
         options.merge! "search[limit_results]" => 0 unless options["search[limit_results]"]
-        response = get("users/#{user}/enrollments", options)
+        response = get("entities/#{entity}/enrollments", options)
         prepare_enrollments response
       end
 
