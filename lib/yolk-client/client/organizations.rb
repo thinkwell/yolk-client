@@ -30,6 +30,11 @@ module Yolk
         put("organizations/#{org_id}/courses/#{course_id}/sections/#{section_id}", {:section => section})
       end
 
+      def lms_synchronized org_id, course_id, section_id
+        return unless org_id && course_id && section_id
+        put("organizations/#{org_id}/courses/#{course_id}/sections/#{section_id}/lms_synchronized")
+      end
+
       private
       def prepare_organizations organizations
         organizations.each {|o| prepare_organization o }
