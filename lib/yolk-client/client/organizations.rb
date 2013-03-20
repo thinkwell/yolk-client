@@ -24,10 +24,9 @@ module Yolk
         put("organizations/#{org_id}/courses/#{course_id}", {:course => course})
       end
 
-      def section_update org_id, course_id, section
-        section_id = section && (section[:id])
-        return unless org_id && course_id && section_id
-        put("organizations/#{org_id}/courses/#{course_id}/sections/#{section_id}", {:section => section})
+      def section_update section_id, section
+        return unless section_id
+        put("sections/#{section_id}", {:section => section})
       end
 
       def lms_synchronized org_id, course_id, section_id
