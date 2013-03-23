@@ -55,7 +55,7 @@ describe Yolk::Client do
     use_vcr_cassette
     it "should update a course" do
       test_org = get_test_organization_with_course
-      test_course = test_org.courses.sample
+      test_course = test_org.courses.first
       test_course.name.should_not be_empty
       new_name = "Course UPDATED"
       response = client.course_update test_org.id, {:id => test_course.id, :name => new_name}

@@ -133,7 +133,7 @@ describe Yolk::Client do
       lambda{
         client.enrollment_update uuid, {:start_at => start_at, :end_at => end_at}
       }.should raise_error(Yolk::UnprocessableEntity){|e|
-        Time.parse(e.body['errors']['end_at'].first.match(/^must be after (.*)$/)[1]).should == now
+        Time.parse(e.body['errors']['end_at'].first.match(/^must be after (.*)$/)[1]).utc.should == now
       }
     end
   end

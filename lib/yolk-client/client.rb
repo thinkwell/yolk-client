@@ -9,11 +9,13 @@ module Yolk
     utils
     enrollments
     organizations
+    terms
     ).each{|lib| require 'yolk-client/client/' + lib}
 
     include Yolk::Client::Utils
     include Yolk::Client::Enrollments
     include Yolk::Client::Organizations
+    include Yolk::Client::Terms
 
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
 

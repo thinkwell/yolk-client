@@ -34,8 +34,9 @@ VCR.configure do |c|
   c.default_cassette_options = {
     #:record => :new_episodes,
     :record => :none,
-    :match_requests_on => [:method, :uri, :john_hancock_headers, :body]
+    :match_requests_on => [:method, :uri, :body]
   }
+  #c.debug_logger = File.open('debug-logger.log', 'w')
 end
 
 RSpec.configure do |config|
