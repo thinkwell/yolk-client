@@ -4,7 +4,7 @@ http_interactions:
     method: post
     uri: http://localhost:3000/enrollments.json
     body:
-      string: "{\"enrollment\":{\"owner\":\"blah@test.com\",\"section_id\":\"4fa0237625f8c653f0000005\",\"rid\":\"calctest\"}}"
+      string: "{\"enrollment\":{\"owner\":\"blah@test.com\",\"rid\":\"calctest\",\"section_id\":\"4fa0237625f8c653f0000005\"}}"
     headers:
       Accept:
       - application/json

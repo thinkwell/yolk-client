@@ -60,7 +60,7 @@ http_interactions:
     method: put
     uri: http://localhost:3000/organizations/4fa0235a25f8c653f0000003/courses/4fa0236025f8c653f0000004.json
     body:
-      string: "{\"course\":{\"name\":\"Course UPDATED\",\"id\":\"4fa0236025f8c653f0000004\"}}"
+      string: "{\"course\":{\"id\":\"4fa0236025f8c653f0000004\",\"name\":\"Course UPDATED\"}}"
     headers:
       Accept:
       - application/json

@@ -9,10 +9,13 @@ require 'yolk-client'
 
 TEST_CONSUMER_KEY = '4fa023c325f8c653f0000007'
 TEST_CONSUMER_SECRET = 'MySeCRET'
+#TEST_CONSUMER_KEY = '50cb67ed8ed7df4ec4000002'
+#TEST_CONSUMER_SECRET = 'K2deCtR72TK1KU2SGHVBHnyQ7AzyxM3T'
 TEST_OWNER = 'test@thinkwell.com'
 TEST_ASSIGNED_TO = 'test@thinkwell.com'
 TEST_ENROLLMENT = '4fa0234c25f8c653f0000002'
 TEST_ORGANIZATION = '4fa0235a25f8c653f0000003'
+TEST_TERM = '514348517070d85c1b000006'
 TEST_SECTION = '4fa0237625f8c653f0000005'
 TEST_RID = 'calctest'
 
@@ -34,7 +37,7 @@ VCR.configure do |c|
   c.default_cassette_options = {
     #:record => :new_episodes,
     :record => :none,
-    :match_requests_on => [:method, :uri, :body]
+    :match_requests_on => [:method, :uri]
   }
   #c.debug_logger = File.open('debug-logger.log', 'w')
 end
