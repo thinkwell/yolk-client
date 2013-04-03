@@ -15,7 +15,12 @@ module Yolk
 
       def organization_courses organization_id
         response = get("organizations/#{organization_id}/courses")
-        prepare_courses response
+        response
+      end
+
+      def organization_terms organization_id
+        response = get("organizations/#{organization_id}/terms")
+        response
       end
 
       def organization id
@@ -48,14 +53,6 @@ module Yolk
       def prepare_organization organization
         # Do nothing for now
         organization
-      end
-      def prepare_courses courses
-        courses.each {|c| prepare_course c }
-        courses
-      end
-      def prepare_course course
-        # Do nothing for now
-        course
       end
     end
   end

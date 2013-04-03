@@ -46,6 +46,14 @@ describe Yolk::Client do
       client.organizations_sections.should =~ sections
     end
   end
+  describe "organization_terms" do
+    use_vcr_cassette
+    it "should return the terms for the organization" do
+      terms = [Yolk::Model.new(:end_at=>"2013-03-29T23:00:00-06:00", :id=>"514348a17070d85c1b000009", :name=>"term 4", :organization_id=>"#{TEST_ORGANIZATION}", :start_at=>"2013-03-02T00:00:00-06:00"),
+               Yolk::Model.new(:end_at=>"2013-09-29T23:00:00-06:00", :id=>"515979357070d83f4d000001", :name=>"test term 1", :organization_id=>"#{TEST_ORGANIZATION}", :start_at=>"2013-03-31T23:00:00-06:00")]
+      client.organization_terms(TEST_ORGANIZATION).should =~ terms
+    end
+  end
   describe "course_update" do
     use_vcr_cassette
     it "should update a course" do
