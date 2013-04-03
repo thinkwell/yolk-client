@@ -50,9 +50,7 @@ http_interactions:
       - '0.013473'
     body:
       encoding: US-ASCII
-      string: ! '[{"id":"4fa0235a25f8c653f0000003","city":"Austin","courses":[{"id":"4fa0236025f8c653f0000004","hippo_course_id":null,"name":"Test
-        Course","product_id":"4fa0230a25f8c653f0000001","rid":null,"sections":[{"id":"4fa0237625f8c653f0000005","active":true,"end_at":"2038-01-19T03:14:07-06:00","instructor":"Professor
-        Test","name":"Test Section","registration_end_at":"2038-01-19T03:14:07-06:00","registration_start_at":"2012-05-01T12:55:02-05:00","rid":"calctest","start_at":"2012-05-01T12:55:02-05:00"}]}],"lms_id":null,"name":"Test
+      string: ! '[{"id":"4fa0235a25f8c653f0000003","city":"Austin","lms_id":null,"name":"Test
         Organization","state":"TX"},{"id":"4fa051ec043260631f000003","city":"Houston","lms_id":null,"name":"Test2
         Organization","state":"TX"}]'
     http_version: 
@@ -107,9 +105,7 @@ http_interactions:
       - '0.011503'
     body:
       encoding: US-ASCII
-      string: ! '[{"id":"4fa0235a25f8c653f0000003","city":"Austin","courses":[{"id":"4fa0236025f8c653f0000004","hippo_course_id":null,"name":"Test
-        Course","product_id":"4fa0230a25f8c653f0000001","rid":null,"sections":[{"id":"4fa0237625f8c653f0000005","active":true,"end_at":"2038-01-19T03:14:07-06:00","instructor":"Professor
-        Test","name":"Test Section","registration_end_at":"2038-01-19T03:14:07-06:00","registration_start_at":"2012-05-01T12:55:02-05:00","rid":"calctest","start_at":"2012-05-01T12:55:02-05:00"}]}],"lms_id":null,"name":"Test
+      string: ! '[{"id":"4fa0235a25f8c653f0000003","city":"Austin","lms_id":null,"name":"Test
         Organization","state":"TX"},{"id":"4fa051ec043260631f000003","city":"Houston","lms_id":null,"name":"Test2
         Organization","state":"TX"}]'
     http_version: 
