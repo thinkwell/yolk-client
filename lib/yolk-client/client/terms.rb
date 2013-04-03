@@ -4,15 +4,15 @@ module Yolk
     module Terms
       def term id
         response = get("terms/#{id}")
-        prepare_term response
+        response
+      end
+
+      def term_accesses term_id
+        response = get("terms/#{term_id}/term_accesses")
+        response
       end
 
       private
-      def prepare_term term
-        # Do nothing for now
-        term
-      end
-
     end
   end
 end
