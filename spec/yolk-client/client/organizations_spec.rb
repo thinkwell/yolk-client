@@ -46,6 +46,12 @@ describe Yolk::Client do
       client.organizations_sections.should =~ sections
     end
   end
+  describe "organization_sections" do
+    use_vcr_cassette
+    it "should return the sections for the organization" do
+      client.organization_sections(TEST_ORGANIZATION).count.should == 5
+    end
+  end
   describe "organization_terms" do
     use_vcr_cassette
     it "should return the terms for the organization" do

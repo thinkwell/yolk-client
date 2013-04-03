@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/courses/512e3c3c7070d821d7000001.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 50cb67ed8ed7df4ec4000002
+      X-Api-Timestamp:
+      - '1364969950'
+      X-Api-Signature:
+      - !binary |-
+        NGNiOWQwOTc3Y2ZlZGE2ZGRlNjEwYWU2NzFhYzM2MzI=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"686fa8074b595c4b7daa4bf18fec1c38"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c792c71a910fcf58f5cf9faee1ffa4ba
+      X-Runtime:
+      - '0.015950'
+      Content-Length:
+      - '196'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      Date:
+      - Wed, 03 Apr 2013 06:19:11 GMT
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"512e3c3c7070d821d7000001","hippo_course_id":"4f72461c8ed7df1d79000347","name":"Course
+        UPDATED","organization_id":"50cb87a38ed7df4ec4000004","product_id":"4fc68f048ed7df4484000007","rid":""}'
+    http_version: 
+  recorded_at: Wed, 03 Apr 2013 06:19:11 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/courses/512e3c3c7070d821d7000001.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 50cb67ed8ed7df4ec4000002
+      X-Api-Timestamp:
+      - '1364969951'
+      X-Api-Signature:
+      - !binary |-
+        OGQ3NTE2ZDBlMWYzMmMxNjE4NWEwMzIzOTIxMTJiNjk=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"686fa8074b595c4b7daa4bf18fec1c38"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3db83ff75a3d09422bac9a47def36a70
+      X-Runtime:
+      - '0.013073'
+      Content-Length:
+      - '196'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      Date:
+      - Wed, 03 Apr 2013 06:19:11 GMT
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"512e3c3c7070d821d7000001","hippo_course_id":"4f72461c8ed7df1d79000347","name":"Course
+        UPDATED","organization_id":"50cb87a38ed7df4ec4000004","product_id":"4fc68f048ed7df4484000007","rid":""}'
+    http_version: 
+  recorded_at: Wed, 03 Apr 2013 06:19:11 GMT
+recorded_with: VCR 2.4.0
