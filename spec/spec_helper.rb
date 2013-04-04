@@ -15,6 +15,7 @@ TEST_ENROLLMENT = '4fa0234c25f8c653f0000002'
 TEST_ORGANIZATION = '4fa0235a25f8c653f0000003'
 TEST_SECTION = '4fa0237625f8c653f0000005'
 TEST_RID = 'calctest'
+TEST_USER = 'dominik-test@thinkwell.com'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -34,7 +35,7 @@ VCR.configure do |c|
   c.default_cassette_options = {
     #:record => :new_episodes,
     :record => :none,
-    :match_requests_on => [:method, :uri, :john_hancock_headers, :body]
+    :match_requests_on => [:method, :uri]
   }
 end
 

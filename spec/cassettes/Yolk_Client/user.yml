@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/crowd/users/dominik-test@thinkwell.com.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 50cb67ed8ed7df4ec4000002
+      X-Api-Timestamp:
+      - '1365099161'
+      X-Api-Signature:
+      - !binary |-
+        Mzc2NjZiYmIzYzhlMWJmODQ4YWU5ZGYzYjY4N2VhOTE=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"c41d2607b023805587886e7ab949db1c"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 10728fb735ef11ed6e21c21b21400727
+      X-Runtime:
+      - '1.593034'
+      Connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"dominik-test@thinkwell.com","username":"dominik-test@thinkwell.com","directory_id":"32769","active":true,"description":null,"first_name":"Dominik","last_name":"Test","display_name":"Dominik
+        Test","email":"dominik-test@thinkwell.com"}'
+    http_version: 
+  recorded_at: Thu, 04 Apr 2013 18:12:43 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/crowd/users/dominik-test@thinkwell.com.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 50cb67ed8ed7df4ec4000002
+      X-Api-Timestamp:
+      - '1365099163'
+      X-Api-Signature:
+      - !binary |-
+        NWE1ZjY5Y2YxMmY1MzJkOWFlNWE5MjViZDBlOGFiY2E=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"c41d2607b023805587886e7ab949db1c"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 22bd3216c56798e466815bacc7af7bca
+      X-Runtime:
+      - '1.316290'
+      Connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"dominik-test@thinkwell.com","username":"dominik-test@thinkwell.com","directory_id":"32769","active":true,"description":null,"first_name":"Dominik","last_name":"Test","display_name":"Dominik
+        Test","email":"dominik-test@thinkwell.com"}'
+    http_version: 
+  recorded_at: Thu, 04 Apr 2013 18:12:44 GMT
+recorded_with: VCR 2.4.0
