@@ -33,6 +33,16 @@ module Yolk
         prepare_organization response
       end
 
+      def section id
+        response = get("sections/#{id}")
+        response
+      end
+
+      def course id
+        response = get("courses/#{id}")
+        response
+      end
+
       def course_update org_id, course
         course_id = course && (course[:id])
         return unless org_id && course_id
