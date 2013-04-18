@@ -11,6 +11,7 @@ module Yolk
     organizations
     terms
     courses
+    sections
     ).each{|lib| require 'yolk-client/client/' + lib}
 
     include Yolk::Client::Utils
@@ -18,6 +19,7 @@ module Yolk
     include Yolk::Client::Organizations
     include Yolk::Client::Terms
     include Yolk::Client::Courses
+    include Yolk::Client::Sections
 
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
 
