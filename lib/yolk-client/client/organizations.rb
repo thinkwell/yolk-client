@@ -13,6 +13,21 @@ module Yolk
         response = get('organizations/all_sections', options)
       end
 
+      def organization_courses organization_id
+        response = get("organizations/#{organization_id}/courses")
+        response
+      end
+
+      def organization_sections organization_id
+        response = get("organizations/#{organization_id}/all_sections")
+        response
+      end
+
+      def organization_terms organization_id
+        response = get("organizations/#{organization_id}/terms")
+        response
+      end
+
       def organization id
         response = get("organizations/#{id}")
         prepare_organization response

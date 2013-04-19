@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/terms/514348517070d85c1b000006/term_accesses.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 50cb67ed8ed7df4ec4000002
+      X-Api-Timestamp:
+      - '1364969138'
+      X-Api-Signature:
+      - !binary |-
+        NTE5OWI1NzMyY2ZhYTA0ZmE2ZGVhYWRjZDY0OTQyYzM=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"a186f6024e1e89b95c365b41fc6a1056"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a532e1bf514a1f63d259415294c89113
+      X-Runtime:
+      - '0.053474'
+      Content-Length:
+      - '367'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      Date:
+      - Wed, 03 Apr 2013 06:05:38 GMT
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":"5143488b7070d85c1b000007","end_date":"2013-09-15T22:59:00-06:00","start_date":"2013-03-14T23:00:00-06:00","term_id":"514348517070d85c1b000006","user_role":"StudentEnrollment"},{"id":"515ab7cd7070d8109a000001","end_date":"2013-10-16T22:59:00-06:00","start_date":"2013-04-01T23:00:00-06:00","term_id":"514348517070d85c1b000006","user_role":"TeacherEnrollment"}]'
+    http_version: 
+  recorded_at: Wed, 03 Apr 2013 06:05:38 GMT
+recorded_with: VCR 2.4.0
