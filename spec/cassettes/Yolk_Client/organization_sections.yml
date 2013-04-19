@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/organizations/4fa0235a25f8c653f0000003/all_sections.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 50cb67ed8ed7df4ec4000002
+      X-Api-Timestamp:
+      - '1364973850'
+      X-Api-Signature:
+      - !binary |-
+        MjczZjE2NDJhNjc2NjFiOGNkNDM5MWM5NTRjYjM4Mzk=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"56334b9c9159d598aa62f45d2f9a6423"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fbea111309400093a690f992823d19db
+      X-Runtime:
+      - '0.612984'
+      Content-Length:
+      - '2121'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      Date:
+      - Wed, 03 Apr 2013 07:24:11 GMT
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":"514c918c7070d83882000009","content_source":"512e3c677070d821d7000002","course_id":"512e3c3c7070d821d7000001","end_at":"2013-09-22T22:59:00-06:00","last_lms_sync":"2013-03-22T11:19:01-06:00","name":"section
+        13 copy 23","registration_end_at":null,"registration_start_at":null,"rid":null,"start_at":"2013-03-21T23:00:00-06:00","term_id":null,"organization_id":"4fa0235a25f8c653f0000003","embedded_course_id":"512e3c3c7070d821d7000001"},{"id":"512e3c677070d821d7000002","content_source":null,"course_id":"512e3c3c7070d821d7000001","end_at":"2013-02-19T23:59:00-06:00","last_lms_sync":"2013-03-22T11:16:10-06:00","name":"section
+        13 edited","registration_end_at":null,"registration_start_at":null,"rid":null,"start_at":"2013-02-06T00:00:00-06:00","term_id":null,"organization_id":"4fa0235a25f8c653f0000003","embedded_course_id":"512e3c3c7070d821d7000001"},{"id":"512f8d647070d843a9000002","content_source":null,"course_id":"512f8d4e7070d843a9000001","end_at":"2013-08-28T22:59:00-06:00","last_lms_sync":"2013-03-22T11:16:10-06:00","name":"section
+        14","registration_end_at":null,"registration_start_at":null,"rid":null,"start_at":"2013-02-28T00:00:00-06:00","term_id":null,"organization_id":"4fa0235a25f8c653f0000003","embedded_course_id":"512f8d4e7070d843a9000001"},{"id":"515bb3817070d80c00000010","content_source":null,"course_id":"512f8d4e7070d843a9000001","end_at":"2013-10-02T22:59:00-06:00","last_lms_sync":null,"name":"test
+        edited","registration_end_at":null,"registration_start_at":null,"rid":null,"start_at":"2013-04-01T23:00:00-06:00","term_id":"5159fd177070d88836000001","organization_id":"4fa0235a25f8c653f0000003","embedded_course_id":"512f8d4e7070d843a9000001"},{"id":"5135cd727070d83440000003","canvas_name":"new
+        course 15 test","content_source":null,"course_id":"5135cd667070d83440000002","end_at":"2013-09-29T23:55:00-06:00","last_lms_sync":"2013-03-22T11:16:10-06:00","name":"section
+        15","registration_end_at":null,"registration_start_at":null,"rid":"","start_at":"2013-03-02T01:00:00-06:00","term_id":null,"organization_id":"4fa0235a25f8c653f0000003","embedded_course_id":"5135cd667070d83440000002"}]'
+    http_version: 
+  recorded_at: Wed, 03 Apr 2013 07:24:11 GMT
+recorded_with: VCR 2.4.0

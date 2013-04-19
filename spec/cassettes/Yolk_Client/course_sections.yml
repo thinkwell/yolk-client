@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/organizations/4fa0235a25f8c653f0000003/courses/512e3c3c7070d821d7000001/sections.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 50cb67ed8ed7df4ec4000002
+      X-Api-Timestamp:
+      - '1364970905'
+      X-Api-Signature:
+      - !binary |-
+        ODdlMDRiYzA1ZTgwZmI1YWM3NzJhMGYyN2I1N2M3ZDI=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"c56f00df59c4c47ece0c34f50e6caf85"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3562ef6791a5b2c14a1ad4ca957c5e30
+      X-Runtime:
+      - '0.347997'
+      Content-Length:
+      - '858'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      Date:
+      - Wed, 03 Apr 2013 06:35:05 GMT
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":"514c918c7070d83882000009","content_source":"512e3c677070d821d7000002","course_id":"512e3c3c7070d821d7000001","end_at":"2013-09-22T22:59:00-06:00","last_lms_sync":"2013-03-22T11:19:01-06:00","name":"section
+        13 copy 23","registration_end_at":null,"registration_start_at":null,"rid":null,"start_at":"2013-03-21T23:00:00-06:00","term_id":null,"organization_id":"4fa0235a25f8c653f0000003","embedded_course_id":"512e3c3c7070d821d7000001"},{"id":"512e3c677070d821d7000002","content_source":null,"course_id":"512e3c3c7070d821d7000001","end_at":"2013-02-19T23:59:00-06:00","last_lms_sync":"2013-03-22T11:16:10-06:00","name":"section
+        13 edited","registration_end_at":null,"registration_start_at":null,"rid":null,"start_at":"2013-02-06T00:00:00-06:00","term_id":null,"organization_id":"4fa0235a25f8c653f0000003","embedded_course_id":"512e3c3c7070d821d7000001"}]'
+    http_version: 
+  recorded_at: Wed, 03 Apr 2013 06:35:05 GMT
+recorded_with: VCR 2.4.0

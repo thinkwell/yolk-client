@@ -54,54 +54,6 @@ http_interactions:
     http_version:
   recorded_at: Thu, 03 May 2012 19:40:35 GMT
 - request:
-    method: put
-    uri: http://localhost:3000/enrollments/c6225010-75e5-012f-cdbb-60c5478e5578.json
-    body:
-      string: "{\"enrollment\":{\"access_unit\":\"month\",\"access_length\":6}}"
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - Yolk Ruby Gem
-      X-Api-Key:
-      - 4fa023c325f8c653f0000007
-      X-Api-Timestamp:
-      - '1336074035'
-      X-Api-Signature:
-      - !binary |-
-        MTM4NGZjOTA2M2Y1Y2VmZjZjMzliODNlMmFlMzY3ZTE=
-      Content-Type:
-      - application/json
-  response:
-    status:
-      code: 204
-      message: No Content
-    headers:
-      Date:
-      - Thu, 03 May 2012 19:40:35 GMT
-      Status:
-      - 204 No Content
-      Connection:
-      - close
-      X-Csrf-Token:
-      - gnCQm23WkASax4aTFqvu8/7F06BsW61C6SpIr6olY44=
-      X-Ua-Compatible:
-      - IE=Edge
-      Cache-Control:
-      - no-cache
-      Set-Cookie:
-      - _yolk_session=BAh7BzoQX2NzcmZfdG9rZW5JIjFnbkNRbTIzV2tBU2F4NGFURnF2dTgvN0YwNkJzVzYxQzZTcElyNm9sWTQ0PQY6BkVGSSIPc2Vzc2lvbl9pZAY7BkZJIiU3ZjE5ZTBkNjBiMGExMDEwNTVkMDU1ZjUxMzVlNGM3ZAY7BlQ%3D--98a6a9ae294a6adf5098d65c656d6bf61341cc66;
-        path=/; HttpOnly
-      X-Request-Id:
-      - 262b92f06e2785ed2edf8dcb1d569fcb
-      X-Runtime:
-      - '0.015196'
-    body:
-      encoding: US-ASCII
-      string: ''
-    http_version:
-  recorded_at: Thu, 03 May 2012 19:40:35 GMT
-- request:
     method: get
     uri: http://localhost:3000/enrollments/c6225010-75e5-012f-cdbb-60c5478e5578.json
     body:
@@ -152,6 +104,55 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ! '{"id":"4fa0234c25f8c653f0000002","access_length":6,"access_unit":"month","assigned_to":"test@thinkwell.com","created_at":"2012-05-01T12:55:50-05:00","disabled_at":null,"end_at":"2038-01-19T03:14:07-06:00","enrollment_id":null,"owner":"test@thinkwell.com","section_id":"4fa0237625f8c653f0000005","start_at":"2012-05-01T12:54:20-05:00","store_id":null,"tx_id":null,"updated_at":"2012-05-03T14:40:35-05:00","url":null,"uuid":"c6225010-75e5-012f-cdbb-60c5478e5578","version":4}'
+    http_version:
+  recorded_at: Thu, 03 May 2012 19:40:35 GMT
+- request:
+    method: put
+    uri: http://localhost:3000/enrollments/c6225010-75e5-012f-cdbb-60c5478e5578.json
+    body:
+      string: "{\"enrollment\":{\"start_at\":\"2010-10-09 23:00:00 UTC\",\"end_at\":\"2010-10-08 23:00:00 UTC\"}}"
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 4fa023c325f8c653f0000007
+      X-Api-Timestamp:
+      - '1336074035'
+      X-Api-Signature:
+      - !binary |-
+        MTM4NGZjOTA2M2Y1Y2VmZjZjMzliODNlMmFlMzY3ZTE=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Date:
+      - Thu, 03 May 2012 19:40:35 GMT
+      Status:
+      - 422 Unprocessable Entity
+      Connection:
+      - close
+      X-Csrf-Token:
+      - GQH3DGenv7ni97egLN8f5oNiAqd4kSpEvwJ8p4GlOHM=
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _yolk_session=BAh7BzoQX2NzcmZfdG9rZW5JIjFHUUgzREdlbnY3bmk5N2VnTE44ZjVvTmlBcWQ0a1NwRXZ3SjhwNEdsT0hNPQY6BkVGSSIPc2Vzc2lvbl9pZAY7BkZJIiViZjM1NGZjNWY5OWY2ZDRiYjMyZTJmMzgzZjVkYzAzYQY7BlQ%3D--5f9aa3004128a51cb40dff1418e3c58880134e8e;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 585dbede0bb1f5c5b9ce041c20440bdf
+      X-Runtime:
+      - '0.011845'
+    body:
+      encoding: US-ASCII
+      string: ! '{"errors":{"end_at":["must be after Sat, 09 Oct 2010 18:00:00 -0500"]}}'
     http_version:
   recorded_at: Thu, 03 May 2012 19:40:35 GMT
 recorded_with: VCR 2.1.1

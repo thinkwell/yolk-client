@@ -12,102 +12,48 @@ http_interactions:
       User-Agent:
       - Yolk Ruby Gem
       X-Api-Key:
-      - 4fa023c325f8c653f0000007
+      - 50cb67ed8ed7df4ec4000002
       X-Api-Timestamp:
-      - '1336074036'
+      - '1364966875'
       X-Api-Signature:
       - !binary |-
-        YTQzNTE2MjY4ZTVhYzUyZDNiNTg4YmNlYmQyMjVlMDQ=
+        Mjk3ZDhiOWQ3YWNiMmFkNzM2YzFhNzRkNThjNTM1ZmQ=
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
-      message: OK
+      message: ! 'OK '
     headers:
-      Date:
-      - Thu, 03 May 2012 19:40:36 GMT
-      Status:
-      - 200 OK
-      Connection:
-      - close
-      X-Csrf-Token:
-      - feg9MUbXXSjMKtnkBCr4Wa9QcqSGCsweB5UPS9acTjo=
       Content-Type:
       - application/json; charset=utf-8
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - ! '"0d151abd4c122bfbb1eb95a792356be9"'
+      - ! '"aa952401f46fe1f4ee9bb688923587d7"'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      Set-Cookie:
-      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTNhMmQyZDkxNzk4NDI2MmMyYWE5MGM2N2U0MTU0ZmRhBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWZlZzlNVWJYWFNqTUt0bmtCQ3I0V2E5UWNxU0dDc3dlQjVVUFM5YWNUam89BjsARg%3D%3D--08c00fa48247257cff649e810471311621f27f6e;
-        path=/; HttpOnly
       X-Request-Id:
-      - 09da77905bb2c5070f8e2ab03f9ba5e1
+      - e48b2b4468dc626662de29bf018b8f9e
       X-Runtime:
-      - '0.010544'
-    body:
-      encoding: US-ASCII
-      string: ! '{"id":"4fa0235a25f8c653f0000003","city":"Austin","courses":[{"id":"4fa0236025f8c653f0000004","hippo_course_id":null,"name":"Test
-        Course","product_id":"4fa0230a25f8c653f0000001","rid":null,"sections":[{"id":"4fa0237625f8c653f0000005","active":true,"end_at":"2038-01-19T03:14:07-06:00","instructor":"Professor
-        Test","name":"Test Section","registration_end_at":"2038-01-19T03:14:07-06:00","registration_start_at":"2012-05-01T12:55:02-05:00","rid":"calctest","start_at":"2012-05-01T12:55:02-05:00"}]}],"lms_id":null,"name":"Test
-        Organization","state":"TX"}'
-    http_version: 
-  recorded_at: Thu, 03 May 2012 19:40:36 GMT
-- request:
-    method: put
-    uri: http://localhost:3000/organizations/4fa0235a25f8c653f0000003/courses/4fa0236025f8c653f0000004.json
-    body:
-      encoding: UTF-8
-      string: ! '{"course":{"id":"4fa0236025f8c653f0000004","name":"Course UPDATED"}}'
-    headers:
-      Accept:
-      - application/json
-      User-Agent:
-      - Yolk Ruby Gem
-      X-Api-Key:
-      - 4fa023c325f8c653f0000007
-      X-Api-Timestamp:
-      - '1336074036'
-      X-Api-Signature:
-      - !binary |-
-        Yzk1MTIxOTA3NjEwZmZiNDllMjUzMmEzOWI2YTUyYjU=
-      Content-Type:
-      - application/json
-  response:
-    status:
-      code: 204
-      message: No Content
-    headers:
+      - '0.010635'
+      Content-Length:
+      - '113'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
       Date:
-      - Thu, 03 May 2012 19:40:36 GMT
-      Status:
-      - 204 No Content
+      - Wed, 03 Apr 2013 05:27:55 GMT
       Connection:
-      - close
-      X-Csrf-Token:
-      - +YZjOaQ63s6U/VlCF/LaM/2eMg636gd7g0LBhktSQkM=
-      X-Ua-Compatible:
-      - IE=Edge
-      Cache-Control:
-      - no-cache
-      Set-Cookie:
-      - _yolk_session=BAh7BzoQX2NzcmZfdG9rZW5JIjErWVpqT2FRNjNzNlUvVmxDRi9MYU0vMmVNZzYzNmdkN2cwTEJoa3RTUWtNPQY6BkVGSSIPc2Vzc2lvbl9pZAY7BkZJIiU0YTI3NTA4MjU0MzAwZGQ1MTZhNDEyOGIzNGY0N2VlZQY7BlQ%3D--c30ea8f968c07732cabb661b435f908accd4ed2a;
-        path=/; HttpOnly
-      X-Request-Id:
-      - e81c444d94a05b72f523067e223a054f
-      X-Runtime:
-      - '0.011631'
+      - Keep-Alive
     body:
       encoding: US-ASCII
-      string: ''
+      string: ! '{"id":"4fa0235a25f8c653f0000003","city":"","lms_id":"50cb67d78ed7df4ec4000001","name":"Demo
+        edited","state":"TX"}'
     http_version: 
-  recorded_at: Thu, 03 May 2012 19:40:36 GMT
+  recorded_at: Wed, 03 Apr 2013 05:27:55 GMT
 - request:
     method: get
-    uri: http://localhost:3000/organizations/4fa0235a25f8c653f0000003.json
+    uri: http://localhost:3000/organizations/4fa0235a25f8c653f0000003/courses.json
     body:
       encoding: US-ASCII
       string: ''
@@ -117,48 +63,96 @@ http_interactions:
       User-Agent:
       - Yolk Ruby Gem
       X-Api-Key:
-      - 4fa023c325f8c653f0000007
+      - 50cb67ed8ed7df4ec4000002
       X-Api-Timestamp:
-      - '1336074036'
+      - '1364966875'
       X-Api-Signature:
       - !binary |-
-        YTQzNTE2MjY4ZTVhYzUyZDNiNTg4YmNlYmQyMjVlMDQ=
+        MmNkODY1NWJhYjU1Y2U5OWQwZTBhNmM4MTYzZGRiM2I=
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
-      message: OK
+      message: ! 'OK '
     headers:
-      Date:
-      - Thu, 03 May 2012 19:40:36 GMT
-      Status:
-      - 200 OK
-      Connection:
-      - close
-      X-Csrf-Token:
-      - Nd4Qziv5pGYUz9AbWC5pFVYUVp3Gkk6E27hd7B3ETTw=
       Content-Type:
       - application/json; charset=utf-8
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - ! '"002d08cdbde8ec9b14cd04674db12d45"'
+      - ! '"1d973420afe69e6f750b8bdecb279006"'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      Set-Cookie:
-      - _yolk_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWQxYzdjZGQ4MmUxZTBiYzk0MzAzNmZmYmFlYzc4NzViBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMU5kNFF6aXY1cEdZVXo5QWJXQzVwRlZZVVZwM0drazZFMjdoZDdCM0VUVHc9BjsARg%3D%3D--1528ce41c73a9aedf27167ad7a62b43d9daefee2;
-        path=/; HttpOnly
       X-Request-Id:
-      - 37bac9d17cf11b892a00a1c6305bae88
+      - 4c9d8b379c5eef6e331d3d00b1e6653c
       X-Runtime:
-      - '0.009575'
+      - '0.031377'
+      Content-Length:
+      - '579'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      Date:
+      - Wed, 03 Apr 2013 05:27:55 GMT
+      Connection:
+      - Keep-Alive
     body:
       encoding: US-ASCII
-      string: ! '{"id":"4fa0235a25f8c653f0000003","city":"Austin","courses":[{"id":"4fa0236025f8c653f0000004","hippo_course_id":null,"name":"Course
-        UPDATED","product_id":"4fa0230a25f8c653f0000001","rid":null,"sections":[{"id":"4fa0237625f8c653f0000005","active":true,"end_at":"2038-01-19T03:14:07-06:00","instructor":"Professor
-        Test","name":"Test Section","registration_end_at":"2038-01-19T03:14:07-06:00","registration_start_at":"2012-05-01T12:55:02-05:00","rid":"calctest","start_at":"2012-05-01T12:55:02-05:00"}]}],"lms_id":null,"name":"Test
-        Organization","state":"TX"}'
+      string: ! '[{"id":"512e3c3c7070d821d7000001","hippo_course_id":"4f72461c8ed7df1d79000347","name":"course
+        13","organization_id":"4fa0235a25f8c653f0000003","product_id":"4fc68f048ed7df4484000007","rid":""},{"id":"512f8d4e7070d843a9000001","hippo_course_id":"4f72461c8ed7df1d79000347","name":"course
+        14","organization_id":"4fa0235a25f8c653f0000003","product_id":"4fc68f048ed7df4484000007","rid":null},{"id":"5135cd667070d83440000002","hippo_course_id":"4f72461c8ed7df1d79000347","name":"course
+        15","organization_id":"4fa0235a25f8c653f0000003","product_id":"4fc68f048ed7df4484000007","rid":""}]'
     http_version: 
-  recorded_at: Thu, 03 May 2012 19:40:36 GMT
-recorded_with: VCR 2.1.1
+  recorded_at: Wed, 03 Apr 2013 05:27:55 GMT
+- request:
+    method: put
+    uri: http://localhost:3000/organizations/4fa0235a25f8c653f0000003/courses/512e3c3c7070d821d7000001.json
+    body:
+      encoding: UTF-8
+      string: ! '{"course":{"id":"512e3c3c7070d821d7000001","name":"Course UPDATED"}}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Yolk Ruby Gem
+      X-Api-Key:
+      - 50cb67ed8ed7df4ec4000002
+      X-Api-Timestamp:
+      - '1364966875'
+      X-Api-Signature:
+      - !binary |-
+        YjM0MDYzMjgyNmZiOTgyMWU5OTUzYzRjZjAxOTQ4MTA=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: ! 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - ! '"686fa8074b595c4b7daa4bf18fec1c38"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 26a376775239d139df42228bdc289988
+      X-Runtime:
+      - '21.072541'
+      Content-Length:
+      - '196'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+      Date:
+      - Wed, 03 Apr 2013 05:28:16 GMT
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"512e3c3c7070d821d7000001","hippo_course_id":"4f72461c8ed7df1d79000347","name":"Course
+        UPDATED","organization_id":"4fa0235a25f8c653f0000003","product_id":"4fc68f048ed7df4484000007","rid":""}'
+    http_version: 
+  recorded_at: Wed, 03 Apr 2013 05:28:16 GMT
+recorded_with: VCR 2.4.0

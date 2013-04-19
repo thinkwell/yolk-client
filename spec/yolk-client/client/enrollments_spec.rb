@@ -120,6 +120,9 @@ describe Yolk::Client do
       #updated_enrollment.product.rid.should == test_enrollment.product.rid
       updated_enrollment.access_length.should == length
     end
+  end
+  describe "enrollment_update_invalid" do
+    use_vcr_cassette
     it "should throw validation errors on invalid update" do
       uuid = get_test_enrollment.uuid
       # Use a fixed to date (2010-10-10) to avoid VCR recording multiple fixtures
@@ -133,7 +136,7 @@ describe Yolk::Client do
       lambda{
         client.enrollment_update uuid, {:start_at => start_at, :end_at => end_at}
       }.should raise_error(Yolk::UnprocessableEntity){|e|
-        Time.parse(e.body['errors']['end_at'].first.match(/^must be after (.*)$/)[1]).should == now
+        Time.parse(e.body['errors']['end_at'].first.match(/^must be after (.*)$/)[1]).utc.should == now
       }
     end
   end
