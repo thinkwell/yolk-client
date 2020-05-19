@@ -2,6 +2,7 @@ require 'yolk-client/models/user'
 
 module Yolk
   class Client
+
     # Defines all api calls related to users
     module Users
       def authenticate_user username, password

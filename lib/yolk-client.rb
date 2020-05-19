@@ -1,6 +1,7 @@
 require 'yolk-client/configuration'
 require 'yolk-client/client'
 require 'yolk-client/error'
+require 'yolk-client/models/user'
 
 module Yolk
   extend Configuration
