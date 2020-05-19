@@ -4,7 +4,6 @@ require 'yolk-client/authentication'
 
 module Yolk
   class Client
-
     %w(
     utils
     enrollments
@@ -13,11 +12,8 @@ module Yolk
     courses
     sections
     term_accesses
+    users
     ).each{|lib| require 'yolk-client/client/' + lib}
-
-    %w(
-    user
-    ).each{|lib| require 'yolk-client/models/' + lib}
 
     include Yolk::Client::Utils
     include Yolk::Client::Enrollments
@@ -27,7 +23,6 @@ module Yolk
     include Yolk::Client::Sections
     include Yolk::Client::TermAccesses
     include Yolk::Client::Users
-    include Yolk::Models::User
 
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
 

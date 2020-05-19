@@ -1,5 +1,5 @@
 module Yolk
-  class Models
+  module Models
     class User < OpenStruct
       def username
         super || id || email
