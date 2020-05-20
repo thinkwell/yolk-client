@@ -10,6 +10,8 @@ module Yolk
         @email = attributes[:email]
         @student_id = attributes[:student_id]
         @id = attributes[:id]
+        @token = attributes[:token]
+        @groups = attributes[:groups]
       end
 
       def display_name
@@ -66,6 +68,14 @@ module Yolk
       def id=(val)
         mark_dirty unless val == @id
         @id = val
+      end
+
+      def token
+        @token
+      end
+
+      def groups
+        @groups
       end
 
       def is_dirty?
