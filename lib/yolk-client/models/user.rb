@@ -7,6 +7,7 @@ module Yolk
         @last_name = attributes[:last_name]
         @display_name = attributes[:display_name]
         @username = attributes[:username]
+        @crowd_username = attributes[:crowd_username]
         @email = attributes[:email]
         @student_id = attributes[:student_id]
         @id = attributes[:id]
@@ -39,7 +40,7 @@ module Yolk
       end
 
       def username
-        @username || id || email
+        @username || @crowd_username || id || email
       end
       def username=(val)
         mark_dirty unless val == @username
