@@ -35,6 +35,11 @@ module Yolk
         Yolk::Models::User.new(response)
       end
 
+      def create_user_token username
+        response = post("/users/#{username}/token")
+        response
+      end
+
       def update_user username, attributes
         response = put("/users/#{username}", {:user => attributes})
         Yolk::Models::User.new(response)
