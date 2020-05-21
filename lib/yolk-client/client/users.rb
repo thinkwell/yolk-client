@@ -11,7 +11,7 @@ module Yolk
       end
 
       def get_user username
-        response = get("users/#{username}")
+        response = get("users/#{username}", {}, false, false)
         Yolk::Models::User.new(response)
       end
 
@@ -26,22 +26,22 @@ module Yolk
       end
 
       def invalidate_user_token token
-        response = delete("/users/tokens/#{token}")
+        response = delete("/users/tokens/#{token}", {}, false, false)
         response
       end
 
       def get_user_by_token token
-        response = get("/users/tokens/#{token}")
+        response = get("/users/tokens/#{token}", {}, false, false)
         Yolk::Models::User.new(response)
       end
 
       def create_user_token username
         response = post("/users/#{username}/token")
-        response
+        response && response["token"]
       end
 
       def update_user username, attributes
-        response = put("/users/#{username}", {:user => attributes})
+        response = put("/users/#{username}", {:user => attributes}, false, false)
         Yolk::Models::User.new(response)
       end
 
@@ -51,7 +51,7 @@ module Yolk
       end
 
       def delete_user username
-        response = delete("/users/#{username}")
+        response = delete("/users/#{username}", {}, false, false)
         Yolk::Models::User.new(response)
       end
 

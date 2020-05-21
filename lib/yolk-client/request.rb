@@ -2,35 +2,36 @@ module Yolk
   # Defines HTTP request methods
   module Request
     # Perform an HTTP GET request
-    def get(path, options={}, raw=false)
-      request(:get, path, options, raw)
+    def get(path, options={}, raw=false, format_in_path=true)
+      request(:get, path, options, raw, format_in_path)
     end
 
     # Perform an HTTP POST request
-    def post(path, options={}, raw=false)
-      request(:post, path, options, raw)
+    def post(path, options={}, raw=false, format_in_path=true)
+      request(:post, path, options, raw, format_in_path)
     end
 
     # Perform an HTTP PUT request
-    def put(path, options={}, raw=false)
-      request(:put, path, options, raw)
+    def put(path, options={}, raw=false, format_in_path=true)
+      request(:put, path, options, raw, format_in_path)
     end
 
     # Perform an HTTP DELETE request
-    def delete(path, options={}, raw=false)
-      request(:delete, path, options, raw)
+    def delete(path, options={}, raw=false, format_in_path=true)
+      request(:delete, path, options, raw, format_in_path)
     end
 
     private
 
     # Perform an HTTP request
-    def request(method, path, options, raw=false)
+    def request(method, path, options, raw=false, format_in_path=true)
+      path_formatted = format_in_path ? formatted_path(path) : path
       response = connection(raw).send(method) do |request|
         case method
         when :get, :delete
-          request.url(formatted_path(path), options)
+          request.url(path_formatted, options)
         when :post, :put
-          request.path = formatted_path(path)
+          request.path = path_formatted
           request.body = options unless options.empty?
         end
       end
