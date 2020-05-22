@@ -13,13 +13,14 @@ module Yolk
         @id = attributes[:id]
         @token = attributes[:token]
         @groups = attributes[:groups]
+        @dirty_attributes = {}
       end
 
       def display_name
         @display_name
       end
       def display_name=(val)
-        mark_dirty unless val == @display_name
+        mark_dirty(:display_name, val) unless val == @display_name
         @display_name = val
       end
 
@@ -27,7 +28,7 @@ module Yolk
         @first_name
       end
       def first_name=(val)
-        mark_dirty unless val == @first_name
+        mark_dirty(:first_name, val) unless val == @first_name
         @first_name = val
       end
 
@@ -35,7 +36,7 @@ module Yolk
         @last_name
       end
       def last_name=(val)
-        mark_dirty unless val == @last_name
+        mark_dirty(:last_name, val) unless val == @last_name
         @last_name = val
       end
 
@@ -43,7 +44,7 @@ module Yolk
         @username || @crowd_username || id || email
       end
       def username=(val)
-        mark_dirty unless val == @username
+        mark_dirty(:username, val) unless val == @username
         @username = val
       end
 
@@ -51,7 +52,7 @@ module Yolk
         @email
       end
       def email=(val)
-        mark_dirty unless val == @email
+        mark_dirty(:email, val) unless val == @email
         @email = val
       end
 
@@ -59,7 +60,7 @@ module Yolk
         @student_id
       end
       def student_id=(val)
-        mark_dirty unless val == @student_id
+        mark_dirty(:student_id, val) unless val == @student_id
         @student_id = val
       end
 
@@ -67,7 +68,7 @@ module Yolk
         @id
       end
       def id=(val)
-        mark_dirty unless val == @id
+        mark_dirty(:id, val) unless val == @id
         @id = val
       end
 
@@ -79,11 +80,19 @@ module Yolk
         @groups
       end
 
-      def is_dirty?
-        !!@is_dirty
+      def dirty_attributes
+        @dirty_attributes
       end
-      def mark_dirty
-        @is_dirty = true
+
+      def is_dirty?
+        !@dirty_attributes.empty?
+      end
+      def mark_dirty(name, val)
+        @dirty_attributes[name] = val
+      end
+
+      def reset
+        @dirty_attributes = {}
       end
 
       def to_h
