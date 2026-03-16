@@ -22,6 +22,7 @@ module Yolk
     include Yolk::Client::Courses
     include Yolk::Client::Sections
     include Yolk::Client::TermAccesses
+    include Yolk::Client::Users
 
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
 
