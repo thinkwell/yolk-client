@@ -3,7 +3,7 @@ module Yolk
     # Defines all api calls related to users
     module Users
       # identifier can be email, username or id
-      def user (identifier)
+      def find_user (identifier)
         response = get("users/#{identifier}")
         Yolk::User.new(response)
       end
@@ -31,6 +31,16 @@ module Yolk
       def is_valid_user_token? (token)
         response = get("users/token/#{token}/is_valid")
         response
+      end
+
+      def add_user (user)
+        response = post("users", {user: user})
+        Yolk::User.new(response)
+      end
+
+      def update_user (user)
+        response = put("users/#{user["id"] || user["username"] || user["email"]}", {user: user})
+        Yolk::User.new(response)
       end
 
       def get_cookie_info
