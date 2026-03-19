@@ -34,12 +34,12 @@ module Yolk
       end
 
       def add_user (user)
-        response = post("users", {user: user})
+        response = post("users", {:user => user})
         Yolk::User.new(response)
       end
 
       def update_user (user)
-        response = put("users/#{user["id"] || user["username"] || user["email"]}", {user: user})
+        response = put("users/#{user["id"] || user["username"] || user["email"]}", {:user => user})
         Yolk::User.new(response)
       end
 
