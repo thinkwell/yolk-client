@@ -13,6 +13,7 @@ module Yolk
     courses
     sections
     term_accesses
+    users
     ).each{|lib| require 'yolk-client/client/' + lib}
 
     include Yolk::Client::Utils
