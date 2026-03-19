@@ -1,5 +1,6 @@
 require 'yolk-client/configuration'
 require 'yolk-client/client'
+require 'yolk-client/mock_client'
 require 'yolk-client/error'
 
 module Yolk
@@ -8,6 +9,10 @@ module Yolk
   # Alias for Yolk::Client.new
   def self.client(options={})
     Yolk::Client.new(options)
+  end
+
+  def self.mock_client(options={})
+    Yolk::MockClient.new(options)
   end
 
   # Delegate to Yolk::Client
