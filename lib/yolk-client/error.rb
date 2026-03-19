@@ -1,4 +1,4 @@
-module Yolk
+module YolkClient
   # Custom error class for rescuing from all Yolk errors
   class Error < StandardError
     attr_reader :http_headers, :body

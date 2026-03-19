@@ -4,7 +4,7 @@ require "yolk-client/version"
 
 Gem::Specification.new do |s|
   s.name        = "yolk-client"
-  s.version     = Yolk::Client::VERSION
+  s.version     = YolkClient::Client::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Paul Strong"]
   s.email       = ["pauls@thinkwell.com"]

@@ -3,19 +3,19 @@ require 'yolk-client/client'
 require 'yolk-client/mock_client'
 require 'yolk-client/error'
 
-module Yolk
+module YolkClient
   extend Configuration
 
-  # Alias for Yolk::Client.new
+  # Alias for YolkClient::Client.new
   def self.client(options={})
-    Yolk::Client.new(options)
+    YolkClient::Client.new(options)
   end
 
   def self.mock_client(options={})
-    Yolk::MockClient.new(options)
+    YolkClient::MockClient.new(options)
   end
 
-  # Delegate to Yolk::Client
+  # Delegate to YolkClient::Client
   def self.method_missing(method, *args, &block)
     a_client = client
     return super unless a_client.respond_to?(method)

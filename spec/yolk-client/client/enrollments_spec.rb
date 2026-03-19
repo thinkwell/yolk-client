@@ -1,21 +1,21 @@
 require 'spec_helper'
 
-describe Yolk::Client do
+describe YolkClient::Client do
   def get_test_enrollment
     client.enrollment TEST_ENROLLMENT
   end
   describe "errors" do
     use_vcr_cassette
     it "should throw an unauthorized error when credentials are incorrect" do
-      client = Yolk::Client.new(:consumer_key => 'invalid', :consumer_secret => 'invalid', :endpoint => 'http://localhost:3000')
-      lambda{client.enrollments(:search => {:limit_results => 20})}.should raise_error Yolk::Unauthorized
+      client = YolkClient::Client.new(:consumer_key => 'invalid', :consumer_secret => 'invalid', :endpoint => 'http://localhost:3000')
+      lambda{client.enrollments(:search => {:limit_results => 20})}.should raise_error YolkClient::Unauthorized
     end
     it "should throw not found error for nonexistant uuid" do
-      lambda{client.enrollment('nonexistant')}.should raise_error Yolk::NotFound
-      lambda{client.enrollment_destroy('nonexistant')}.should raise_error Yolk::NotFound
+      lambda{client.enrollment('nonexistant')}.should raise_error YolkClient::NotFound
+      lambda{client.enrollment_destroy('nonexistant')}.should raise_error YolkClient::NotFound
     end
     it "should throw unprocessable entity when there are validation errors" do
-      lambda{client.enrollment_create({:owner => "blah@test.com"})}.should raise_error(Yolk::UnprocessableEntity){|error|
+      lambda{client.enrollment_create({:owner => "blah@test.com"})}.should raise_error(YolkClient::UnprocessableEntity){|error|
         error.body['errors']['section'].should == ["can't be blank"]
         error.body.should have(1).keys
       }
@@ -30,8 +30,8 @@ describe Yolk::Client do
       it "should only return up to the limit" do
         @enrollments.count.should == 2
       end
-      it "should return Yolk::Model objects" do
-        @enrollments.all?{|e| e.should be_instance_of Yolk::Model}
+      it "should return YolkClient::Model objects" do
+        @enrollments.all?{|e| e.should be_instance_of YolkClient::Model}
         @enrollments.all?{|e| e.should be_a Hashie::Rash}
       end
       it "should return actual Time objects instead of strings" do
@@ -135,7 +135,7 @@ describe Yolk::Client do
       end_at.gsub!(/GMT/, 'UTC')
       lambda{
         client.enrollment_update uuid, {:start_at => start_at, :end_at => end_at}
-      }.should raise_error(Yolk::UnprocessableEntity){|e|
+      }.should raise_error(YolkClient::UnprocessableEntity){|e|
         Time.parse(e.body['errors']['end_at'].first.match(/^must be after (.*)$/)[1]).utc.should == now
       }
     end
@@ -146,7 +146,7 @@ describe Yolk::Client do
       uuid = get_test_enrollment.uuid
 
       client.enrollment_destroy(uuid)
-      lambda{client.enrollment(uuid)}.should raise_error(Yolk::NotFound)
+      lambda{client.enrollment(uuid)}.should raise_error(YolkClient::NotFound)
     end
   end
 end

@@ -5,11 +5,11 @@ module Faraday
     def on_complete(env)
       case env[:status].to_i
       when 500
-        raise Yolk::InternalServerError.new(error_message(env, "Something is technically wrong."), env[:response_headers])
+        raise YolkClient::InternalServerError.new(error_message(env, "Something is technically wrong."), env[:response_headers])
       when 502
-        raise Yolk::BadGateway.new(error_message(env, "Yolk is down or being upgraded."), env[:response_headers])
+        raise YolkClient::BadGateway.new(error_message(env, "Yolk is down or being upgraded."), env[:response_headers])
       when 503
-        raise Yolk::ServiceUnavailable.new(error_message(env, "(__-){ Yolk is over capacity."), env[:response_headers])
+        raise YolkClient::ServiceUnavailable.new(error_message(env, "(__-){ Yolk is over capacity."), env[:response_headers])
       end
     end
 

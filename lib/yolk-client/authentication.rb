@@ -1,4 +1,4 @@
-module Yolk
+module YolkClient
   module Authentication
     private
     def authentication

@@ -1,4 +1,4 @@
-module Yolk
+module YolkClient
   class Client
     # Defines all api calls related to terms
     module Terms

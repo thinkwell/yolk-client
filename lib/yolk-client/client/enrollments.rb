@@ -1,5 +1,5 @@
 require 'time'
-module Yolk
+module YolkClient
   class Client
     # Defines all api calls related to enrollments
     module Enrollments

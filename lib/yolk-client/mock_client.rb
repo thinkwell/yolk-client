@@ -1,5 +1,5 @@
 # Client with basic functions mocked out to stop calls from going to the server during tests
-module Yolk
+module YolkClient
   class MockClient
     class << self
       attr_accessor :users, :tokens, :groups

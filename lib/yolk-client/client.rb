@@ -2,7 +2,7 @@ require 'yolk-client/connection'
 require 'yolk-client/request'
 require 'yolk-client/authentication'
 
-module Yolk
+module YolkClient
   class Client
 
     %w(
@@ -16,20 +16,20 @@ module Yolk
     users
     ).each{|lib| require 'yolk-client/client/' + lib}
 
-    include Yolk::Client::Utils
-    include Yolk::Client::Enrollments
-    include Yolk::Client::Organizations
-    include Yolk::Client::Terms
-    include Yolk::Client::Courses
-    include Yolk::Client::Sections
-    include Yolk::Client::TermAccesses
-    include Yolk::Client::Users
+    include YolkClient::Client::Utils
+    include YolkClient::Client::Enrollments
+    include YolkClient::Client::Organizations
+    include YolkClient::Client::Terms
+    include YolkClient::Client::Courses
+    include YolkClient::Client::Sections
+    include YolkClient::Client::TermAccesses
+    include YolkClient::Client::Users
 
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
 
     # Creates a new Client
     def initialize(options={})
-      options = Yolk.options.merge(options)
+      options = YolkClient.options.merge(options)
       Configuration::VALID_OPTIONS_KEYS.each do |key|
         send("#{key}=", options[key])
       end

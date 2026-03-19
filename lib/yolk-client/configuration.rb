@@ -1,6 +1,6 @@
 require 'faraday'
 
-module Yolk
+module YolkClient
   module Configuration
     # An array of valid keys in the options hash when configuring yolk client
     VALID_OPTIONS_KEYS = [

@@ -1,4 +1,4 @@
-module Yolk
+module YolkClient
   class Entity
 
     def initialize(attrs={})

@@ -5,7 +5,7 @@ require 'faraday/response/raise_http_4xx'
 require 'faraday/response/raise_http_5xx'
 require 'faraday/response/yolkify'
 
-module Yolk
+module YolkClient
   module Connection
     private
 

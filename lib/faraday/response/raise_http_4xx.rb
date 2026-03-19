@@ -5,17 +5,17 @@ module Faraday
     def on_complete(env)
       case env[:status].to_i
       when 400
-        raise Yolk::BadRequest.new(error_message(env), env[:response_headers])
+        raise YolkClient::BadRequest.new(error_message(env), env[:response_headers])
       when 401
-        raise Yolk::Unauthorized.new(error_message(env), env[:response_headers])
+        raise YolkClient::Unauthorized.new(error_message(env), env[:response_headers])
       when 403
-        raise Yolk::Forbidden.new(error_message(env), env[:response_headers])
+        raise YolkClient::Forbidden.new(error_message(env), env[:response_headers])
       when 404
-        raise Yolk::NotFound.new(error_message(env), env[:response_headers], env[:body])
+        raise YolkClient::NotFound.new(error_message(env), env[:response_headers], env[:body])
       when 406
-        raise Yolk::NotAcceptable.new(error_message(env), env[:response_headers])
+        raise YolkClient::NotAcceptable.new(error_message(env), env[:response_headers])
       when 422
-        raise Yolk::UnprocessableEntity.new(error_message(env), env[:response_headers], env[:body])
+        raise YolkClient::UnprocessableEntity.new(error_message(env), env[:response_headers], env[:body])
       end
     end
 

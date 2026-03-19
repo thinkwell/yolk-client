@@ -1,4 +1,4 @@
-module Yolk
+module YolkClient
   class User < Entity
     # Immutable properties
     property :id, :immutable => true

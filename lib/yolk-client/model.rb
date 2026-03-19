@@ -1,6 +1,6 @@
 require 'hashie/mash'
 require 'rash'
-class Yolk::Model < Hashie::Rash
+class YolkClient::Model < Hashie::Rash
 #  def regular_writer(key,value) #:nodoc:
 #    super(*convert_pair(key, value))
 #  end

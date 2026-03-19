@@ -1,4 +1,4 @@
-module Yolk
+module YolkClient
   # Defines HTTP request methods
   module Request
     # Perform an HTTP GET request
