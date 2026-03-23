@@ -13,6 +13,7 @@ module YolkClient
     attribute :student_id
     attribute :display_name
     attribute :email
+    attribute :token
 
     def errors
       errors = super
