@@ -10,7 +10,7 @@ module YolkClient
 
       def authenticate_user (username, password)
         response = post("users/login", {:username => username, :password => password})
-        response
+        YolkClient::User.new(response)
       end
 
       def invalidate_user_token (token)
