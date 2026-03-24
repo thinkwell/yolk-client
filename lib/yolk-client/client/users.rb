@@ -43,6 +43,11 @@ module YolkClient
         YolkClient::User.new(response)
       end
 
+      def update_password (username, password)
+        response = put("users/#{username}/password", {:password => password})
+        YolkClient::User.new(response)
+      end
+
       def get_cookie_info
         {:domain=>".thinkwell.com", :secure=>false}
       end
