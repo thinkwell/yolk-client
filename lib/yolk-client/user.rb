@@ -14,6 +14,7 @@ module YolkClient
     attribute :display_name
     attribute :email
     attribute :token
+    attribute :password
 
     def errors
       errors = super
