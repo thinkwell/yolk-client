@@ -14,7 +14,7 @@ module YolkClient
       end
 
       def invalidate_user_token (token)
-        response = delete("users/token/#{token}")
+        response = delete("users/tokens/#{token}")
         response
       end
 
@@ -24,12 +24,12 @@ module YolkClient
       end
 
       def find_user_by_token (token)
-        response = get("users/token/#{token}")
+        response = get("users/tokens/#{token}")
         YolkClient::User.new(response)
       end
 
       def is_valid_user_token? (token)
-        response = get("users/token/#{token}/is_valid")
+        response = get("users/tokens/#{token}/is_valid")
         response
       end
 
