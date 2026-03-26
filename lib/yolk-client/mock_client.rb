@@ -51,7 +51,7 @@ module YolkClient
       user = users.delete(find_user(name))
       tokens.reject!{|t| t =~ /.+-TOKENFOR-#{user.username}/} if user && user.username
     end
-    def update_user_credential name, credential, encrypted = false
+    def update_password name, credential
       if user = find_user(name)
         user.instance_variable_set('@password', credential)
       end
