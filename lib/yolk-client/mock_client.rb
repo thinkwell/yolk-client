@@ -23,10 +23,10 @@ module YolkClient
     end
 
     def authenticate_user name, password, factors = nil
-      (user = find_user_by_name(name)) && user.instance_variable_get('@password') && user.instance_variable_get('@password') == password ? new_user_token(name) : nil
+      (user = find_user(name)) && user.instance_variable_get('@password') && user.instance_variable_get('@password') == password ? new_user_token(name) : nil
     end
     def create_user_token name
-      new_user_token(name) if find_user_by_name(name)
+      new_user_token(name) if find_user(name)
     end
     def invalidate_user_token token
       tokens.delete token
@@ -39,20 +39,20 @@ module YolkClient
     end
 
     def find_user_by_token token
-      token && tokens.include?(token) && (name = /.+-TOKENFOR-(.+)$/.match(token)) && name[1] && find_user_by_name(name[1])
+      token && tokens.include?(token) && (name = /.+-TOKENFOR-(.+)$/.match(token)) && name[1] && find_user(name[1])
     end
     def add_user user
-      if user && user.username && !find_user_by_name(user.username)
+      if user && user.username && !find_user(user.username)
         self.class.users << user
         user
       end
     end
     def remove_user name
-      user = users.delete(find_user_by_name(name))
+      user = users.delete(find_user(name))
       tokens.reject!{|t| t =~ /.+-TOKENFOR-#{user.username}/} if user && user.username
     end
     def update_user_credential name, credential, encrypted = false
-      if user = find_user_by_name(name)
+      if user = find_user(name)
         user.instance_variable_set('@password', credential)
       end
     end
@@ -62,7 +62,7 @@ module YolkClient
       attrs_to_update = user.dirty_attributes
       return if attrs_to_update.empty?
 
-      stored_user = find_user_by_name(user.username)
+      stored_user = find_user(user.username)
       return if stored_user.blank?
 
       attrs_to_update.each do |a|
